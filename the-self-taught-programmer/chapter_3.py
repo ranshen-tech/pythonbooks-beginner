@@ -35,7 +35,7 @@ print(100 // 3)
 age = 64
 retirement = age - 65
 
-if retirement < 10:
+if retirement < 1:
     print("You get to retire soon.")
 else:
     print("You have a long time until you can retire!")
