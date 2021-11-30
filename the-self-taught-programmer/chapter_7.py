@@ -1,11 +1,34 @@
-questions = ["What's your name? ",
-             "What's your favourite color? ",
-             "What's your quest? "]
+# challenge1
+shows = ["The Walking Dead", "Entourage", "The Sopranos","TheVampire Diaries"]
 
-n = 0
-while True:
-    print("type 'q' to quit.")
-    answer = input(questions[n])
-    if answer == 'q':
-        break
-    n = (n + 1) % 3
+for show in shows:
+    print(show)
+
+
+# challenge2
+for i in range(25, 51):
+    print(i)
+
+
+# challenge3
+for i, show in enumerate(shows):
+    print(i, show)
+
+
+# challenge4
+
+
+
+# challenge5
+list1 = [8, 19, 148, 4]
+list2 = [9, 1, 33, 83]
+multiply = []
+
+for i in list1:
+    for j in list2:
+        multiply.append(i * j)
+
+print(multiply)
+
+
+# challenge6
