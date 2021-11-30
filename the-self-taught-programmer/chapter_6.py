@@ -19,12 +19,13 @@ print("aldous Huxley was born in 1894.".capitalize())
 
 
 # challenge4
-print("Where now? Who now? When now? ".split(' '))
+print("Where now? Who now? When now? ".split('?'))
 
 
 # challenge5
 lst = ["The", "fox", "jumped", "over", "the", "fence", "."]
-print(" ".join(lst))
+string = " ".join(lst)
+print(string[:-2] + string[-1])
 
 
 # challenge6
