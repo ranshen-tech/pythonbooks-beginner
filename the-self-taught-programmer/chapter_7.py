@@ -1,7 +1,11 @@
-tv = ['cctv-1', 'anhui-tv', 'cctv-5']
+questions = ["What's your name? ",
+             "What's your favourite color? ",
+             "What's your quest? "]
 
-i = 0
-for show in tv:
-    tv[i] = show.upper()
-    i += 1
-print(tv)
+n = 0
+while True:
+    print("type 'q' to quit.")
+    answer = input(questions[n])
+    if answer == 'q':
+        break
+    n = (n + 1) % 3
