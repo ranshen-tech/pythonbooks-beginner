@@ -104,6 +104,7 @@ for country in rivers.values():
     print(f"- {country.title()}")
 print()
 
+
 # 6-6
 favourite_languages = {
     'jen': 'python',
@@ -114,4 +115,16 @@ favourite_languages = {
 
 for name, language in favourite_languages.items():
     print(f"{name.title()}'s favourite language is {language.title()}.")
-print('f\nf')
+print()
+
+
+coders = ['phil', 'josh', 'david', 'becca', 'sarah', 'matt', 'danielle']
+for coder in coders:
+    if coder in favourite_languages.keys():
+        print(f'Thank you for taking the poll, {coder.title()}.')
+    else:
+        print(f"{coder.title()}, What's your favourite programming language?")
+print()
+
+
+# 6-7
