@@ -124,7 +124,41 @@ for coder in coders:
         print(f'Thank you for taking the poll, {coder.title()}.')
     else:
         print(f"{coder.title()}, What's your favourite programming language?")
-print()
 
 
 # 6-7
+people = []
+
+person = {
+    "first_name": "ran",
+    "last_name": "shen",
+    "age": 29,
+    "city": "huai nan",
+    }
+people.append(person)
+
+person = {
+    'first_name': 'zhu',
+    'last_name': 'yucheng',
+    'age': 29,
+    'city': 'huai nan',
+    }
+people.append(person)
+
+person = {
+    'first_name': 'zhou',
+    'last_name': 'fan',
+    'age': 28,
+    'city': 'shang hai',
+    }
+people.append(person)
+
+print(people)
+
+for i in people:
+    print('information:')
+    for key, value in i.items():
+        print(f"\n{key.title()}:\n\t{value.title()}")
+        print(f"{key.title()}:\n\t{value.title()}")
+        print(f"{key.title()}:\n\t{value.title()}")
+        print(f"{key.title()}:\n\t{value.title()}")
