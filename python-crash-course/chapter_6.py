@@ -152,13 +152,11 @@ person = {
     'city': 'shang hai',
     }
 people.append(person)
+print()
 
-print(people)
 
-for i in people:
-    print('information:')
-    for key, value in i.items():
-        print(f"\n{key.title()}:\n\t{value.title()}")
-        print(f"{key.title()}:\n\t{value.title()}")
-        print(f"{key.title()}:\n\t{value.title()}")
-        print(f"{key.title()}:\n\t{value.title()}")
+for person in people:
+    name = f"{person['first_name'].title()} {person['last_name'].title()}"
+    age = person['age']
+    city = person['city'].title()
+    print(f"{name}, of {city}, is {age} years old.")
