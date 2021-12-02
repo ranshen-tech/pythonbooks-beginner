@@ -224,3 +224,50 @@ for name, numbers in favourite_numbers.items():
     for number in numbers:
         print(f"- {number}")
 print()
+
+
+# 6-11
+cities = {
+    'santiago': {
+       'country': 'chile',
+       'population': 6_310_000,
+       'nearby mountains': 'andes',
+       },
+    'talkeetna': {
+       'country': 'united states',
+       'population': 876,
+       'nearby mountains': 'alaska range',
+       },
+    'kathmandu': {
+       'country': 'nepal',
+       'population': 975_453,
+       'nearby mountains': 'himilaya',
+       }
+    }
+
+for city, city_info in cities.items():
+    country = city_info['country'].title()
+    population = city_info['population']
+    mountains = city_info['nearby mountains'].title()
+
+    print(f"\n{city.title()} is in {country.title()}.")
+    print(f"\tIt has a population of about {population}.")
+    print(f"\tThe {mountains} mountains are nearby.")
+print()
+
+
+# 6-12
+favourite_languages = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python', 'rust'],
+    }
+
+for name, languages in favourite_languages.items():
+    if len(languages) == 1:
+        print(f"\n{name.title()}'s favourite language is {languages[0].title()}.")
+    elif len(languages) > 1:
+        print(f"\n{name.title()}'s favourite languages are:")
+        for language in languages:
+            print(f"\t{language.title()}")
