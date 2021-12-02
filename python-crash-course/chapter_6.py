@@ -63,5 +63,6 @@ print(f"\n{word.title()}:\n\t{glossary[word]}")
 word = 'dictionary'
 print(f"\n{word.title()}:\n\t{glossary[word]}")
 
-for name in glossary:
-    print(name)
+languages = ['python', 'c', 'c', 'ruby']
+
+print(set(languages))
