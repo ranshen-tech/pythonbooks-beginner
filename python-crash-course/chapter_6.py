@@ -82,6 +82,7 @@ for key, value in glossary.items():
     print(f"\n{key.title()}:\n\t{value}")
 print()
 
+
 # 6-5
 rivers = {
     'nile': 'egypt',
@@ -101,3 +102,16 @@ for river in rivers.keys():
 print("\nThe following countries are included in this data set:")
 for country in rivers.values():
     print(f"- {country.title()}")
+print()
+
+# 6-6
+favourite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+
+for name, language in favourite_languages.items():
+    print(f"{name.title()}'s favourite language is {language.title()}.")
+print('f\nf')
