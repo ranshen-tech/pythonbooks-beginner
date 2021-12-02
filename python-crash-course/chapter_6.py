@@ -160,3 +160,7 @@ for person in people:
     age = person['age']
     city = person['city'].title()
     print(f"{name}, of {city}, is {age} years old.")
+print()
+
+
+# 6-8
