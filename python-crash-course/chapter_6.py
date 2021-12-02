@@ -172,7 +172,7 @@ pet = {
     'owner': 'guido',
     'weight': 43,
     'eats': 'bugs',
-}
+    }
 pets.append(pet)
 
 pet = {
@@ -181,7 +181,7 @@ pet = {
     'owner': 'tiffany',
     'weight': 2,
     'eats': 'seeds',
-}
+    }
 pets.append(pet)
 
 pet = {
@@ -190,11 +190,26 @@ pet = {
     'owner': 'eric',
     'weight': 37,
     'eats': 'shoes',
-}
+    }
 pets.append(pet)
 
 for pet in pets:
     print(f"Here's what I know about {pet['name'].title()}:")
     for key, value in pet.items():
         print(f"\t{key}: {value}")
-print()
+
+
+# 6-9
+favourite_places = {
+    'eric': ['bear mountain', 'death valley', 'tierra del fuego'],
+    'erin': ['hawaii', 'iceland'],
+    'willie': ['mt. verstovia', 'the playground', 'new hampshire'],
+    }
+
+for name, places in favourite_places.items():
+    print(f"\n{name.title()} likes the following places:")
+    for place in places:
+        print(f"- {place.title()}")
+
+
+        
