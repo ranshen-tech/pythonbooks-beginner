@@ -147,8 +147,9 @@ def show_messages(messages):
     print("Showing all messages:")
     for message in messages:
        print(message)
-       
-def send_messages(messages, sent_messages): """打印每条消息，再将其移到列表 sent_messages 中。""" print("\nSending all messages:")
+
+def send_messages(messages, sent_messages):
+    """打印每条消息，再将其移到列表 sent_messages 中。""" print("\nSending all messages:")
 while messages:
        current_message = messages.pop()
        print(current_message)
