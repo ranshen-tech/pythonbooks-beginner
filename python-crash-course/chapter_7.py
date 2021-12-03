@@ -54,35 +54,57 @@
 
 
 # 7-8
-sandwich_orders =['veggie', 'grilled cheese', 'turkey', 'roast beef']
-finished_sandwiches = []
+# sandwich_orders =['veggie', 'grilled cheese', 'turkey', 'roast beef']
+# finished_sandwiches = []
 
-while sandwich_orders:
-    current_sandwich = sandwich_orders.pop()
-    print(f"I'm working on your {current_sandwich} sandwich.")
-    finished_sandwiches.append(current_sandwich)
+# while sandwich_orders:
+#     current_sandwich = sandwich_orders.pop()
+#     print(f"I'm working on your {current_sandwich} sandwich.")
+#     finished_sandwiches.append(current_sandwich)
 
-print()
-for sandwich in finished_sandwiches:
-    print(f"I made a {sandwich} sandwich.")
-print('\n')
+# print()
+# for sandwich in finished_sandwiches:
+#     print(f"I made a {sandwich} sandwich.")
+# print('\n')
 
 
-# 7-9
-sandwich_orders = [
-    'pastrami', 'veggie', 'grilled cheese', 'pastrami',
-    'turkey', 'roast beef', 'pastrami'
-    ]
-finished_sandwiches = []
+# # 7-9
+# sandwich_orders = [
+#     'pastrami', 'veggie', 'grilled cheese', 'pastrami',
+#     'turkey', 'roast beef', 'pastrami'
+#     ]
+# finished_sandwiches = []
 
-print("I'm sorry, we're all out of pastrami today.")
-while 'pastrami' in sandwich_orders:
-    sandwich_orders.remove('pastrami')
-print()
-while sandwich_orders:
-    current_sandwich = sandwich_orders.pop()
-    print(f"I'm working on your {current_sandwich} sandwich.")
-    finished_sandwiches.append(current_sandwich)
-print()
-for sandwich in finished_sandwiches:
-    print(f"I made a {sandwich} sandwich.")
+# print("I'm sorry, we're all out of pastrami today.")
+# while 'pastrami' in sandwich_orders:
+#     sandwich_orders.remove('pastrami')
+# print()
+# while sandwich_orders:
+#     current_sandwich = sandwich_orders.pop()
+#     print(f"I'm working on your {current_sandwich} sandwich.")
+#     finished_sandwiches.append(current_sandwich)
+# print()
+# for sandwich in finished_sandwiches:
+#     print(f"I made a {sandwich} sandwich.")
+# print('\n')
+
+
+# 7-10
+name_prompt = "\nWhat's your name? "
+place_prompt = 'If you could visit one place in the world,'
+place_prompt += 'where would you go? '
+continue_prompt = 'Would you like to let someone else respond? (yes/no) '
+
+responds = {}
+
+while True:
+    name = input(name_prompt)
+    place = input(place_prompt)
+    responds[name] = place
+    repeat = input(continue_prompt)
+    if repeat != 'yes':
+        break
+    
+print("\n--- Result ---")
+for name, place in responds.items():
+    print(f"{name.title()} would like to visit {place.title()}.")
