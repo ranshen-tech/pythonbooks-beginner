@@ -116,18 +116,18 @@ def make_album(artist, title, tracks=0):
 title_prompt = "\nWhat album are you thinking of? "
 artist_prompt = "Who's the artist? "
 # 让用户知道如何退出。
-print("Enter 'quit' at any time to stop.")
-while True:
-    title = input(title_prompt)
-    if title == 'quit':
-        break
-    artist = input(artist_prompt)
-    if artist == 'quit':
-       break
-    album = make_album(artist, title)
-    print(album)
-print("\nThanks for responding!")
-print()
+# print("Enter 'quit' at any time to stop.")
+# while True:
+#     title = input(title_prompt)
+#     if title == 'quit':
+#         break
+#     artist = input(artist_prompt)
+#     if artist == 'quit':
+#        break
+#     album = make_album(artist, title)
+#     print(album)
+# print("\nThanks for responding!")
+# print()
 
 
 # 8-9
@@ -174,6 +174,7 @@ def show_messages(messages):
     print("Showing all messages:")
     for message in messages:
        print(message)
+
 def send_messages(messages, sent_messages):
     """打印每条消息，再将其移到列表 sent_messages 中。"""
     print("\nSending all messages:")
@@ -187,5 +188,11 @@ show_messages(messages)
 
 sent_messages = []
 send_messages(messages[:], sent_messages)
+
 print("\nFinal lists:")
 print(messages)
+print(sent_messages)
+print()
+
+
+# 8-12
