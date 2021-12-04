@@ -245,6 +245,7 @@ print(my_old_accord)
 print()
 
 
+# 8-14
 def make_car(manufacturer, model, **options):
     """创建一个表示汽车的字典。"""
     options['manufacturer'] = manufacturer.title()
@@ -260,3 +261,29 @@ print(my_outback)
 my_old_accord = make_car('honda', 'accord', year=1991, color='white',
        headlights='popup')
 print(my_old_accord)
+
+
+# 8-15
+"""与打印 3D 模型相关的函数。"""
+def print_models(unprinted_designs, completed_models):
+    """
+    模拟打印每个设计，直到没有未打印的设计为止。 打印每个设计后，都将其移到列表 completed_models 中。
+    """
+    while unprinted_designs:
+       current_design = unprinted_designs.pop()
+# 模拟根据设计制作 3D 打印模型的过程。
+    print(f"Printing model: {current_design}")
+    completed_models.append(current_design)
+
+def show_completed_models(completed_models):
+    """显示打印好的所有模型。"""
+    print("\nThe following models have been printed:")
+    for completed_model in completed_models:
+       print(completed_model)
+ 
+# printing_models.py:
+import printing_functions as pf
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+pf.print_models(unprinted_designs, completed_models)
+pf.show_completed_models(completed_models)
