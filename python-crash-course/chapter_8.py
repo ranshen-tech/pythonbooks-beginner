@@ -206,3 +206,23 @@ def make_sandwich(*items):
 make_sandwich('roast beef', 'cheddar cheese', 'lettuce', 'honey dijon')
 make_sandwich('turkey', 'apple slices', 'honey mustard')
 make_sandwich('peanut butter', 'strawberry jam')
+
+
+# 8-13
+def build_profile(first, last, **user_info):
+    """创建一个字典，其中包含我们知道的有关用户的一切"""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+user_profile = build_profile('ran', 'shen',
+                             location='huai nan',
+                             field='CS',
+                             age=29,
+                             height='179cm',
+                             weight='67kg')
+print(f'\n{user_profile}')
+print()
+
+
+# 8-14
