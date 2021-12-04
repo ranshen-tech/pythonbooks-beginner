@@ -242,3 +242,19 @@ print(my_outback)
 my_old_accord = make_car('honda', 'accord', year=1991, color='white',
        headlights='popup')
 print(my_old_accord)
+
+
+def make_car(manufacturer, model, **options):
+    """创建一个表示汽车的字典。"""
+    options['manufacturer']: manufacturer.title()
+    options['model']: model.title()
+    for option, value in options.items():
+        options[option] = value
+    
+    return options
+my_outback = make_car('subaru', 'outback', color='blue', tow_package=True)
+print(my_outback)
+ 
+my_old_accord = make_car('honda', 'accord', year=1991, color='white',
+       headlights='popup')
+print(my_old_accord)
