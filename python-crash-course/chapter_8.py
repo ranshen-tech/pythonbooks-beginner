@@ -242,13 +242,13 @@ print(my_outback)
 my_old_accord = make_car('honda', 'accord', year=1991, color='white',
        headlights='popup')
 print(my_old_accord)
-print('\n')
+print()
 
 
 def make_car(manufacturer, model, **options):
     """创建一个表示汽车的字典。"""
-    options['manufacturer']: manufacturer
-    options['model']: model
+    options['manufacturer'] = manufacturer.title()
+    options['model'] = model.title()
     for option, value in options.items():
         options[option] = value
     
