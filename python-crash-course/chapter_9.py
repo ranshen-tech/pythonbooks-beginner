@@ -132,7 +132,7 @@ print(f"Number served: {restaurant.number_served}")
 # 9-5
 class User():
     """一个表示用户的简单类。"""
-    
+
     def __init__(self, first_name, last_name, username, email, location):
         """初始化用户."""
         self.first_name = first_name.title()
@@ -164,11 +164,13 @@ class User():
 eric = User('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska')
 eric.describe_user()
 eric.greet_user()
+
 print("\nMaking 3 login attempts...")
 eric.increment_login_attempts()
 eric.increment_login_attempts()
 eric.increment_login_attempts()
 print(f" Login attempts: {eric.login_attempts}")
+
 print("Resetting login attempts...")
 eric.reset_login_attempts()
 print(f" Login attempts: {eric.login_attempts}")
