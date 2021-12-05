@@ -283,3 +283,5 @@ eric.privileges = [
     'can suspend accounts',
     ]
 eric.show_privileges()
+
+
