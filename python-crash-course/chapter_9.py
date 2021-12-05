@@ -245,19 +245,37 @@ class User():
         print(f" Username: {self.username}")
         print(f" Email: {self.email}")
         print(f" Location: {self.location}")
-def greet_user(self): """向用户发出个性化问候。""" print(f"\nWelcome back, {self.username}!")
-def increment_login_attempts(self): """将属性 login_attempts 的值加 1。""" self.login_attempts += 1
-def reset_login_attempts(self): """将 login_attempts 重置为 0。""" self.login_attempts = 0
-class Admin(User): """有管理权限的用户。"""
-·69·
-练习答案
- 
-def __init__(self, first_name, last_name, username, email, location): """初始化管理员。"""
-super().__init__(first_name, last_name, username, email, location) self.privileges = []
-def show_privileges(self): """显示当前管理员的权限。""" print("\nPrivileges:")
-for privilege in self.privileges:
+
+    def greet_user(self):
+        """向用户发出个性化问候。"""
+        print(f"\nWelcome back, {self.username}!")
+
+    def increment_login_attempts(self):
+        """将属性 login_attempts 的值加 1。"""
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        """将 login_attempts 重置为 0。"""
+        self.login_attempts = 0
+
+
+class Admin(User):
+    """有管理权限的用户。"""
+
+    def __init__(self, first_name, last_name, username, email, location):
+        """初始化管理员。"""
+        super().__init__(first_name, last_name, username, email, location)
+        self.privileges = []
+
+    def show_privileges(self):
+        """显示当前管理员的权限。"""
+        print("\nPrivileges:")
+        for privilege in self.privileges:
            print(f"- {privilege}")
-eric = Admin('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska') eric.describe_user()
+
+eric = Admin('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska')
+
+eric.describe_user()
 eric.privileges = [
     'can reset passwords',
     'can moderate discussions',
