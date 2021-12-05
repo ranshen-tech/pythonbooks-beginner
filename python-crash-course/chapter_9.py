@@ -323,11 +323,17 @@ class Admin(User):
 
     def __init__(self, first_name, last_name, username, email, location):
         """初始化管理员。"""
-super().__init__(first_name, last_name, username, email, location)
-# 将权限集初始化为空。 self.privileges = Privileges()
-class Privileges(): """一个存储管理员权限的类。"""
+        super().__init__(first_name, last_name, username, email, location)
+        # 将权限集初始化为空。
+        self.privileges = Privileges()
+
+
+class Privileges():
+    """一个存储管理员权限的类。"""
+    
     def __init__(self, privileges=[]):
        self.privileges = privileges
+    
     def show_privileges(self):
        print("\nPrivileges:")
        if self.privileges:
@@ -335,17 +341,19 @@ class Privileges(): """一个存储管理员权限的类。"""
                print(f"- {privilege}")
        else:
            print("- This user has no privileges.")
-eric = Admin('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska') eric.describe_user()
+
+eric = Admin('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska')
+
+eric.describe_user()
 eric.privileges.show_privileges()
+
 print("\nAdding privileges...")
+
 eric_privileges = [
     'can reset passwords',
-    'can moderate discussions',
-·72·
-
-练习答案
- 
-'can suspend accounts',
+    'can moderate discussions', 
+    'can suspend accounts',
     ]
+    
 eric.privileges.privileges = eric_privileges
 eric.privileges.show_privileges()
