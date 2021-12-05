@@ -215,12 +215,14 @@ def build_profile(first, last, **user_info):
     user_info['last_name'] = last
     return user_info
 
-user_profile = build_profile('ran', 'shen',
-                             location='huai nan',
-                             field='CS',
-                             age=29,
-                             height='179cm',
-                             weight='67kg')
+user_profile = build_profile(
+    'ran', 'shen',
+    location='huai nan',
+    field='CS',
+    age=29,
+    height='179cm',
+    weight='67kg'
+    )
 print(f'\n{user_profile}')
 print()
 
