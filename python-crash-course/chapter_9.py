@@ -359,11 +359,13 @@ eric.privileges.privileges = eric_privileges
 eric.privileges.show_privileges()
 
 # 9-9
-class Car(): """一次模拟汽车的简单尝试。"""
-def __init__(self, manufacturer, model, year): """初始化描述汽车的属性。""" self.manufacturer = manufacturer self.model = model
-·73·
-练习答案
-         self.year = year
+class Car():
+    """一次模拟汽车的简单尝试。"""
+    def __init__(self, manufacturer, model, year):
+        """初始化描述汽车的属性。"""
+        self.manufacturer = manufacturer
+        self.model = model
+        self.year = year
        self.odometer_reading = 0
 def get_descriptive_name(self):
 """返回整洁的描述性信息。"""
