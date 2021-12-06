@@ -354,6 +354,7 @@ eric_privileges = [
     'can moderate discussions', 
     'can suspend accounts',
     ]
-    
+
 eric.privileges.privileges = eric_privileges
 eric.privileges.show_privileges()
+
