@@ -1,9 +1,10 @@
-for row in range(1, 3):
-    for col in range(1, 3):
+for row in range(1, 10):
+    for col in range(1, 10):
         prod = row * col
         if prod < 10:
-            print('', end='')
-        print(prod, '', end='')
+            print(' ', end='')
+        print(prod, ' ', end='')
+    print()
 
 # print(0, 0, 0, 0)
 # print(1, 1, 1, 1)
