@@ -361,6 +361,7 @@ eric.privileges.show_privileges()
 # 9-9
 class Car():
     """一次模拟汽车的简单尝试。"""
+    
     def __init__(self, manufacturer, model, year):
         """初始化描述汽车的属性。"""
         self.manufacturer = manufacturer
