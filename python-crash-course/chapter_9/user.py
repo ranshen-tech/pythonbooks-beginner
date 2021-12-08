@@ -1,12 +1,11 @@
-# 9-11
-"""一系列模拟用户的类。"""
+# 9-12
+"""一个模拟用户的类。"""
 
 class User():
     """一个表示用户的简单类。"""
-    
+
     def __init__(self, first_name, last_name, username, email, location):
         """初始化用户。"""
-
         self.first_name = first_name.title()
         self.last_name = last_name.title()
         self.username = username
@@ -21,7 +20,7 @@ class User():
         print(f" Email: {self.email}")
         print(f" Location: {self.location}")
 
-    def greet_user(self):
+    def greet_user(self): 
         """向用户发出个性化问候。"""
         print(f"\nWelcome back, {self.username}!")
 
@@ -32,28 +31,3 @@ class User():
     def reset_login_attempts(self):
         """将 login_attempts 重置为 0。"""
         self.login_attempts = 0
-
-
-class Admin(User):
-    """有管理权限的用户。"""
- 
-    def __init__(self, first_name, last_name, username, email, location):
-        """初始化管理员。"""
-        super().__init__(first_name, last_name, username, email, location)
-        # 将权限集初始化为空。
-        self.privileges = Privileges()
-
-
-class Privileges():
-    """存储管理员权限的类。"""
-    
-    def __init__(self, privileges=[]):
-       self.privileges = privileges
-    
-    def show_privileges(self):
-       print("\nPrivileges:")
-       if self.privileges:
-           for privilege in self.privileges:
-               print(f"- {privilege}")
-       else:
-           print("- This user has no privileges.")
