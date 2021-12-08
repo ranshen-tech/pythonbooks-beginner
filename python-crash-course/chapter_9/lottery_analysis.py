@@ -33,7 +33,7 @@ def make_random_ticket(possibilities):
 
         # 仅当随机生成的数字或字母不在彩票中时，才将其添加到彩票中。
         if pulled_item not in ticket:
-           ticket.append(pulled_item)
+            ticket.append(pulled_item)
     return ticket
 
 possibilities = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'a', 'b', 'c', 'd', 'e']
@@ -53,7 +53,7 @@ while not won:
         break
 
 if won:
-    print("We have a winning ticket!")
+    print("\nWe have a winning ticket!")
     print(f"Your ticket: {new_ticket}")
     print(f"Winning ticket: {winning_ticket}")
     print(f"It only took {plays} tries to win!")
