@@ -1,4 +1,3 @@
-
 CHAR = '*'
 def rectangle(height, width):
     """prints the rectangle."""
@@ -7,4 +6,7 @@ def rectangle(height, width):
             print(CHAR, end='')
         print()
 
-rectangle(2, 3)
+def square(side):
+    """prints a square."""
+    rectangle(side, side)
+
