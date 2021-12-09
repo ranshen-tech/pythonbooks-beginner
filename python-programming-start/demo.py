@@ -1,3 +1,4 @@
+
 CHAR = '*'
 def rectangle(height, width):
     """prints the rectangle."""
