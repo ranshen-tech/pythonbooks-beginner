@@ -1,45 +1,32 @@
-from random import choice
+# import math
 
-def get_winning_ticket(possibilities):
-    winning_ticket = []
-    while len(winning_ticket) < 3:
-        pulled_item = choice(possibilities)
-        if pulled_item not in winning_ticket:
-            winning_ticket.append(pulled_item)
-    return winning_ticket
+# def area(radius):
+#     """returns the area of a circle with the given radius.
+#     for example:
+#         >>> print(area(1))
+#         3.141592653589793
+#     """
+#     return math.pi * radius ** 2
 
-def check_ticket(played_ticket, winning_ticket):
-    for element in played_ticket:
-       if element not in winning_ticket:
-           return False
-    return True
+# print(area(1))
+# print(area(5.5))
+# print(2 * ((area(3) + area(4))))
+# print(area.__doc__)
 
-def make_random_ticket(possibilities):
-    my_ticket = []
-    while len(my_ticket) < 3:
-        pulled_item = choice(possibilities)
-        if pulled_item not in my_ticket:
-            my_ticket.append(pulled_item)
-    return my_ticket
+# def main():
+#     password = input("What's your password? ")
+#     if password == 'apple':
+#         print("Logging on...")
+#     else:
+#         print("Incorrect password.")
+#     print("All Done.")
 
-possibilities = [1, 2, 3, 'a', 'b', 'c']
-winning_ticket = get_winning_ticket(possibilities)
-plays = 0
-won = False
-max_tries = 10
+# main()
 
-while not won:# True
-    my_ticket = make_random_ticket(possibilities)
-    won = check_ticket(my_ticket, winning_ticket)
-    plays += 1
-    if plays >= max_tries:
-        break
-if won:
-    print("\nWe have a winning ticket!")
-    print(f"Your ticket: {my_ticket}")
-    print(f"Winning ticket: {winning_ticket}")
-    print(f"It only took {plays} tries to win!")
-else:
-    print(f"Tried {plays} times, without pulling a winner. :(")
-    print(f"Your ticket: {my_ticket}")
-    print(f"Winning ticket: {winning_ticket}")
+def set1(x):
+    x = 1
+    return x
+
+m = 5
+print(set1(m))
+print(set1(5))
