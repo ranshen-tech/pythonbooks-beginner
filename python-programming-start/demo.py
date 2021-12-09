@@ -6,4 +6,4 @@ def rectangle(height, width):
             print(CHAR, end='')
         print()
 
-rectangle(3, 5)
+rectangle(2, 3)
