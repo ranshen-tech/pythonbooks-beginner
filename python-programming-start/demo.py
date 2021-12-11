@@ -1,2 +1,2 @@
-name = '-  . -ran shen-   . - '
-print(name.strip('-. -'))
+name = 'a bb   cran shenc bb aa    . -'
+print(name.rpartition('aa'))
