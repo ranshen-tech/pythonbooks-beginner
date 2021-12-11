@@ -1,2 +1,2 @@
-name = 'ran shen'
-print(name.center(20, '*'))
+name = '-  . -ran shen-   . - '
+print(name.strip('-. -'))
