@@ -1,24 +1,10 @@
-CHAR = '*'
-def rectangle(height, width):
-    """prints the rectangle."""
-    for row in range(height):
-        for col in range(width):
-            print(CHAR, end='')
-        print()
+def codesum(s):
+    """Returns the sums of the character codes of s."""
+    total = 0
+    for c in s:
+        total = total + ord(c)
+    return total
 
-def square(side):
-    """prints a square."""
-    rectangle(side, side)
+print(codesum('ranshen'))
 
-def triangle(height):
-    """prints a right triangle."""
-    for row in range(height):
-        for col in range(1, row+2):
-            print(CHAR, end='')
-        print()
-
-rectangle(2, 2)
-print()
-square(2)
-print()
-triangle(3)
+print(ord.__doc__)
