@@ -1,1 +1,1 @@
-import shapes
+print(dir(''))
