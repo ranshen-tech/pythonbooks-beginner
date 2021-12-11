@@ -1,2 +1,2 @@
-name = 'ran'
-print(name.center(9, 'cna'))
+name = 'ran shen'
+print(name.center(20, '*'))
