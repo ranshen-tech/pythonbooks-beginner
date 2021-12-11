@@ -1,2 +1,2 @@
-name = 'a bb   cran shenc bb aa    . -'
-print(name.rpartition('aa'))
+url = www.baidu.com
+
