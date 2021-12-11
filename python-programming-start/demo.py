@@ -1,2 +1,3 @@
-url = www.baidu.com
+url = 'www.baidu.com'
 
+print(url.split('.'))
