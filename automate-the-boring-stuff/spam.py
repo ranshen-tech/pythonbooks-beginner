@@ -1,7 +1,3 @@
-spam = [3.14, 'cat', 11, 'cat', True]
-
-spam.append(99)
-print(spam)
-
-spam.remove('cat')
-print(spam)
+spam = {'name': 'Pooka', 'age': 5}
+if 'color' not in spam:
+    spam['color'] = 'black'
