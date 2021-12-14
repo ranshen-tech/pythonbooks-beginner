@@ -6,7 +6,7 @@ all_guests = {
 
 def total_brought(guests, item):
     num_brought = 0
-    for key, value in guests.items():
+    for value in guests.values():
         num_brought += value.get(item, 0)
     return num_brought
 
