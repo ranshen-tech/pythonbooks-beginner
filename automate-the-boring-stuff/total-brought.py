@@ -7,12 +7,12 @@ all_guests = {
 def total_brought(guests, item):
     num_brought = 0
     for key, value in guests.items():
-        num_brought = num_brought + value.get(item, 0)
+        num_brought += value.get(item, 0)
     return num_brought
 
 print('Number of things being brought:')
-print(' - Apples ' + str(total_brought(all_guests, 'apples')))
-print(' - Cups ' + str(total_brought(all_guests, 'cups')))
+print(f" - Apples {total_brought(all_guests, 'apples')}")
+print(f" - Cups {total_brought(all_guests, 'cups')}")
 print(f" - Cakes {total_brought(all_guests, 'cakes')}")
 print(f" - Ham Sandwiches {total_brought(all_guests, 'ham sandwiches')}")
 print(f" - Apple Pies {total_brought(all_guests, 'apple pies')}")
