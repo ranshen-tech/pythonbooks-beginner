@@ -1,3 +1,5 @@
 Shawn Ran
 python
 2021.12.20
+2021.12.21
+consolidation exercise1
