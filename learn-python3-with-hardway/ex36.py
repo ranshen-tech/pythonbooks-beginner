@@ -6,15 +6,10 @@ def dead(why):
     exit(0)
 
 def start():
-    print("""
-    A forest is in front of you.
-    What are you going to do ?
-    """)
-    
+    print("A forest is in front of you. What are you going to do ?")
     choice = input(">>> ")
     a = choice.find('straight')
     b = choice.find('back')
-
     if a != -1:
         dead('You dead in the forest due to the fear.')
     elif b != -1:
