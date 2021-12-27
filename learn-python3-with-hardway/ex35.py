@@ -4,11 +4,6 @@ def gold_room():
     print("This room is full of gold. How much do you take?")
 
     how_much = int(input("> "))
-    # if '0' in choice or '1' in choice:
-    #     how_much = int(choice)
-    # else:
-    #     dead("Man, learn to type a number.")
-
     if how_much < 50:
         print("Nice, you're not greedy, you win!")
         exit(0)
@@ -21,6 +16,7 @@ def bear_room():
     print("The bear has a bunch of honey.")
     print("The fat bear is in front of another door.")
     print("How are you going to move the bear?")
+    # False代表熊在睡觉
     bear_moved = False
 
     while True:
