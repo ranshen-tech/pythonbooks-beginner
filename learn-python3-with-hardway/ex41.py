@@ -43,4 +43,5 @@ def convert(snippet, phrase):
         param_names.append(','.join(random.sample(WORDS, param_count)))
 
 
-    
+    for sentence in snippet, phrase:
+        
