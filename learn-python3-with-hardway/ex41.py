@@ -12,7 +12,7 @@ PHRASES = {
         "class %%% has-a __init__ that takes self and *** params.",
     "class %%%(object):\n\tdef ***(self, @@@)":
         "class %%% has-a function *** that takes self and @@@params.",
-    "*** == %%%()":
+    "*** = %%%()":
         "Set *** to an instance of class %%%.",
     "***.***(@@@)":
         "From *** get the *** function, call it with params self, @@@.",
@@ -78,6 +78,6 @@ try:
             print(question)
 
             input('> ')
-            print(f"ANSWER: {answer}/n/n")
+            print(f"ANSWER: {answer}\n\n")
 except EOFError:
     print("\nBye")
