@@ -6,7 +6,7 @@ class Animal(object):
 class Dog(Animal):
     
     def __init__(self, name):
-        ## ??
+        # has-a
         self.name = name
 
 # is-a
@@ -30,7 +30,7 @@ class Person(object):
 class Employee(Person):
 
     def __init__(self, name, salary):
-        # hmm what is this strange magic?
+        # hmm what is this strange magic? has-a
         super(Employee, self).__init__(name)
         # has-a
         self.salary = salary
@@ -57,13 +57,13 @@ satan = Cat('satan')
 # is-a
 mary = Person("Mary")
 
-# is-a
+# has-a
 mary.pet = satan
 
-# is-a
+# is-a has-a
 frank = Employee("Frank", 120000)
 
-# is-a
+# has-a
 frank.pet = rover
 
 # is-a
