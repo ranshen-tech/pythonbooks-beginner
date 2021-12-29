@@ -38,3 +38,11 @@ class Employee(Person):
 ## ??
 class Fish(object):
     pass
+
+## ??
+class Salmon(Fish):
+    pass
+
+## ??
+class Halibut(Fish):
+    pass
