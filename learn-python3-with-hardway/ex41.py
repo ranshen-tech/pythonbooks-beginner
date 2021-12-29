@@ -2,8 +2,8 @@ import random
 from urllib.request import urlopen
 import sys
 
-WORL_URL = "http://learncodethehardway.org/word.txt"
-WORL_URL = []
+WORD_URL = "http://learncodethehardway.org/word.txt"
+WORDS = []
 
 PHRASES = {
     "class %%%(%%%):":
@@ -27,7 +27,7 @@ else:
     PHRASE_FIRST = False
 
 # load up the words from the website
-for word in urlopen('WORD_URL').readlines():
+for word in urlopen(WORD_URL).readlines():
     WORDS.append(str(word.strip(), encoding='utf-8'))
 
 
