@@ -103,5 +103,4 @@ class CentralCorridor(Scene):
 
         else:
             print("Does Not Compute!")
-
-        return 'central_corridor'
+            return 'central_corridor'
