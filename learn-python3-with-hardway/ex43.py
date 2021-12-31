@@ -10,7 +10,7 @@ class Scene(object):
 
 
 class Engine(object):
-    def __init__(self, scene_map):
+    def __init__(self, scene_map):# self.start_scene = 'central_corridor'
         self.scene_map = scene_map
 
     def play(self):
@@ -28,7 +28,7 @@ class Death(Scene):
         "You died. You kinda suck at this.",
         "Your mom would be proud...if she were smarter.",
         "Such a luser.",
-        "I have a small puppy that's better at this."# ,
+        "I have a small puppy that's better at this.",
         "You're worse than your Dad's jokes."
     ]
     def enter(self):
@@ -126,7 +126,7 @@ class Map(object):
 	}
 	
 	def __init__(self, start_scene):
-		self.start_scene = start_scene
+		self.start_scene = start_scene # self.start_scene = 'central_corridor'
 		
 	def next_scene(self, scene_name):
 		val = Map.scenes.get(scene_name)
