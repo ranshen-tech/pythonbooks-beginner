@@ -1,6 +1,6 @@
 import json
 # 如果以前存储了用户名，就加载它。否则，提示用户输入用户名并存储它。
-filename = 'username.jsons'
+filename = 'username.json'
 try:
     with open(filename) as f:
         username = json.load(f)
