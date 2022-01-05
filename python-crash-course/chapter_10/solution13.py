@@ -19,20 +19,16 @@ def get_new_username():
        json.dump(username, f_obj)
     return username
 
-def check_username():
-    """检查用户名是否正确"""
-    username = get_stored_username()
-    if username:
-        correct = input(f"Are you {username}? (y/n) ")
-        return correct
-
 def greet_user():
     """基于用户名问候用户。"""
-
-    if check_username() == 'y':
-        print(f"Welcome back, {check_username()}!")
-        return
-
+    username = get_stored_username()
+    if username:
+       correct = input(f"Are you {username}? (y/n) ")
+       if correct == 'y':
+           print(f"Welcome back, {username}!")
+           return
+    # 获得了用户名，但不对。
+    # 因此提示用户输入其用户名。
     username = get_new_username()
     print(f"We'll remember you when you come back, {username}!")
 
