@@ -13,3 +13,5 @@ print(a)
 print(b, c)
 
 print(dir(threenames))
+
+import module1
