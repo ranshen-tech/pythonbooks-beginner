@@ -1,2 +1,3 @@
-print(len(str(2 ** 100)))
-print(2 ** 100)
+import random
+print(random.random())
+print(random.choice([1, 2, 3, 4]))
