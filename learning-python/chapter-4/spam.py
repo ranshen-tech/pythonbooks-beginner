@@ -20,6 +20,5 @@ print('{0}, eggs, and {1}'.format('spam', 'Spam!'))
 print('{}, eggs, and {}'.format('spam', 'Spam!'))
 print('{:,.2f}'.format(3.1415926))
 
-print(dir(S))
-
-print(help(S.replace))
+print(dir(str))
+print(help(str.replace))
