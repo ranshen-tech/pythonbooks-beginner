@@ -20,5 +20,13 @@ print('{0}, eggs, and {1}'.format('spam', 'Spam!'))
 print('{}, eggs, and {}'.format('spam', 'Spam!'))
 print('{:,.2f}'.format(3.1415926))
 
-print(dir(str))
-print(help(str.replace))
+# print(dir(str))
+# print(help(str.replace))
+
+S = 'A\nB\tC'
+print(S)
+print(len(S))
+print(ord('\n'))
+S = 'A\0B\0C'
+print(S)
+print(len(S))
