@@ -30,3 +30,31 @@ print(ord('\n'))
 S = 'A\0B\0C'
 print(S)
 print(len(S))
+
+msg = """
+aaaaaaaaa
+bbb'''bbbbbb""bbbbbbb'bbbb
+cccccccccc
+"""
+print(msg)
+
+M = ['bb', 'aa', 'cc']
+M.sort()
+print(M)
+M.reverse()
+print(M)
+
+M = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+
+col = [row[1] for row in M]
+print(col)
+print([row[1] + 1 for row in M])
+print([row[1] for row in M if row[1] % 2 == 0])
+
+diag = [M[i][i] for i in [0, 1, 2]]
+print(diag)
+
+doubles = [c * 2 for c in 'spam']
+print(doubles)
