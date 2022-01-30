@@ -135,6 +135,8 @@ value = D['x'] if 'x' in D else 0
 print(value)
 
 # 键的排序: for循环
+D = {'a': 1, 'b': 2, 'c': 3}
+print(D)
 Ks = list(D.keys())
 print(Ks)
 Ks.sort()
@@ -142,4 +144,7 @@ print(Ks)
 Ks.reverse()
 print(Ks)
 for key in Ks:
+    print(key, '=>', D[key])
+print(sorted(D, reverse=True))
+for key in sorted(D, reverse=True):
     print(key, '=>', D[key])
