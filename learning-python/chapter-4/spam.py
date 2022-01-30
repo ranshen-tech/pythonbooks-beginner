@@ -98,3 +98,13 @@ bob1 = dict(name = 'Bob', job = 'dev', age = 40)
 print(bob1)
 bob2 = dict(zip(['name', 'job', 'age'], ['Bob', 'dev', 40]))
 print(bob2)
+
+rec = {'name': {'first': 'Bob', 'last': 'Smith'},
+       'job': ['dev', 'mgr'],
+       'age': 40.5}
+print(rec['name'])
+print(rec['name']['last'])
+print(rec['job'])
+print(rec['job'][-1])
+rec['job'].append('janitor')
+print(rec)
