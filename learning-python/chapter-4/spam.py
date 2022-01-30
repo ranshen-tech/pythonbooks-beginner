@@ -93,3 +93,8 @@ D['job'] = 'dev'
 D['age'] = 40
 print(D)
 print(D['name'])
+
+bob1 = dict(name = 'Bob', job = 'dev', age = 40)
+print(bob1)
+bob2 = dict(zip(['name', 'job', 'age'], ['Bob', 'dev', 40]))
+print(bob2)
