@@ -71,3 +71,25 @@ print(next(G))
 print(next(G))
 
 print(list(map(sum, M)))
+
+print({sum(row) for row in M})
+print({i : sum(M[i]) for i in range(3)})
+
+print([ord(x) for x in 'spaam'])
+print({ord(x) for x in 'spamm'})
+print({x : ord(x) for x in 'spamm'})
+print((ord(x) for x in 'spamm'))
+
+
+# 字典
+D = {'food': 'Spam', 'quantity': 4, 'color': 'pink'}
+print(D['food'])
+D['quantity'] += 1
+print(D)
+
+D = {}
+D['name'] = 'Bob'
+D['job'] = 'dev'
+D['age'] = 40
+print(D)
+print(D['name'])
