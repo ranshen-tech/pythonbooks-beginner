@@ -156,3 +156,12 @@ x = 4
 while x > 0:
     print('spam!' * x)
     x -= 1
+
+# 迭代和优化
+squares = [x ** 2 for x in [1, 2, 3, 4, 5]]
+print(squares)
+
+squares = []
+for x in [1, 2, 3, 4, 5]:
+    squares.append(x ** 2)
+print(squares)
