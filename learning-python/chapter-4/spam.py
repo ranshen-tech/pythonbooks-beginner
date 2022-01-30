@@ -171,3 +171,13 @@ print(squares)
 T = (1, 2, 3, 4)
 print(len(T))
 
+T = T + (5, 6)
+print(T)
+
+print(T[0])
+
+print(T.index(6))
+print(T.count(4))
+
+T = (2,) + T[1:]
+print(T)
