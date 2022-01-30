@@ -123,3 +123,7 @@ D = dict(zip(['a', 'b', 'c'], [1, 2, 3]))
 print(D)
 D['e'] = 99
 print(D)
+
+print('f' in D)
+if not 'f' in D:
+    print('missing')
