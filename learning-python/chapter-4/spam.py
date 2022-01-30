@@ -128,3 +128,8 @@ print('f' in D)
 if not 'f' in D:
     print('missing')
     print('no, really...')
+
+value = D.get('x', 0)
+print(value)
+value = D['x'] if 'x' in D else 0
+print(value)
