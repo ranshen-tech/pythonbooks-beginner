@@ -133,3 +133,13 @@ value = D.get('x', 0)
 print(value)
 value = D['x'] if 'x' in D else 0
 print(value)
+
+# 键的排序: for循环
+Ks = list(D.keys())
+print(Ks)
+Ks.sort()
+print(Ks)
+Ks.reverse()
+print(Ks)
+for key in Ks:
+    print(key, '=>', D[key])
