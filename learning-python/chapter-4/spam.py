@@ -82,6 +82,7 @@ print((ord(x) for x in 'spamm'))
 
 
 # 字典
+# 映射操作
 D = {'food': 'Spam', 'quantity': 4, 'color': 'pink'}
 print(D['food'])
 D['quantity'] += 1
@@ -99,6 +100,7 @@ print(bob1)
 bob2 = dict(zip(['name', 'job', 'age'], ['Bob', 'dev', 40]))
 print(bob2)
 
+# 重访嵌套
 rec = {'name': {'first': 'Bob', 'last': 'Smith'},
        'job': ['dev', 'mgr'],
        'age': 40.5}
@@ -111,3 +113,13 @@ print(rec)
 
 rec = 0
 print(rec)
+
+# 不存在的键: if测试
+D = {'a': 1, 'b': 2, 'c': 3}
+print(D)
+D = dict(a = 1, b = 2, c = 3)
+print(D)
+D = dict(zip(['a', 'b', 'c'], [1, 2, 3]))
+print(D)
+D['e'] = 99
+print(D)
