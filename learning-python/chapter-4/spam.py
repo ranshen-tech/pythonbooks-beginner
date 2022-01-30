@@ -127,3 +127,4 @@ print(D)
 print('f' in D)
 if not 'f' in D:
     print('missing')
+    print('no, really...')
