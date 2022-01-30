@@ -165,3 +165,9 @@ squares = []
 for x in [1, 2, 3, 4, 5]:
     squares.append(x ** 2)
 print(squares)
+
+
+# 元组
+T = (1, 2, 3, 4)
+print(len(T))
+
