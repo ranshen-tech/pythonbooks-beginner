@@ -108,3 +108,6 @@ print(rec['job'])
 print(rec['job'][-1])
 rec['job'].append('janitor')
 print(rec)
+
+rec = 0
+print(rec)
