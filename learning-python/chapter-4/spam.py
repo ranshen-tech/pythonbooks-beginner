@@ -146,5 +146,8 @@ print(Ks)
 for key in Ks:
     print(key, '=>', D[key])
 print(sorted(D, reverse=True))
-for key in sorted(D, reverse=True):
+for key in sorted(D):
     print(key, '=>', D[key])
+
+for c in 'spam':
+    print(c.upper())
