@@ -74,3 +74,8 @@ print(bob.lastName())
 print(sue.lastName())
 sue.giveRaise(0.10)
 print(sue.pay)
+
+a = (1, 2)
+b = (3, 4)
+print(a, b)
+print(a + b)
