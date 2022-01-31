@@ -23,3 +23,20 @@ print(packed)
 
 file = open("data.bin", "wb")
 print(file.write(packed))
+file.close()
+
+data = open("data.bin", "rb").read()
+print(data)
+print(data[4:8])
+print(list(data))
+print(struct.unpack(">i4sh", data))
+
+
+# unicode 文本文件
+S = "sp\xc4m"
+print(S)
+print(S[2])
+
+file = open("unidata.txt", "w", encoding="utf-8")
+print(file.write(S))
+file.close()
