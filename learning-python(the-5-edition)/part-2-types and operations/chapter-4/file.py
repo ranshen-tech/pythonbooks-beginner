@@ -40,3 +40,26 @@ print(S[2])
 file = open("unidata.txt", "w", encoding="utf-8")
 print(file.write(S))
 file.close()
+
+text = open("unidata.txt", encoding="utf-8").read()
+print(text)
+print(len(text))
+
+raw = open("unidata.txt", "rb").read()
+print(raw)
+print(len(raw))
+
+print(text.encode("utf-8"))
+print(raw.decode("utf-8"))
+
+print(text.encode("latin-1"))
+print(text.encode("utf-16"))
+
+print(len(text.encode("latin-1")), len(text.encode("utf-16")))
+print(text.encode("utf-16").decode("utf-16"))
+
+import codecs
+
+print(codecs.open("unidata.txt", encoding="utf-8").read())
+print(open("unidata.txt", "rb").read())
+print(open("unidata.txt").read())
