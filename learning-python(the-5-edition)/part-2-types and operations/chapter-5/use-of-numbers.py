@@ -82,4 +82,6 @@ print(5 / 2.0, 5 / -2.0)
 print(5 // 2.0, 5 // -2.0)
 print(int(2.5), int(-2.5))
 
-print()
+print(5 / -2)
+print(5 // -2)
+print(math.trunc(5 / -2))
