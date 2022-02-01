@@ -40,3 +40,20 @@ Z = 6
 
 print(X < Y < Z)
 print(X < Y and Y < Z)
+
+print(X < Y > Z)
+print(X < Y and Y > Z)
+
+print(1 < 2 < 3.0 < 4)
+print(1 > 2 > 3.0 > 4)
+
+# same as: 1 == 2 and 2 < 3
+# not same as: False < 3 (which means 0 < 3)
+print(1 == 2 < 3)
+
+print(1.1 + 2.2 == 3.3)
+print(1.1 + 2.2)
+print(int(1.1 + 2.2) == int(3.3))
+
+
+# 除法：经典除法、向下取整除法和真除法
