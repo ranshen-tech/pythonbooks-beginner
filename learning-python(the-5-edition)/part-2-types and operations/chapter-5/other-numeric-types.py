@@ -19,3 +19,5 @@ print(Decimal(1) / Decimal(7))
 
 decimal.getcontext().prec = 4
 print(Decimal(1) / Decimal(7))
+
+print(Decimal(0.1) + Decimal(0.1) + Decimal(0.1) - Decimal(0.3))
