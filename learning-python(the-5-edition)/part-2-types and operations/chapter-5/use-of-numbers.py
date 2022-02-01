@@ -178,3 +178,20 @@ print(pow(144, 0.5))
 print(math.sqrt(1234567890))
 print(1234567890**0.5)
 print(pow(1234567890, 0.5))
+
+import random
+
+print(random.random())
+print(random.random())
+print(random.randint(1, 10))
+print(random.randint(1, 5))
+
+print(random.choice(["Life of Brian", "Holy Grail", "Meaning of Life"]))
+print(random.choice(["Life of Brian", "Holy Grail", "Meaning of Life"]))
+
+suits = ["hearts", "clubs", "diamonds", "spades"]
+print(suits)
+random.shuffle(suits)
+print(suits)
+random.shuffle(suits)
+print(suits)
