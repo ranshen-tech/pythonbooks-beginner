@@ -23,3 +23,20 @@ print(num)
 print("%e" % num)
 print("%4.2f" % num)
 print("{0:4.2f}".format(num))
+
+print(repr("spam"))
+print(str("spam"))
+
+
+# 普通比较与链式比较
+print(1 < 2)
+print(2.0 >= 1)
+print(2.0 == 2.0)
+print(2.0 != 2.0)
+
+X = 2
+Y = 4
+Z = 6
+
+print(X < Y < Z)
+print(X < Y and Y < Z)
