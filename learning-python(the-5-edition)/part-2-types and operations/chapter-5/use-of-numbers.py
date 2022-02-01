@@ -153,3 +153,9 @@ print(bin(256), (256).bit_length(), len(bin(256)) - 2)
 
 
 # 其他内置数值工具
+import math
+
+print(math.pi, math.e)
+print(math.sin(2 * math.pi / 180))
+print(math.sqrt(144), math.sqrt(2))
+print(pow(2, 4), 2**4, 2.0**4.0)
