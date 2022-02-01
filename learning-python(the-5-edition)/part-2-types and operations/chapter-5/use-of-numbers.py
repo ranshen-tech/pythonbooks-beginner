@@ -146,3 +146,7 @@ print(bin(X))
 print(X ^ 0b10101010)
 print(int("1010101", 2))
 print(hex(85))
+
+X = 99
+print(bin(X), X.bit_length(), len(bin(X)) - 2)
+print(bin(256), (256).bit_length(), len(bin(256)) - 2)
