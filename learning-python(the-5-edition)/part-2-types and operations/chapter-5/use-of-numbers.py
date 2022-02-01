@@ -57,3 +57,29 @@ print(int(1.1 + 2.2) == int(3.3))
 
 
 # 除法：经典除法、向下取整除法和真除法
+print(10 / 4)
+print(10 / 4.0)
+print(10 // 4)
+print(10 // 4.0)
+
+X = Y // Z
+print(X)
+X = Y / Z
+print(X)
+
+
+# 向下取整除法 VS 截断除法
+import math
+
+print(math.floor(2.5))
+print(math.floor(-2.5))
+print(math.trunc(2.5))
+print(math.trunc(-2.5))
+
+print(5 / 2, 5 / -2)
+print(5 // 2, 5 // -2)
+print(5 / 2.0, 5 / -2.0)
+print(5 // 2.0, 5 // -2.0)
+print(int(2.5), int(-2.5))
+
+print()
