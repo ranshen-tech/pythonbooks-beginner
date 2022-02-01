@@ -100,3 +100,49 @@ print((2 + 1j) * 3)
 
 
 # 十六进制、八进制和二进制：字面量与转换
+print(0o1, 0o0, 0o377)
+print(0x01, 0x10, 0xFF)
+print(0b1, 0b10000, 0b11111111)
+
+print(0xFF, (15 * (16**1)) + (15 * (16**0)))
+print(0x2F, (2 * (16**1)) + (15 * (16**0)))
+print(0xF, 0b1111, (1 * (2**3) + 1 * (2**2) + 1 * (2**1) + 1 * (2**0)))
+
+print(oct(64), hex(64), bin(64))
+
+print(64, 0o100, 0x40, 0b1000000)
+print(int("64"), int("100", 8), int("40", 16), int("1000000", 2), int("64", 10))
+print(int("0x40", 16), int("0b1000000", 2))
+
+print(eval("64"), eval("0o100"), eval("0x40"), eval("0b1000000"))
+
+print("{0:o}, {1:x}, {2:b}".format(64, 64, 64))
+print("%o, %x, %x, %X" % (64, 64, 255, 255))
+
+print(0o1, 0o20, 0o377)
+
+X = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+print(X)
+print(oct(X))
+print(bin(X))
+
+
+# 按位操作
+x = 1
+print(x)
+print(x << 2)
+print(int("0100", 2))
+print(x | 2)
+print(x & 1)
+
+X = 0b0001
+print(X << 2)
+print(bin(X << 2))
+print(bin(X | 0b010))
+print(bin(X & 0b1))
+
+X = 0xFF
+print(bin(X))
+print(X ^ 0b10101010)
+print(int("1010101", 2))
+print(hex(85))
