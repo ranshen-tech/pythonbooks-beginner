@@ -49,3 +49,29 @@ print(Fraction(1, 3) + Fraction(6, 12))
 
 print(Decimal(str(1 / 3)) + Decimal(str(6 / 12)))
 print(Fraction(1000, 12345677890))
+
+
+# 分数转换和混用类型
+print((2.5).as_integer_ratio())
+
+f = 2.5
+z = Fraction(*f.as_integer_ratio())
+print(z)
+print(x)
+print(x + z)
+
+print(float(x))
+print(float(z))
+print(float(x + z))
+print(17 / 6)
+
+print(Fraction.from_float(1.75))
+print(Fraction(*(1.75).as_integer_ratio()))
+
+print("\n")
+print(x)
+print(x + 2)
+print(x + 2.0)
+print(x + (1.0 / 3))
+print(x + (4.0 / 3))
+print(x + Fraction(4, 3))
