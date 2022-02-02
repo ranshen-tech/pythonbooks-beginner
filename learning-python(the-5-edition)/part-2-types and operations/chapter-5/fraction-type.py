@@ -75,3 +75,8 @@ print(x + 2.0)
 print(x + (1.0 / 3))
 print(x + (4.0 / 3))
 print(x + Fraction(4, 3))
+
+print("\n")
+print(4.0 / 3)
+print((4.0 / 3).as_integer_ratio())
+print(Fraction(*(4.0 / 3).as_integer_ratio()))
