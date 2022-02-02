@@ -80,3 +80,10 @@ print("\n")
 print(4.0 / 3)
 print((4.0 / 3).as_integer_ratio())
 print(Fraction(*(4.0 / 3).as_integer_ratio()))
+print("\n")
+
+print(x)
+a = x + Fraction(*(4.0 / 3).as_integer_ratio())
+print(a)
+
+print(a.limit_denominator(10))
