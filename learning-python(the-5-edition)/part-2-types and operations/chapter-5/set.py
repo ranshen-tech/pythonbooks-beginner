@@ -38,5 +38,18 @@ print(S.intersection([1, 3, 5]))
 print(S.issubset(range(-5, 5)))
 print("\n")
 
+
+# Python3.X 和 Python2.7中的集合字面量
 print(set([1, 2, 3, 4]))
 print({1, 2, 3, 4})
+print("\n")
+
+print(set([1, 2, 3, 4]))
+print(set("spam"))
+print({1, 2, 3, 4})
+S = {"s", "p", "a", "m"}
+print(S)
+
+S.add("alot")
+print(S)
+print("\n")
