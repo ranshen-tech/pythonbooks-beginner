@@ -53,3 +53,73 @@ print(S)
 S.add("alot")
 print(S)
 print("\n")
+
+S1 = {1, 2, 3, 4}
+print(S1 & {1, 3})
+print({1, 5, 3, 6} | S1)
+print(S1 - {1, 3, 4})
+print(S1 > {1, 3})
+print("\n")
+
+print(S1 - {1, 2, 3, 4})
+print(type({}))
+
+S = set()
+S.add(1.23)
+print(S)
+print("\n")
+
+print({1, 2, 3} | {3, 4})
+# print({1, 2, 3} | [3, 4])
+print({1, 2, 3}.union([3, 4]))
+print({1, 2, 3}.union({3, 4}))
+print({1, 2, 3}.union(set([3, 4])))
+print({1, 2, 3}.intersection((1, 3, 5)))
+print({1, 2, 3}.issubset(range(-5, 5)))
+print("\n")
+
+# 不可变性限制与冻结集合
+print(S)
+# S.add([1, 2, 3])
+# S.add({"a": 1})
+S.add((1, 2, 3))
+print(S)
+print("\n")
+
+print(S | {(4, 5, 6), (1, 2, 3)})
+print((1, 2, 3) in S)
+print((1, 4, 3) in S)
+print("\n")
+
+
+# Python3.X 和 2.7中的集合推导
+print({x**2 for x in [1, 2, 3, 4]})
+print({x for x in "spma"})
+print("\n")
+
+print({c * 4 for c in "spma"})
+print({c * 4 for c in "spamham"})
+print("\n")
+
+S = {c * 4 for c in "spma"}
+print(S | {"mmmm", "xxxx"})
+print(S & {"mmmm", "xxxx"})
+print("\n")
+
+# 为什么使用集合
+L = [1, 2, 1, 3, 2, 4, 5]
+print(set(L))
+L = list(set(L))
+print(L)
+print("\n")
+
+print(list(set(["yy", "cc", "aa", "xx", "dd", "aa"])))
+print("\n")
+
+print(set([1, 3, 5, 7]) - set([1, 2, 4, 5, 6]))
+print(set("abcdefg") - set("abdghij"))
+print(set("spma") - set(["h", "a", "m"]))
+print("\n")
+
+print(set(dir(bytes)) - set(dir(bytearray)))
+print(set(dir(bytearray)) - set(dir(bytes)))
