@@ -123,3 +123,40 @@ print("\n")
 
 print(set(dir(bytes)) - set(dir(bytearray)))
 print(set(dir(bytearray)) - set(dir(bytes)))
+print("\n")
+
+L1, L2 = [1, 3, 5, 2, 4], [2, 5, 3, 4, 1]
+print(L1 == L2)
+print(set(L1) == set(L2))
+print(sorted(L1) == sorted(L2))
+print("spma" == "asmp", set("spam") == set("asmp"), sorted("spam") == sorted("asmp"))
+print("\n")
+
+engineers = {"bob", "sue", "ann", "vic"}
+managers = {"tom", "sue"}
+
+print("bob" in engineers)
+print(engineers & managers)
+
+print(engineers | managers)
+print(engineers - managers)
+
+print(managers - engineers)
+
+print(engineers > managers)
+print({"bob", "sue"} < engineers)
+
+print((managers | engineers) > managers)
+
+print(managers ^ engineers)
+
+print((managers | engineers) - (managers ^ engineers))
+print("\n")
+
+# 布尔型
+print(type(True))
+print(isinstance(True, int))
+print(True == 1)
+print(True is 1)
+print(True or False)
+print(True + 4)
