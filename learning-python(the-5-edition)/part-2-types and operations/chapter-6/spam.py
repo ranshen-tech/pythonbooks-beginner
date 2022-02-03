@@ -74,3 +74,6 @@ X = copy.copy(Y)
 print(X)
 X = copy.deepcopy(Y)
 print(X)
+
+
+# 共享引用和相等
