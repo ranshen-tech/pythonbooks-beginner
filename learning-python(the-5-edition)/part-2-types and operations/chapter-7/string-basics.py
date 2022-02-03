@@ -40,3 +40,4 @@ print("\n")
 S = "s\tp\na\x00m"
 print(S)
 print(len(S))
+print("\n")
