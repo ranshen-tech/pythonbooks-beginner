@@ -74,6 +74,54 @@ X = copy.copy(Y)
 print(X)
 X = copy.deepcopy(Y)
 print(X)
-
+print("\n")
 
 # 共享引用和相等
+x = 42
+x = "shrubbery"
+
+
+L = [1, 2, 3]
+M = L
+print(L == M)
+print(L is M)
+print("\n")
+
+L = [1, 2, 3]
+M = [1, 2, 3]
+print(L == M)
+print(L is M)
+print("\n")
+
+X = 42
+Y = 42
+print(X == Y)
+print(X is Y)
+print("\n")
+
+import sys
+
+print(sys.getrefcount(1))
+print("\n")
+
+# exercise
+A = "spam"
+B = A
+B = B + "shrubbery"
+
+print(A)
+print(B)
+print("\n")
+
+A = ["spam"]
+B = A
+B[0] = "shrubbery"
+print(A)
+print(B)
+print("\n")
+
+A = ["spam"]
+B = A[:]
+B[0] = "shrubbery"
+print(B)
+print(A)
