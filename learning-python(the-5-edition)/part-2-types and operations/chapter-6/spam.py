@@ -57,8 +57,20 @@ print(L2)
 print("\n")
 
 L1 = [2, 3, 4]
-L2 = L1[:]
+# L2 = L1[:]
+# L2 = list(L1)
+L2 = L1.copy()
+print(L2)
 L1[0] = 24
 
 print(L1)
 print(L2)
+print("\n")
+
+import copy
+
+Y = {"a": 1, "b": 2, "c": [3, 4, 5]}
+X = copy.copy(Y)
+print(X)
+X = copy.deepcopy(Y)
+print(X)
