@@ -41,3 +41,7 @@ S = "s\tp\na\x00m"
 print(S)
 print(len(S))
 print("\n")
+
+x = "C:\py\code"
+print(x)
+print(len(x))
