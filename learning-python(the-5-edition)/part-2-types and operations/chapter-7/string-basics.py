@@ -51,3 +51,12 @@ print("\n")
 # 原始字符串阻止转义
 # myfile = open('C:\new\text.dat', 'w')
 myfile = open(r"C:\new\text.dat", "w")
+print("C:\new\text.dat")
+print(r"C:\new\text.dat")
+print("C:\\new\\text.dat")
+print("\n")
+
+path = r"C:\new\text.dat"
+print(path)
+print(len(path))
+print("\n")
