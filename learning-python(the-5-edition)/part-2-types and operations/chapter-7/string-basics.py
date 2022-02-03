@@ -45,3 +45,9 @@ print("\n")
 x = "C:\py\code"
 print(x)
 print(len(x))
+print("\n")
+
+
+# 原始字符串阻止转义
+# myfile = open('C:\new\text.dat', 'w')
+myfile = open(r"C:\new\text.dat", "w")
