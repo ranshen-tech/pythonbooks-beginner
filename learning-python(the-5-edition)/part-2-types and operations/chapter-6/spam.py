@@ -36,3 +36,29 @@ print(b)
 a = a + 2
 print(a)
 print("\n")
+
+
+# 共享引用和在原位置修改
+L1 = [2, 3, 4]
+print(L1)
+L2 = L1
+print(L2)
+L1 = 24
+print(L1)
+print(L2)
+print("\n")
+
+L1 = [2, 3, 4]
+L2 = L1
+L1[0] = 24
+
+print(L1)
+print(L2)
+print("\n")
+
+L1 = [2, 3, 4]
+L2 = L1[:]
+L1[0] = 24
+
+print(L1)
+print(L2)
