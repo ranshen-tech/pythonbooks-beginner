@@ -86,3 +86,36 @@ print(ord("5") - ord("0"))
 print(ord("5"))
 print(ord("0"))
 print("\n")
+
+print(ord("1"))
+I = 1
+I = 3
+I = 6
+I = 13
+
+B = "1101"
+print(type(B[0]))
+I = 0
+while B != "":
+    I = I * 2 + (ord(B[0]) - ord("0"))
+    B = B[1:]
+
+print(I)
+print("\n")
+
+print(int("1101", 2))
+print(bin(13))
+print("\n")
+
+
+# 修改字符串｜
+S = "spam"
+S = S + "SPAM!"
+print(S)
+S = S[:4] + "Burger" + S[-1]
+print(S)
+print("\n")
+
+S = "splot"
+S = S.replace("pl", "pamal")
+print(S)
