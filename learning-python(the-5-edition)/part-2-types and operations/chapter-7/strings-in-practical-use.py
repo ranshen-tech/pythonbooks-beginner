@@ -119,3 +119,9 @@ print("\n")
 S = "splot"
 S = S.replace("pl", "pamal")
 print(S)
+print("\n")
+
+msg = "That is %d %s bird!" % (1, "dead")
+print(msg)
+msg = "That is {0} {1} bird!".format(1, "dead")
+print(msg)
