@@ -29,3 +29,32 @@ S = "xxxxSPAMxxxxSPAMxxxx"
 print(S.replace("SPAM", "EGGS"))
 print(S)
 print(S.replace("SPAM", "EGGS", 1))
+print("\n")
+
+S = "spammy"
+L = list(S)
+print(L)
+print("\n")
+
+L[3] = "x"
+L[4] = "x"
+print(L)
+
+S = "".join(L)
+print(S)
+
+print("SPAM".join(["eggs", "sausage", "ham", "toast"]))
+print("\n")
+
+
+# 字符串方法示例：解析文本
+line = "aaa bbb ccc"
+col1 = line[0:3]
+col3 = line[8:]
+print(col1)
+print(col3)
+print("\n")
+
+line = "aaa bbb ccc"
+cols = line.split()
+print(cols)
