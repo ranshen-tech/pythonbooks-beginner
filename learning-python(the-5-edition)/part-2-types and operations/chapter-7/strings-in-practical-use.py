@@ -60,3 +60,29 @@ print(int(S) + I)
 
 print(S + str(I))
 print("\n")
+
+print(str(3.1415), float("1.5"))
+
+text = "1.234E-10"
+print(float(text))
+print("\n")
+
+
+# 字符串代码转换
+print(ord("s"))
+print(chr(115))
+print("\n")
+
+S = "5"
+S = chr(ord(S) + 1)
+print(S)
+
+S = chr(ord(S) + 1)
+print(S)
+print("\n")
+
+print(int("5"))
+print(ord("5") - ord("0"))
+print(ord("5"))
+print(ord("0"))
+print("\n")
