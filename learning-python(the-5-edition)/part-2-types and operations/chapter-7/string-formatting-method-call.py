@@ -94,4 +94,7 @@ print("%.2f" % 1.2345)
 print("\n")
 
 # 与%格式化表达式比较
-print("%s=%d" % ("spam", 42))
+print("%s=%s" % ("spam", 42))
+print("{0}={1}".format("spam", 42))
+print("{}={}".format("spam", 42))
+print("\n")
