@@ -100,3 +100,4 @@ print("{}={}".format("spam", 42))
 print("\n")
 
 print("%s, %s and %s" % (3.14, 42, [1, 2]))
+print()
