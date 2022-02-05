@@ -58,3 +58,46 @@ print("\n")
 line = "aaa bbb ccc"
 cols = line.split()
 print(cols)
+print("\n")
+
+line = "bob,hacker,40"
+print(line.split(","))
+
+line = "i'mSPAMaSPAMlumberjack"
+print(line.split("SPAM"))
+print("\n")
+
+
+# 实际应用中的其他常见字符串方法
+line = "The knights who say Ni!\n"
+print(line.rstrip())
+print(line.upper())
+print(line.isalpha())
+print(line.endswith("Ni!\n"))
+print(line.startswith("The"))
+print("\n")
+
+print(line)
+
+print(line.find("Ni") != -1)
+print("Ni" in line)
+
+sub = "Ni!\n"
+print(line.endswith(sub))
+
+print(line[-len(sub) :] == sub)
+print("\n")
+
+S = ""
+# print(help(S.upper))
+
+
+# 原始 string 模块的函数（在Python3中删除）
+S = "a+b+c+"
+x = S.replace("+", "spam")
+print(x)
+
+# import string
+
+# y = string.replace(S, "+", "spam")
+# print(y)
