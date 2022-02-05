@@ -91,6 +91,7 @@ print("\n")
 print("{0:.2f}".format(1.2345))
 print(format(1.2345, ".2f"))
 print("%.2f" % 1.2345)
-
+print("\n")
 
 # 与%格式化表达式比较
+print("%s=%d" % ("spam", 42))
