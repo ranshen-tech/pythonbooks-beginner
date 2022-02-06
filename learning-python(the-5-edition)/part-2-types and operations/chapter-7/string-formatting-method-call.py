@@ -192,3 +192,40 @@ print("%s" % 1.23)
 print("%s" % (1.23,))
 print("%s" % ((1.23,),))
 print("\n")
+
+print("{0:.2f}".format(1.2345))
+print("{0:.2f} {1}".format(1.2345, 99))
+print("{0}".format(1.23))
+print("{0}".format((1.23,)))
+print("\n")
+
+print(type((1.23)))
+print(type((1.23,)))
+print("\n")
+
+
+# 功能 vs 表达式：微小的便利
+def myformat(fmt, args):
+    return fmt % args
+
+
+print(myformat("%s %s", (88, 99)))
+print(str.format("{} {}", 88, 99))
+print(format(3.1415, ".2f"))
+print("\n")
+
+print("%(num)i = %(title)s" % dict(num=7, title="Strings"))
+print("{num:d} = {title:s}".format(num=7, title="Strings"))
+print("{num} = {title}".format(**dict(num=7, title="Strings")))
+print("\n")
+
+import string
+
+t = string.Template("$num = $title")
+print(t.substitute({"num": 7, "title": "Strings"}))
+print(t.substitute(num=7, title="Strings"))
+print(t.substitute(dict(num=7, title="Strings")))
+print("\n")
+
+print("%d = %s" % (7, "Strings"))
+print("{} = {}".format(7, "Strings"))
