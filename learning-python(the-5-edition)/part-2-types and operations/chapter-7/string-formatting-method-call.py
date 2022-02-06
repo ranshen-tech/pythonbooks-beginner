@@ -100,4 +100,33 @@ print("{}={}".format("spam", 42))
 print("\n")
 
 print("%s, %s and %s" % (3.14, 42, [1, 2]))
-print()
+print("My %(kind)s runs %(platform)s" % {"kind": "laptop", "platform": sys.platform})
+print("My %(kind)s runs %(platform)s" % dict(kind="laptop", platform=sys.platform))
+
+somelist = list("SPAM")
+parts = somelist[0], somelist[-1], somelist[1:3]
+print(type(parts))
+print("first=%s, last=%s, middle=%s" % parts)
+print("\n")
+
+print("%-10s = %10s" % ("spam", 123.4567))
+print("%10s = %-10s" % ("spam", 123.4567))
+print("%(plat)10s = %(kind)-10s" % dict(plat=sys.platform, kind="laptop"))
+print("\n")
+
+print("%e, %.3e, %g" % (3.14159, 3.14159, 3.14159))
+print("%f, %.2f, %06.2f" % (3.14159, 3.14159, 3.14159))
+print("%x, %o" % (255, 255))
+print("\n")
+
+import sys
+
+print("My {1[kind]:<8} runs {0.platform:>8}".format(sys, {"kind": "laptop"}))
+print("My %(kind)-8s runs %(plat)8s" % dict(kind="laptop", plat=sys.platform))
+print("\n")
+
+data = dict(platform=sys.platform, kind="laptop")
+print(data)
+print("My {kind:<8} runs {platform:>8}".format(**data))
+print("My %(kind)-8s runs %(platform)8s" % data)
+print("\n")
