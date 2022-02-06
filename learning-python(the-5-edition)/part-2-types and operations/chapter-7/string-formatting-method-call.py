@@ -130,3 +130,23 @@ print(data)
 print("My {kind:<8} runs {platform:>8}".format(**data))
 print("My %(kind)-8s runs %(platform)8s" % data)
 print("\n")
+
+print("{0:d}".format(999999999999))
+print("{0:,d}".format(999999999999))
+print("\n")
+
+print("{:,d}".format(999999999999))
+print("{:,d} {:,d}".format(999999999, 8888888))
+print("{:,.2f}".format(296999.2567))
+print("\n")
+
+
+# 为什么使用格式化方法
+print("{0:b}".format((2**16) - 1))
+# print("%b" % ((2**16) - 1))
+
+print(bin((2**16) - 1))
+print("%s" % bin((2**16) - 1))
+print("{}".format(bin((2**16) - 1)))
+
+print("%s" % bin((2**16) - 1)[2:])
