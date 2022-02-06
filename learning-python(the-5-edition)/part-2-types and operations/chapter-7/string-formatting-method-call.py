@@ -150,3 +150,13 @@ print("%s" % bin((2**16) - 1))
 print("{}".format(bin((2**16) - 1)))
 
 print("%s" % bin((2**16) - 1)[2:])
+print("\n")
+
+print("{:,d}".format(999999999999))
+print("\n")
+
+
+# 灵活的引用语法：额外的发杂性和功能的重叠
+print("{name} {job} {name}".format(name="Bob", job="dev"))
+print("%(name)s %(job)s %(name)s" % dict(name="Bob", job="dev"))
+print("\n")
