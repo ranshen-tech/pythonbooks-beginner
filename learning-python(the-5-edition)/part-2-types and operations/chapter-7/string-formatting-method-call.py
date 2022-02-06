@@ -160,3 +160,35 @@ print("\n")
 print("{name} {job} {name}".format(name="Bob", job="dev"))
 print("%(name)s %(job)s %(name)s" % dict(name="Bob", job="dev"))
 print("\n")
+
+D = dict(name="Bob", job="dev")
+print("{0[name]} {0[job]} {0[name]}".format(D))
+print("{name} {job} {name}".format(**D))
+print("%(name)s %(job)s %(name)s" % D)
+print("\n")
+
+
+# 显式的值的引用：如今变得可选和不常用
+# print("\n%s<Class %s, address %s:\n%s%s%s>\n" % (...))
+# print("\n{0}<Class {1}, address {2}:\n{3}{4}{5}>\n".format(...))
+
+print("The {0} side {1} {2}".format("bright", "of", "life"))
+print("The {} side {} {}".format("bright", "of", "life"))
+print("The %s side %s %s" % ("bright", "of", "life"))
+print("\n")
+
+print("{0:f}, {1:.2f}, {2:05.2f}".format(3.14159, 3.14159, 3.14159))
+print("{:f}, {:.2f}, {:06.2f}".format(3.14159, 3.14159, 3.14159))
+print("%f, %.2f, %06.2f" % (3.14159, 3.14159, 3.14159))
+print("\n")
+
+
+# 命名的方法与上下文中立的参数：美学 vs 实用
+print("%.2f" % 1.2345)
+print("%.2f %s" % (1.2345, 99))
+print("\n")
+
+print("%s" % 1.23)
+print("%s" % (1.23,))
+print("%s" % ((1.23,),))
+print("\n")
