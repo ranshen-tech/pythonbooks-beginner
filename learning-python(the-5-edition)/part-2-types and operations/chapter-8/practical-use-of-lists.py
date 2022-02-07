@@ -29,3 +29,15 @@ print(list(map(abs, [-1, -2, 0, 1, 2])))
 print("\n")
 
 # 索引、分片和矩阵
+L = ["spma", "Spam", "SPAM!"]
+print(L[2])
+print(L[-2])
+print(L[1:])
+print("\n")
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(matrix[1])
+print(matrix[1][1])
+print(matrix[2][0])
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(matrix[1][1])
