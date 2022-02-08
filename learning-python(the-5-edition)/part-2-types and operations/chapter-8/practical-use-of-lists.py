@@ -44,4 +44,34 @@ print(matrix[1][1])
 print("\n")
 
 
-# 原位置修改列表
+# 索引与分片的赋值
+L = ["spam", "Spam", "SPAM!"]
+L[1] = "eggs"
+print(L)
+
+L[0:2] = ["eat", "more"]
+print(L)
+print("\n")
+
+L = [1, 2, 3]
+L[1:2] = [4, 5]
+print(L)
+L[1:1] = [6, 7]
+print(L)
+L[2:5] = L[3:6]
+print(L)
+L[1:2] = []
+print(L)
+print("\n")
+
+L = [1]
+L[:0] = [2, 3, 4]
+print(L)
+L[len(L) :] = [5, 6, 7]
+print(L)
+L.extend([8, 9, 10])
+print(L)
+print("\n")
+
+
+# 列表方法调用
