@@ -103,3 +103,46 @@ print("\n")
 
 
 # 其他常见的列表方法
+L = [1, 2]
+L.extend([3, 4, 5])
+print(L)
+print(L.pop())
+print(L)
+L.reverse()
+print(L)
+print(list(reversed(L)))
+print("\n")
+
+L = []
+L.append(1)
+L.append(2)
+print(L)
+print(L.pop())
+print(L)
+print("\n")
+
+L = ["spam", "eggs", "ham"]
+print(L.index("eggs"))
+L.insert(1, "toast")
+print(L)
+L.remove("eggs")
+print(L)
+print(L.pop(1))
+print(L)
+print(L.count("spam"))
+print("\n")
+
+
+# 其他常见列表操作
+L = ["spam", "eggs", "ham", "toast"]
+del L[0]
+print(L)
+del L[1:]
+print(L)
+print("\n")
+
+L = ["Already", "got", "one"]
+L[1:] = []
+print(L)
+L[0] = []
+print(L)
