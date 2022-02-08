@@ -75,3 +75,31 @@ print("\n")
 
 
 # 列表方法调用
+L = ["eat", "more", "SPAM!"]
+L.append("please")
+print(L)
+L.sort()
+print(L)
+print("\n")
+
+
+# 更多的关于列表排序
+L = ["abc", "ABD", "aBe"]
+L.sort()
+print(L)
+L = ["abc", "ABD", "aBe"]
+L.sort(key=str.lower)
+print(L)
+L = ["abc", "ABD", "aBe"]
+L.sort(key=str.lower, reverse=True)
+print(L)
+print("\n")
+
+L = ["abc", "ABD", "aBe"]
+print(sorted(L, key=str.lower, reverse=True))
+L = ["abc", "ABD", "aBe"]
+print(sorted([x.lower() for x in L], reverse=True))
+print("\n")
+
+
+# 其他常见的列表方法
