@@ -160,3 +160,43 @@ db = []
 db.append(rec)
 print(db)
 print(db[0]["jobs"])
+print("\n")
+
+db = {}
+db["bob"] = rec
+print(db)
+print(db["bob"]["jobs"])
+print("\n")
+
+
+# 创建字典的其他方式
+{"name": "Bob", "age": 40}
+
+D = {}
+D["name"] = "Bob"
+D["age"] = 40
+
+a = dict(name="Bob", age=40)
+print(a)
+b = dict([("name", "Bob"), ("age", 40)])
+print(b)
+print("\n")
+
+print(list(b.keys()))
+print(dict(zip(b.keys(), b.values())))
+print("\n")
+
+a = [1, 2, 3]
+b = [4, 5, 6]
+print(zip(a, b))
+print(list(zip(a, b)))
+c = dict(list(zip(a, b)))
+print(c)
+print("\n")
+
+c = {"a": 0, "b": 0}
+c["c"] = 0
+print(c)
+c = dict.fromkeys(["a", "b", "c"], 1)
+print(c)
+print("\n")
