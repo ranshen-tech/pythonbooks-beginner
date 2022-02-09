@@ -100,3 +100,63 @@ print("\n")
 table = {1975: "Holy Grail", 1979: "Life of Brian", 1983: "The Meaning of Life"}
 print(table[1975])
 print(list(table.items()))
+print("\n")
+
+
+# 对稀疏数据结构使用字典：用元组做键
+Matrix = {}
+Matrix[(2, 3, 4)] = 88
+Matrix[(7, 8, 9)] = 99
+
+X = 2
+Y = 3
+Z = 4
+print(Matrix[X, Y, Z])
+print(Matrix)
+print("\n")
+
+# print(Matrix[(2, 3, 6)])
+
+
+# 避免键不存在错误
+if (2, 3, 6) in Matrix:
+    print(Matrix[(2, 3, 6)])
+else:
+    print(0)
+
+try:
+    print(Matrix[(2, 3, 6)])
+except KeyError:
+    print(0)
+
+print(Matrix.get((2, 3, 4), 0))
+print(Matrix.get((2, 3, 6), 0))
+print("\n")
+
+# 字典的嵌套
+rec = {}
+rec["name"] = "Bob"
+rec["age"] = 40.5
+rec["job"] = "developer/manager"
+
+print(rec)
+print(rec["name"])
+print("\n")
+
+rec = {
+    "name": "Bob",
+    "jobs": ["developer", "manager"],
+    "web": "www.bobs.org/?Bob",
+    "home": {"state": "Overworked", "zip": 12345},
+}
+print(rec)
+print(rec["name"])
+print(rec["jobs"])
+print(rec["jobs"][1])
+print(rec["home"]["zip"])
+print("\n")
+
+db = []
+db.append(rec)
+print(db)
+print(db[0]["jobs"])
