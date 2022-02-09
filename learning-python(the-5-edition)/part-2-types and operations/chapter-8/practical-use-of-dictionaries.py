@@ -200,3 +200,36 @@ print(c)
 c = dict.fromkeys(["a", "b", "c"], 1)
 print(c)
 print("\n")
+
+a = dict([("name", "bob"), ("age", 40)])
+print(a)
+print("\n")
+
+
+# 请留意：字典 vs 列表
+L = ["Bob", 40.5, ["dev", "mgr"]]
+print(L[0])
+print(L[1])
+print(L[2][1])
+print("\n")
+
+D = {"name": "Bob", "age": 40.5, "jobs": ["dev", "mgr"]}
+print(D["name"])
+print(D["age"])
+print(D["jobs"][1])
+print("\n")
+
+D = dict(name="Bob", age=40.5, jobs=["dev", "mgr"])
+print(D["name"])
+D["jobs"].remove("mgr")
+print(D)
+print("\n")
+
+D = {}
+D["state1"] = True
+print("state1" in D)
+S = set()
+S.add("state1")
+print(S)
+print("state1" in S)
+print("\n")
