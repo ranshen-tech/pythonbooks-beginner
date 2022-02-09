@@ -54,3 +54,49 @@ print(L)
 print(L.pop(1))
 print(L)
 print("\n")
+
+
+# 示例：电影数据库
+table = {"1975": "Holy Grail", "1979": "Life of Brian", "1983": "The Meaning of Life"}
+
+year = "1983"
+movie = table[year]
+print(movie)
+for year in table:
+    print(year + "\t" + table[year])
+print("\n")
+
+
+# 预习：将值映射为键
+table = {"Holy Grail": "1975", "Life of Brian": "1979", "The Meaning of Life": "1983"}
+print(table["Holy Grail"])
+
+print(list(table.items()))
+print([title for (title, year) in table.items() if year == "1975"])
+print("\n")
+
+print(table)
+K = "Holy Grail"
+print(table[K])
+
+V = "1975"
+print([key for (key, value) in table.items() if value == V])
+print([key for key in table.keys() if table[key] == V])
+print("\n")
+
+
+# 用字典模拟灵活的列表：整数键
+D = [[0] * 3]
+# D[99] = "spam"
+print(D)
+print("\n")
+
+D = {}
+D[99] = "spam"
+print(D)
+print(D[99])
+print("\n")
+
+table = {1975: "Holy Grail", 1979: "Life of Brian", 1983: "The Meaning of Life"}
+print(table[1975])
+print(list(table.items()))
