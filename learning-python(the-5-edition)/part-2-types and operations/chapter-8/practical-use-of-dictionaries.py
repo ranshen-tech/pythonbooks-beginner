@@ -235,4 +235,4 @@ print("state1" in S)
 print("\n")
 
 
-# Python 3.X 和 2.7中的字典变化
+# Python 3.X 和 2.7中的字典推导
