@@ -246,3 +246,9 @@ print(D)
 D = {x: x**2 for x in [1, 2, 3, 4]}
 print(D)
 print("\n")
+
+D = {c: c * 4 for c in "SPAM"}
+print(D)
+D = {c.lower(): c + "!" for c in ["SPAM", "EGGS", "HAM"]}
+print(D)
+print("\n")
