@@ -236,3 +236,4 @@ print("\n")
 
 
 # Python 3.X 和 2.7中的字典推导
+print(list(zip(["a", "b", "c"], [1, 2, 3])))
