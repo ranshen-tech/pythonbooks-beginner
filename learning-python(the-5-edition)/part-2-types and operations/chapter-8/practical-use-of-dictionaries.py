@@ -252,3 +252,53 @@ print(D)
 D = {c.lower(): c + "!" for c in ["SPAM", "EGGS", "HAM"]}
 print(D)
 print("\n")
+
+D = dict.fromkeys(["a", "b", "c"], 0)
+print(D)
+D = {k: 0 for k in ["a", "b", "c"]}
+print(D)
+D = dict.fromkeys("spam")
+print(D)
+D = {k: None for k in "spam"}
+print(D)
+print("\n")
+
+
+# 3.X 中的字典视图
+D = dict(a=1, b=2, c=3)
+print(D)
+K = D.keys()
+print(K)
+print(list(K))
+print("\n")
+
+V = D.values()
+print(V)
+print(list(V))
+print(D.items())
+print(list(D.items()))
+# print(K[0])
+print(list(K)[0])
+print("\n")
+
+for k in D.keys():
+    print(k)
+print("\n")
+
+for key in D:
+    print(key)
+print("\n")
+
+D = {"a": 1, "b": 2, "c": 3}
+print(D)
+K = D.keys()
+V = D.values()
+print(list(K))
+print(list(V))
+print("\n")
+
+del D["b"]
+print(D)
+print(list(K))
+print(list(V))
+print("\n")
