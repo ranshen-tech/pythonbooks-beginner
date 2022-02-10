@@ -243,3 +243,6 @@ print("\n")
 
 D = {k: v for (k, v) in zip(["a", "b", "c"], [1, 2, 3])}
 print(D)
+D = {x: x**2 for x in [1, 2, 3, 4]}
+print(D)
+print("\n")
