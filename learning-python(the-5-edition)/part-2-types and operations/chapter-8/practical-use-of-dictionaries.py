@@ -328,3 +328,56 @@ print(D.items() | D)
 print(D.items() | {("c", 3), ("d", 4)})
 print(dict(D.items() | {("c", 3), ("d", 4)}))
 print("\n")
+
+
+# 3.X 中字典键排序
+D = {"a": 1, "b": 2, "c": 3}
+print(D)
+Ks = D.keys()
+# print(Ks.sort())
+print(Ks)
+Ks = list(Ks)
+print(Ks.sort())
+print(Ks)
+for k in Ks:
+    print(k, D[k])
+print("\n")
+
+print(D)
+Ks = D.keys()
+for k in sorted(Ks):
+    print(k, D[k])
+print("\n")
+
+print(D)
+for k in sorted(D):
+    print(k, D[k])
+print("\n")
+
+
+# 在3.X 中has_key方法已死，in方法万岁
+print(D)
+print("c" in D)
+print("x" in D)
+if "c" in D:
+    print("present", D["c"])
+print(D.get("c"))
+print(D.get("x"))
+if D.get("c") != None:
+    print("present", D["c"])
+print("\n")
+
+
+# 请留意：字典借口
+# import dbm
+
+# file = dbm.open("filename")
+# file["key"] = "data"
+# data = file["key"]
+# print(data)
+
+import cgi
+
+form = cgi.FieldStorage()
+if "name" in form:
+    showReply("Hello, " + form["name"].value)
