@@ -302,3 +302,29 @@ print(D)
 print(list(K))
 print(list(V))
 print("\n")
+
+
+# 字典和视图的集合
+print(K, V)
+print(K | {"x": 4})
+print(K & {"x": 4})
+print(K & {"x": 4}.values())
+# print(V & {"x": 4})
+# print(V & {"x": 4}.values())
+print("\n")
+
+D = {"a": 1, "b": 2, "c": 3}
+print(D.keys() & D.keys())
+print(D.keys() & {"b": 1})
+print(D.keys() & {"b"})
+print(type({"b"}))
+print(D.keys() | {"b", "c", "d"})
+print("\n")
+
+D = {"a": 1}
+print(list(D.items()))
+print(D.items() | D.keys())
+print(D.items() | D)
+print(D.items() | {("c", 3), ("d", 4)})
+print(dict(D.items() | {("c", 3), ("d", 4)}))
+print("\n")
