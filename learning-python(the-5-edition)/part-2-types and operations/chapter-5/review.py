@@ -11,5 +11,6 @@ print(math.trunc(2.5))
 print(math.trunc(-2.5))
 print("\n")
 
-print(math.pi)
 print(math.pi, math.e)
+print(math.sin(2 * math.pi / 180))
+print("\n")
