@@ -12,3 +12,4 @@ print(math.trunc(-2.5))
 print("\n")
 
 print(math.pi)
+print(math.pi, math.e)
