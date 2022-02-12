@@ -78,10 +78,45 @@ a = "bbbac"
 print(a.replace("b", "r", 1))
 print("\n")
 
-# print(help(map))
 # *解包元组项
 somelist = list("spam")
 parts = somelist[0], somelist[-1], somelist[1:3]
 print(parts)
 print(*parts)
+print("\n")
+
+print(list(map(sum, m)))
+print("\n")
+
+print({sum(row) for row in m})
+print({i: sum(m[i]) for i in range(3)})
+print("\n")
+
+print([ord(x) for x in "spaam"])
+print({ord(x) for x in "spaam"})
+print({x: ord(x) for x in "spaam"})
+print((ord(x) for x in "spaam"))
+print("\n")
+
+
+# 字典
+print(list(zip(["name", "job", "age"], ["ranshen", "dev", "29"])))
+print("\n")
+
+d = {"a": 1, "b": 2, "c": 3}
+value = d.get("x", 0)
+print(value)
+value = d["x"] if "x" in d else 0
+print(value)
+print("\n")
+
+print(list(d))
+print("\n")
+
+
+def is_odd(n):
+    return n % 2 == 1
+
+
+print(list(filter(is_odd, [1, 2, 3, 4, 5, 6, 7, 8, 9])))
 print("\n")
