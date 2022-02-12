@@ -1,3 +1,4 @@
+# 字符串
 s = set("123")
 print(s)
 s = set("abc")
@@ -57,3 +58,30 @@ print("\n")
 
 print("x" + b"y".decode())
 print("x".encode() + b"y")
+print("\n")
+
+
+# 列表
+print([[x, x / 2, x * 2] for x in range(-6, 7, 2) if x > 0])
+print("\n")
+
+m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+g = [row for row in m]
+print(type(g))
+print(g)
+print(sum([3, 4, 5]))
+# print(help(sum))
+# print(help(str.replace))
+print("\n")
+
+a = "bbbac"
+print(a.replace("b", "r", 1))
+print("\n")
+
+# print(help(map))
+# *解包元组项
+somelist = list("spam")
+parts = somelist[0], somelist[-1], somelist[1:3]
+print(parts)
+print(*parts)
+print("\n")
