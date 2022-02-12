@@ -10,3 +10,5 @@ print(math.floor(-2.5))
 print(math.trunc(2.5))
 print(math.trunc(-2.5))
 print("\n")
+
+print(math.pi)
