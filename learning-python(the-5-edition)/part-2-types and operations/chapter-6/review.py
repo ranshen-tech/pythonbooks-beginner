@@ -64,3 +64,37 @@ d1["a"] = 3
 print(d1)
 print(d2)
 print("\n")
+
+s1 = set("spam")
+print(s1)
+s2 = set(s1)
+print(s2)
+print("\n")
+
+d1 = {"a": 1, "b": 2}
+print(d1)
+d2 = dict(d1)
+print(d2)
+d1["a"] = 3
+print(d1)
+print(d2)
+print("\n")
+
+
+import copy
+
+x = ["abc", 123]
+y = copy.copy(x)
+print(y)
+x = ["abc", 123, {"a": 1, "b": 2}]
+y = copy.copy(x)
+print(x)
+
+x = {"a": "abc", "b": [123], "c": [123]}
+print(x)
+y = copy.copy(x)
+print(y)
+
+y = copy.deepcopy(x)
+print(y)
+print("\n")
