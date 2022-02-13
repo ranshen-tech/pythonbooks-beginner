@@ -24,4 +24,26 @@ print(l)
 l = ["abc", "ABD", "aBe"]
 l.sort(key=str.lower, reverse=True)
 print(l)
-commentary
+print("\n")
+
+l = ["abc", "ABD", "aBe"]
+print(sorted(l, key=str.lower, reverse=True))
+print(l)
+l = ["abc", "ABD", "aBe"]
+print(sorted([x.lower() for x in l], reverse=True))
+print("\n")
+
+l = [1, 2, 3, 4]
+print(list(reversed(l)))
+print("\n")
+
+l = ["spam", "eggs", "ham"]
+print(l.index("eggs"))
+l.insert(1, "toast")
+print(l)
+l.remove("eggs")
+print(l)
+l.pop(1)
+print(l)
+print(l.count("spam"))
+print("\n")
