@@ -94,3 +94,23 @@ print(s)
 s.update({(4, 5, 6), (1, 2, 3)})
 print(s)
 print("\n")
+
+l = [1, 2, 1, 3, 2, 4, 5]
+print(l)
+print(set(l))
+l = list(set(l))
+print(l)
+print("\n")
+
+print(set((1, 2, 3)))
+print("\n")
+
+l1, l2 = [1, 3, 5, 2, 4], [2, 5, 3, 4, 1]
+print(l1, l2)
+print(l1 == l2)
+print(set(l1) == set(l2))
+print(sorted(l1) == sorted(l2))
+print("spam" == "asmp", set("spam") == set("asmp"), sorted("spam") == sorted("asmp"))
+print("\n")
+
+print(True + 4)
