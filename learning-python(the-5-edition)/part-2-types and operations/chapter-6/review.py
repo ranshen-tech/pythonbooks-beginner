@@ -98,3 +98,16 @@ print(y)
 y = copy.deepcopy(x)
 print(y)
 print("\n")
+
+a = ["spam"]
+b = a
+b[0] = "shrubbery"
+print(a)
+print(b)
+print("\n")
+
+a = ["spam"]
+b = a[:]
+b[0] = "shrubbery"
+print(a)
+print(b)
