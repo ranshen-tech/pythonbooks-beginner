@@ -74,3 +74,35 @@ print(t)
 t[1][0] = "spam"
 print(t)
 print("\n")
+
+
+# 重访记录：有名元组
+bob = ("Bob", 40.5, ["dev", "mgr"])
+print(bob)
+print(bob[0], bob[2])
+print("\n")
+
+bob = dict(name="Bob", age=40.5, jobs=["dev", "mgr"])
+print(bob)
+print(bob["name"], bob["jobs"])
+print(bob.values())
+print(tuple(bob.values()))
+print(bob.items())
+print(tuple(bob.items()))
+print(list(bob.items()))
+print("\n")
+
+from collections import namedtuple
+
+rec = namedtuple("rec", ["name", "age", "jobs"])
+print(rec)
+bob = rec("bob", age=40.5, jobs=["dev", "mgr"])
+print(bob)
+print(bob[0], bob[2])
+print(bob.name, bob.jobs)
+print("\n")
+
+o = bob._asdict()
+print(o["name"], o["jobs"])
+print(o)
+print("\n")
