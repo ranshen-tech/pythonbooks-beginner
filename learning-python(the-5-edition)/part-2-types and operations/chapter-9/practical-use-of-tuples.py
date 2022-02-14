@@ -49,3 +49,28 @@ print("\n")
 s = "acb"
 print(sorted(s))
 print(s)
+print("\n")
+
+t = ("cc", "aa", "dd", "bb")
+print(sorted(t))
+print(t)
+print("\n")
+
+t = (1, 2, 3, 4, 5)
+l = [x + 20 for x in t]
+print(l)
+print("\n")
+
+t = (1, 2, 3, 2, 4, 2, 2)
+print(t.index(2))
+# print(help(t.index))
+print(t.index(2, 6))
+print(t.count(2))
+# print(help(t.count))
+print("\n")
+
+t = (1, [2, 3], 4)
+print(t)
+t[1][0] = "spam"
+print(t)
+print("\n")
