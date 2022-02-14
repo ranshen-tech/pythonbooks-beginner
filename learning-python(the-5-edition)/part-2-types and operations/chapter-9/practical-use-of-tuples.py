@@ -106,3 +106,27 @@ o = bob._asdict()
 print(o["name"], o["jobs"])
 print(o)
 print("\n")
+
+bob = rec("bob", 40.5, ["dev", "mgr"])
+name, age, jobs = bob
+print(name, jobs)
+
+for x in bob:
+    print(x)
+print("\n")
+
+bob = {"name": "bob", "age": 40.5, "jobs": ["dev", "mgr"]}
+job, name, age = bob.values()
+print(bob.values())
+print(job, name, age)
+print(name, job)
+print("\n")
+
+for x in bob:
+    print(bob[x])
+for x in bob:
+    print(x)
+print("\n")
+
+for x in bob.values():
+    print(x)
