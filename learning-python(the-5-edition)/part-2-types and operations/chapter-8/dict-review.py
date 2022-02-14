@@ -27,3 +27,28 @@ print("\n")
 d = dict.fromkeys(["a", "b", "c"], 666)
 print(d)
 print("\n")
+
+d = dict(zip(["a", "b", "c"], [1, 2, 3]))
+print(d)
+d = {k: v for k, v in zip(["a", "b", "c"], [1, 2, 3])}
+print(d)
+d = {c.lower(): c + "!" for c in ["SPAM", "EGGS", "HAM"]}
+print(d)
+print("\n")
+
+d = dict.fromkeys(["a", "b", "c"], 0)
+print(d)
+d = {d: 0 for d in ["a", "b", "c"]}
+print(d)
+d["h"] = 4
+print(d)
+print("\n")
+
+print(type({("c", 3), ("d", 4)}))
+d = {"a": 1}
+print(type(dict(d.items())))
+print("\n")
+
+d = {"a": 1, "b": 2, "c": 3}
+ks = d.keys()
+print(ks)
