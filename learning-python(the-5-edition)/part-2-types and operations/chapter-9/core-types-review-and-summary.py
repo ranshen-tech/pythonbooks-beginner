@@ -63,3 +63,24 @@ print("\n")
 
 print("b" < "c")
 print("\n")
+
+print(11 == "11")
+a = ["-3", "22", "11"]
+a.sort()
+print(a)
+print(str(11) >= "11", 11 >= int("11"))
+print("\n")
+
+d1 = {"a": 1, "b": 2}
+d2 = {"a": 1, "b": 3}
+print(d1 == d2)
+# print(d1 < d2)
+print("\n")
+
+print(list(d1.items()))
+print(sorted(d1.items()))
+print(sorted(d1.items()) < sorted(d2.items()))
+print("\n")
+
+
+# Python中的True和False的含义
