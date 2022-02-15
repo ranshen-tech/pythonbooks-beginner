@@ -45,3 +45,21 @@ l1 = [1, ("a", 3)]
 l2 = [1, ("a", 3)]
 print(l1 == l2, l1 is l2)
 print("\n")
+
+s1 = "spam"
+s2 = "spam"
+print(s1 == s2, s1 is s2)
+print("\n")
+
+s1 = "a longer string1234567890"
+s2 = "a longer string1234567890"
+print(s1 == s2, s1 is s2)
+print("\n")
+
+l1 = [1, ("a", 3)]
+l2 = [1, ("a", 2)]
+print(l1 < l2, l1 == l2, l1 > l2)
+print("\n")
+
+print("b" < "c")
+print("\n")
