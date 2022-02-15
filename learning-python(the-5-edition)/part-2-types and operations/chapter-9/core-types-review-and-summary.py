@@ -84,3 +84,48 @@ print("\n")
 
 
 # Python中的True和False的含义
+print(None)
+if None != True:
+    print(123)
+print("\n")
+
+l = [None] * 10
+print(l)
+print("\n")
+
+print(bool(1))
+print(bool("spam"))
+print(bool(None))
+print("\n")
+
+print(type([1]) == type([]))
+print(type([1]) == list())
+print(list)
+print(list())
+print(isinstance([1], list))
+print("\n")
+
+import types
+
+
+def f():
+    pass
+
+
+print(type(f) == types.FunctionType)
+print(type(f))
+print("\n")
+
+l = [1, 2, 3]
+m = ["x", l, "y"]
+print(m)
+l[1] = 0
+print(m)
+print("\n")
+
+l = [1, 2, 3]
+m = ["x", l[:], "y"]
+l[1] = 0
+print(l)
+print(m)
+print("\n")
