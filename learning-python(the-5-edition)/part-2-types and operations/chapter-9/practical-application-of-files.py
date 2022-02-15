@@ -109,3 +109,41 @@ print(open("testjson.txt").read())
 p = json.load(open("testjson.txt"))
 print(p)
 print("\n")
+
+# import csv
+
+# rdr = csv.reader(open("csvdata.txt"))
+# for row in rdr:
+#     print(row)
+
+
+# 存储打包二进制数据：struct
+f = open("data.bin", "wb")
+import struct
+
+data = struct.pack(">i4sh", 7, b"spam", 8)
+print(data)
+f.write(data)
+f.close()
+print("\n")
+
+f = open("data.bin", "rb")
+data = f.read()
+print(data)
+values = struct.unpack(">i4sh", data)
+print(values)
+print("\n")
+
+
+# 文件上下文管理器
+with open("myfile.txt") as myfile:
+    for line in myfile:
+        print(line)
+print("\n")
+
+myfile = open("myfile.txt")
+try:
+    for line in myfile:
+        print(line)
+finally:
+    myfile.close()
