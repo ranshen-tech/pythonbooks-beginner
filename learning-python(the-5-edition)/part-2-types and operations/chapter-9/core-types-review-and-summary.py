@@ -149,3 +149,45 @@ y = [list(l)] * 4
 l[1] = 0
 print(y)
 print("\n")
+
+y[0][1] = 99
+print(y)
+
+l = [4, 5, 6]
+y = [list(l) for i in range(4)]
+print(y)
+
+y[0][1] = 99
+print(y)
+
+
+# 注意循环数据结构
+l = ["grail"]
+l.append(l)
+print(l)
+print("\n")
+
+
+# 不可变类型不可以在原位置改变
+t = (1, 2, 3)
+# t[2] = 4
+t = t[:2] + (4,)
+print(t)
+print(t[:2] + (4,))
+print("\n")
+
+
+# exercises
+t = (4, 5, 6)
+print(t)
+t1 = list(t)
+print(t1)
+t1[0] = 1
+print(t1)
+t = tuple(t1)
+print(t)
+t1 = (1,) + t[1:]
+print(t1)
+print("\n")
+
+print(type((1, 2, 3)))
