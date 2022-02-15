@@ -46,3 +46,40 @@ line = f.readline()
 print(line)
 print(line.rstrip())
 print("\n")
+
+line = f.readline()
+print(line)
+parts = line.split(",")
+print(parts)
+# print(help(line.split))
+print("\n")
+
+print(int(parts[1]))
+numbers = [int(p) for p in parts]
+print(numbers)
+print("\n")
+
+line = f.readline()
+# print(help(f.readline))
+print(line)
+parts = line.split("$")
+print(parts)
+print(eval(parts[0]))
+print(type(eval(parts[0])))
+objects = [eval(p) for p in parts]
+print(objects)
+print("\n")
+
+
+# 存储 Python 原生对象：pickle
+d = {"a": 1, "b": 2}
+f = open("datafile.pkl", "wb")
+import pickle
+
+pickle.dump(d, f)
+f.close()
+
+f = open("datafile.pkl", "rb")
+e = pickle.load(f)
+print(e)
+print("\n")
