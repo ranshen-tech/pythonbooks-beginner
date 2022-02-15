@@ -176,8 +176,6 @@ print(t)
 print(t[:2] + (4,))
 print("\n")
 
-
-# exercises
 t = (4, 5, 6)
 print(t)
 t1 = list(t)
@@ -191,3 +189,4 @@ print(t1)
 print("\n")
 
 print(type((1, 2, 3)))
+print("\n")
