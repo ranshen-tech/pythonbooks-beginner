@@ -83,3 +83,29 @@ f = open("datafile.pkl", "rb")
 e = pickle.load(f)
 print(e)
 print("\n")
+
+print(open("datafile.pkl", "rb").read())
+print("\n")
+
+
+# 用 Json 格式存储 Python对象
+name = dict(first="Bob", last="Smith")
+rec = dict(name=name, job=["dev", "mgr"], age=40.5)
+print(rec)
+print("\n")
+
+import json
+
+print(json.dumps(rec))
+s = json.dumps(rec)
+print(s)
+o = json.loads(s)
+print(o)
+print(o == rec)
+print("\n")
+
+json.dump(rec, fp=open("testjson.txt", "w"), indent=4)
+print(open("testjson.txt").read())
+p = json.load(open("testjson.txt"))
+print(p)
+print("\n")
