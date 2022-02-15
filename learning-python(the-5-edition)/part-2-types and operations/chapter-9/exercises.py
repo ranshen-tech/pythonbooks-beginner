@@ -71,3 +71,24 @@ del l[1:]
 print(l)
 l[1:2] = [1]
 print(l)
+print("\n")
+
+
+# exercise4
+x = "spam"
+y = "eggs"
+x, y = y, x
+print(x, y)
+print("\n")
+
+
+# exercise5
+d = {}
+d[1] = "a"
+d[2] = "b"
+d[(1, 2, 3)] = "c"
+print(d)
+print("\n")
+
+
+# exercise6
