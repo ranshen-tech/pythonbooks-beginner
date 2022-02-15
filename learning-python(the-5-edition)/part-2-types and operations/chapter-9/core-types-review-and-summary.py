@@ -129,3 +129,23 @@ l[1] = 0
 print(l)
 print(m)
 print("\n")
+
+l = [4, 5, 6]
+x = l * 4
+y = [l] * 4
+print(x)
+print(y)
+print("\n")
+
+l[1] = 0
+print(x)
+print(y)
+print("\n")
+
+l = [4, 5, 6]
+print(l)
+print(list(l))
+y = [list(l)] * 4
+l[1] = 0
+print(y)
+print("\n")
