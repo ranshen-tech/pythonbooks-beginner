@@ -25,3 +25,49 @@ l.sort()
 print(l)
 print(l.index(4))
 print("\n")
+
+print({"a": 1, "b": 2}["b"])
+d = {"x": 1, "y": 2, "z": 3}
+d["w"] = 0
+print(d["x"] + d["w"])
+d[(1, 2, 3)] = 4
+print(list(d.keys()), list(d.values()), (1, 2, 3) in d)
+print([[]], ["", [], (), {}, None])
+print("\n")
+
+
+# exercise2
+l = [0, 1, 2, 3]
+print(l[-1000:100])
+l1 = l[:]
+l2 = l[-1000:100]
+print(l1)
+print(l2)
+print(l1 == l2)
+print(l1 is l2)
+print(l[:39])
+print("\n")
+
+print(l[3:1])
+print(l[1:3])
+print(l[3])
+l[3:1] = [7, 6]
+print(l)
+print("\n")
+
+
+# exercise3
+l = [1, 2, 3, 4]
+l[2] = []
+print(l)
+l[2:3] = []
+print(l)
+del l[0]
+print(l)
+print("\n")
+
+l = [1, 2, 3, 4]
+del l[1:]
+print(l)
+l[1:2] = [1]
+print(l)
