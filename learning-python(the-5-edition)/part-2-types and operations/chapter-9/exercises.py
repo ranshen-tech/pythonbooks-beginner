@@ -92,3 +92,5 @@ print("\n")
 
 
 # exercise6
+d.fromkeys(["a", "b", "c"], 0)
+print(d)
