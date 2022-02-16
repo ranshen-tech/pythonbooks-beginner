@@ -36,5 +36,26 @@ print("\n")
 print({"a": 1, "b": 2}["b"])
 D = {"x": 1, "y": 2, "z": 3}
 D["w"] = 0
-print(D)
 print(D["x"] + D["w"])
+D[(1, 2, 3)] = 4
+print(D)
+print(list(D.keys()), list(D.values()), (1, 2, 3) in D)
+print("\n")
+
+
+# Empties
+print([[]], "", [], (), {}, None)
+print("\n")
+
+
+# 索引运算和分片运算
+L = [1, 2, 3, 4]
+print(L[-1000:100])
+print(L[3:1])
+print(L)
+L[3:1] = ["?"]
+print(L)
+print("\n")
+
+
+# 索引运算、分片运算以及del
