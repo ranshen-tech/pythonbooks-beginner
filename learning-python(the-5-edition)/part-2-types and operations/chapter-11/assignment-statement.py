@@ -208,3 +208,65 @@ print("\n")
 for a, *b, c in [(1, 2, 3, 4), (5, 6, 7, 8)]:
     print(a, b, c)
 print("\n")
+
+for a, b, c in [(1, 2, 3), (4, 5, 6)]:
+    print(a, b, c)
+print("\n")
+
+
+# 多目标赋值
+a = b = c = "spam"
+print(a, b, c)
+print("\n")
+
+c = "spam"
+b = c
+a = b
+print(a, b, c)
+print("\n")
+
+a = b = 0
+b = b + 1
+print(a, b)
+print("\n")
+
+a = b = []
+b.append(42)
+print(a, b)
+print("\n")
+
+a = []
+b = []
+b.append(42)
+print(a, b)
+print("\n")
+
+a, b = [], []
+print(a, b)
+print("\n")
+
+
+# 增量赋值
+x = 1
+x = x + 1
+print(x)
+x += 1
+print(x)
+print("\n")
+
+S = "spam"
+S += "SPAM"
+print(S)
+print("\n")
+
+L = [1, 2]
+L = L + [3]
+print(L)
+L.append(4)
+print(L)
+print("\n")
+
+L = L + [5, 6]
+print(L)
+L.extend([7, 8])
+print(L)
