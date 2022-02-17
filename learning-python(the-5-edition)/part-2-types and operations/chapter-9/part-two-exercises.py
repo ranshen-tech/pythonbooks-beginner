@@ -124,3 +124,32 @@ print(""[:])
 # 字符串索引运算
 S = "spam"
 print(S[0][0][0][0][0])
+print("\n")
+
+
+# 不可变类型
+S = "Spam"
+S = S[0] + "l" + S[2:]
+print(S)
+S = S[0] + "l" + S[2] + S[3]
+print(S)
+print("\n")
+
+
+# 嵌套
+me = {"name": ("John", "Q", "Doe"), "age": "?", "job": "engineer"}
+print(me["job"])
+print(me["name"][2])
+print("\n")
+
+
+# 文件
+
+# File: maker.py
+file = open("myfile.txt", "w")
+file.write("Hello file world!\n")
+file.close()
+
+# File: reader.py
+file = open("myfile.txt")
+print(file.read())
