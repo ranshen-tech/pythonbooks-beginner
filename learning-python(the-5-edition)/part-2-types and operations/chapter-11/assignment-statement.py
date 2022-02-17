@@ -270,3 +270,33 @@ L = L + [5, 6]
 print(L)
 L.extend([7, 8])
 print(L)
+print("\n")
+
+L += [9, 10]
+print(L)
+print("\n")
+
+L = []
+L += "spam"
+print(L)
+# L = L + "spam"
+print("\n")
+
+
+# 增量赋值与共享引用
+L = [1, 2]
+M = L
+L = L + [3, 4]
+print(L, M)
+
+L = [1, 2]
+M = L
+L += [3, 4]
+print(L, M)
+print("\n")
+
+
+# 变量命名规则
+x = 0
+x = "Hello"
+x = [1, 2, 3]
