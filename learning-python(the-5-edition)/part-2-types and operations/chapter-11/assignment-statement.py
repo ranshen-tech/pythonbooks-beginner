@@ -178,3 +178,33 @@ print(a, b, c, d, e)
 a, b, *e, c, d = seq
 print(a, b, c, d, e)
 print("\n")
+
+# a, *b, c, *d = seq
+# a, b = seq
+# *a = seq
+(*a,) = seq
+print(a)
+print("\n")
+
+# 一种有用的便捷方式
+print(seq)
+
+a, *b = seq
+print(a, b)
+
+a, b = seq[0], seq[1:]
+print(a, b)
+print("\n")
+
+*a, b = seq
+print(a, b)
+
+a, b = seq[:-1], seq[-1]
+print(a, b)
+print("\n")
+
+
+# for循环中的应用
+for a, *b, c in [(1, 2, 3, 4), (5, 6, 7, 8)]:
+    print(a, b, c)
+print("\n")
