@@ -3,6 +3,7 @@ print(2**16)
 print(2 / 5, 2 / 5.0)
 print("\n")
 
+
 # String
 print("spam" + "eggs")
 s = "ham"
@@ -14,10 +15,12 @@ print("green %s and %s" % ("eggs", s))
 print("green {0} and {1}".format("eggs", s))
 print("\n")
 
+
 # Tuples
 print(("x",)[0])
 print(("x", "y")[1])
 print("\n")
+
 
 # Lists
 L = [1, 2, 3] + [4, 5, 6]
@@ -59,3 +62,33 @@ print("\n")
 
 
 # 索引运算、分片运算以及del
+L = [1, 2, 3, 4]
+L[2] = []
+print(L)
+L[2:3] = []
+print(L)
+del L[0]
+print(L)
+del L[1:]
+print(L)
+# L[1:2] = 1
+# print(L)
+print("\n")
+
+
+# 元组赋值运算
+X = "spam"
+Y = "eggs"
+X, Y = Y, X
+print(X)
+print(Y)
+print("\n")
+
+
+# 字典键
+D = {}
+D[1] = "a"
+D[2] = "b"
+D[(1, 2, 3)] = "c"
+print(D)
+print("\n")
