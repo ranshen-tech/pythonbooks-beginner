@@ -89,3 +89,53 @@ print(a, b, c)
 (a, b), c = "SP", "AM"
 print(a, b, c)
 print("\n")
+
+for (a, b, c) in [(1, 2, 3), (4, 5, 6)]:
+    print(a, b, c)
+for ((a, b), c) in [((1, 2), 3), ((4, 5), 6)]:
+    print((a, b), c)
+print("\n")
+for a, b, c in [(1, 2, 3), (4, 5, 6)]:
+    print(a, b, c)
+for (a, b), c in [((1, 2), 3), ((4, 5), 6)]:
+    print((a, b), c)
+print("\n")
+
+red, green, blue = range(3)
+print(red, blue)
+print("\n")
+
+print(list(range(3)))
+print("\n")
+
+L = [1, 2, 3, 4]
+while L:
+    fnt, L = L[0], L[1:]
+    print(fnt, L)
+print("\n")
+
+seq = [1, 2, 3, 4]
+a, b, c, d = seq
+print(a, b, c, d)
+print("\n")
+
+a, *b = seq
+print(a)
+print(b)
+print("\n")
+
+*a, b = seq
+print(a)
+print(b)
+print("\n")
+
+a, *b, c = seq
+print(a)
+print(b)
+print(c)
+print("\n")
+
+a, b, *c = seq
+print(a)
+print(b)
+print(c)
