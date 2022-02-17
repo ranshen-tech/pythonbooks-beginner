@@ -62,3 +62,30 @@ a, b, c = "ABC"
 print(a, c)
 print(b)
 print("\n")
+
+
+# 高级序列赋值语句模式
+string = "SPAM"
+a, b, c, d = string
+print(a, d)
+# a, b, c = string
+a, b, c = string[0], string[1], string[2:]
+print(a, b, c)
+
+a, b, c = list(string[:2]) + [string[2:]]
+print(a, b, c)
+
+a, b = string[:2]
+print(type(string[:2]))
+c = string[2:]
+print(a, b, c)
+
+(a, b), c = string[:2], string[2:]
+print(a, b, c)
+print("\n")
+
+((a, b), c) = ("SP", "AM")
+print(a, b, c)
+(a, b), c = "SP", "AM"
+print(a, b, c)
+print("\n")
