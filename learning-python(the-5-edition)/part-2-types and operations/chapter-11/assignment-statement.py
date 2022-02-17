@@ -150,3 +150,31 @@ print(a, b, c)
 a, *b, c = range(4)
 print(a, b, c)
 print("\n")
+
+S = "spam"
+print(S[0], S[1:])
+print(S[0], S[1:3], S[3])
+print("\n")
+
+L = [1, 2, 3, 4]
+while L:
+    front, *L = L
+    print(front, L)
+print("\n")
+
+
+# 边界情况
+seq = [1, 2, 3, 4]
+a, b, c, *d = seq
+print(a, b, c, d)
+print("\n")
+
+a, b, c, d, *e = seq
+print(a, b, c, d, e)
+
+a, b, *c, d, e = seq
+print(a, b, c, d, e)
+
+a, b, *e, c, d = seq
+print(a, b, c, d, e)
+print("\n")
