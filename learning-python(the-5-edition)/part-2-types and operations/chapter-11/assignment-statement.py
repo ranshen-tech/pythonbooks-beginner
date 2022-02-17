@@ -139,3 +139,14 @@ a, b, *c = seq
 print(a)
 print(b)
 print(c)
+print("\n")
+
+a, *b = "spam"
+print(a, b)
+
+a, *b, c = "spam"
+print(a, b, c)
+
+a, *b, c = range(4)
+print(a, b, c)
+print("\n")
