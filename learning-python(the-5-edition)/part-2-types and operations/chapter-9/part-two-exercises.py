@@ -92,3 +92,35 @@ D[2] = "b"
 D[(1, 2, 3)] = "c"
 print(D)
 print("\n")
+
+
+# 字典索引运算
+D = {"a": 1, "b": 2, "c": 3}
+print(D["a"])
+# print(D["d"])
+D["d"] = 4
+print(D)
+L = [0, 1]
+# print(L[2])
+# L[2] = 3
+print(L)
+print("\n")
+
+
+# 通用操作。习题解答
+# print("x" + 1)
+# print({} + {})
+l = []
+l.append(9)
+print(l)
+s = ""
+# s.append(9)
+print(list({}.keys()))
+# print([].keys())
+print([][:])
+print(""[:])
+
+
+# 字符串索引运算
+S = "spam"
+print(S[0][0][0][0][0])
