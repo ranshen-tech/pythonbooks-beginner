@@ -34,3 +34,37 @@ elif choice == "bacon":
     print(1.10)
 else:
     print("Bad choice")
+print("\n")
+
+
+# 处理选择语句的默认情况
+branch = {"spam": 1.25, "ham": 1.99, "eggs": 0.99}
+print(branch.get("spam", "Bad choice"))
+print(branch.get("bacon", "Bad choice"))
+print("\n")
+
+choice = "bacon"
+if choice in branch:
+    print(branch[choice])
+else:
+    print("Bad choice")
+print("\n")
+
+try:
+    print(branch[choice])
+except KeyError:
+    print("Bad choice")
+print("\n")
+
+
+# 处理更大规模的活动
+def function():
+    pass
+
+
+def default():
+    pass
+
+
+branch = {"spam": lambda: ..., "ham": function, "eggs": lambda: ...}
+branch.get(choice, default)()
