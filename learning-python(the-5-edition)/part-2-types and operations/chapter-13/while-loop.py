@@ -43,3 +43,21 @@ def func2():
 
 
 func1()
+
+
+def func1():
+    ...
+
+
+def func2():
+    ...
+
+
+func1()
+
+x = ...
+print(x)
+print("\n")
+
+
+# continue
