@@ -100,3 +100,31 @@ log.close()
 print(7, 8, 9)
 print(open("log.txt").read())
 print("\n")
+
+sys.stderr.write(("Bad!" * 8) + "\n")
+print("Bad!" * 8, file=sys.stderr)
+print("Bad!" * 8)
+print("\n")
+
+X = 1
+Y = 2
+print(X, Y)
+sys.stdout.write(str(X) + " " + str(Y) + "\n")
+
+print(X, Y, file=open("temp1", "w"))
+open("temp2", "w").write(str(X) + " " + str(Y) + "\n")
+
+print(open("temp1", "rb").read())
+print(open("temp2", "rb").read())
+print("\n")
+
+print("spam")
+print("spam", "ham", "eggs")
+print()
+print("")
+print("\n")
+
+print("%s %s %s" % ("spam", "ham", "eggs"))
+print("{0} {1} {2}".format("spam", "ham", "eggs"))
+print("answer " + str(42))
+print("\n")
