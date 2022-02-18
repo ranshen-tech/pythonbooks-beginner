@@ -58,4 +58,45 @@ import sys
 sys.stdout.write("hello world\n")
 print("\n")
 
+
 # 手动定向输出流
+x = 1
+y = 2
+z = 3
+print(x, y)
+
+import sys
+
+temp = sys.stdout
+sys.stdout.write(str(x) + " " + str(y) + "\n")
+print("\n")
+
+sys.stdout = open("log.txt", "a")
+print(x, y, x)
+
+
+# 自动流重定向
+print("spam")
+print(1, 2, 3)
+sys.stdout.close()
+sys.stdout = temp
+
+print("back here")
+print(open("log.txt").read())
+print("\n")
+
+a = 4
+b = 5
+c = 6
+log = open("log.txt", "a")
+print(x, y, z, file=log)
+print(a, b, c)
+print("\n")
+
+log = open("log.txt", "w")
+print(1, 2, 3, file=log)
+print(4, 5, 6, file=log)
+log.close()
+print(7, 8, 9)
+print(open("log.txt").read())
+print("\n")
