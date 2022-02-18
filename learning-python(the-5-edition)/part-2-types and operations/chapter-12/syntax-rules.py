@@ -21,3 +21,13 @@ print("\n")
 # 语句分隔符：行与行间连接符
 L = ["Good", "Bad", "Ugly"]
 print("\n")
+
+a, b, c, d, e, f, g = 1, 1, 1, 1, 1, 1, 1
+print(a, b, c, d, e, f)
+
+if a == b and c == d and d == e and f == g:
+    print("olde")
+
+if a == b and c == d and d == e and e == f:
+    print("new")
+print("\n")
