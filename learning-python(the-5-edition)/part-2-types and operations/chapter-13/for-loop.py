@@ -154,3 +154,25 @@ while True:
     else:
         break
 print("\n")
+
+file = open("log.txt", "rb")
+while True:
+    chunk = file.read()
+    if not chunk:
+        break
+    print(chunk)
+print("\n")
+
+for line in open("log.txt").readlines():
+    print(line.rstrip())
+print("\n-----------------")
+
+for line in open("log.txt"):
+    print(line.rstrip())
+print("\n")
+
+for line in reversed(open("log.txt").readlines()):
+    print(line)
+print("\n")
+
+print(type(open("log.txt").read()))
