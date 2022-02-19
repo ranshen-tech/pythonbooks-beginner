@@ -117,3 +117,38 @@ T1, T2, T3 = (1, 2, 3), (4, 5, 6), (7, 8, 9)
 print(T3)
 print(list(zip(T1, T2, T3)))
 print("\n")
+
+S1 = "abc"
+S2 = "xyz123"
+print(list(zip(S1, S2)))
+print("\n")
+
+print(list(map(ord, "spam")))
+print("\n")
+
+res = []
+for c in "spam":
+    res.append(ord(c))
+print(res)
+print("\n")
+
+
+# Construct the dictionary using ZIP
+D1 = {"spam": 1, "eggs": 3, "toast": 5}
+print(D1)
+
+D1 = {}
+D1["spam"] = 1
+D1["eggs"] = 3
+D1["toast"] = 5
+print(D1)
+print("\n")
+
+keys = ["spam", "eggs", "toast"]
+vals = [1, 3, 5]
+
+print(list(zip(keys, vals)))
+D2 = {}
+for k, v in zip(keys, vals):
+    D2[k] = v
+print(D2)
