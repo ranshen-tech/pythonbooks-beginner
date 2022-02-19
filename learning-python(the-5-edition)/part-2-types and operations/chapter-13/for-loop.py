@@ -60,3 +60,33 @@ print("\n")
 ((a, b), c) = ((1, 2), 3)
 print(a, b, c)
 print("\n")
+
+for (a, b), c in [((1, 2), 3), ((4, 5), 6)]:
+    print(a, b, c)
+print("\n")
+
+for (a, b), c in [([1, 2], 3), ["XY", 6]]:
+    print(a, b, c)
+print("\n")
+
+
+# Python 3.X entended sequence assignment in the for loop
+a, b, c = (1, 2, 3)
+print(a, b, c)
+print("\n")
+
+for a, b, c in [(1, 2, 3), (4, 5, 6)]:
+    print(a, b, c)
+print("\n")
+
+a, *b, c = (1, 2, 3, 4)
+print(a, b, c)
+print("\n")
+
+for a, *b, c in [(1, 2, 3, 4), (5, 6, 7, 8)]:
+    print(a, b, c)
+print("\n")
+
+for all in [(1, 2, 3, 4), (5, 6, 7, 8)]:
+    a, b, c = all[0], all[1:3], all[3]
+    print(a, b, c)
