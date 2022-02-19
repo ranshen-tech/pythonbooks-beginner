@@ -179,3 +179,14 @@ print("\n")
 
 E = enumerate(S)
 print(E)
+print(next(E))
+print(next(E))
+print(next(E))
+print(next(E))
+print("\n")
+
+print(list(E))
+print([c * i for i, c in enumerate(S)])
+for i, l in enumerate(open("log.txt")):
+    print("%s) %s" % (i, l.rstrip()))
+print("\n")
