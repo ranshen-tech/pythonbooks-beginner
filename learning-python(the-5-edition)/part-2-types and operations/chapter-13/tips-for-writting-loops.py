@@ -40,6 +40,7 @@ print("\n")
 
 
 # Sequence sequencer: range and len
+
 S = "spam"
 for i in range(len(S)):
     S = S[1:] + S[:1]
@@ -60,6 +61,7 @@ print("\n")
 
 
 # 非穷尽遍历：range VS slice
+
 S = "abcdefghijk"
 print(list(range(0, len(S), 2)))
 print("\n")
@@ -75,18 +77,43 @@ print("\n")
 
 
 # 修改list：range vs 推导
-L = [1, 2, 3, 4, 5]
 
+L = [1, 2, 3, 4, 5]
 for x in L:
     x += 1
-
 print(L)
 print(x)
 print("\n")
 
 L = [1, 2, 3, 4, 5]
-
 for i in range(len(L)):
     L[i] += 1
-
 print(L)
+print("\n")
+
+i = 0
+while i < len(L):
+    L[i] += 1
+    i += 1
+print(L)
+
+print([x + 1 for x in L])
+print("\n")
+
+
+# 并行遍历： zip and map
+
+L1 = [1, 2, 3, 4]
+L2 = [5, 6, 7, 8]
+print(list(zip(L1)))
+print(list(zip(L1, L2)))
+print("\n")
+
+for x, y in zip(L1, L2):
+    print(x, y, "--", x + y)
+print("\n")
+
+T1, T2, T3 = (1, 2, 3), (4, 5, 6), (7, 8, 9)
+print(T3)
+print(list(zip(T1, T2, T3)))
+print("\n")
