@@ -121,3 +121,36 @@ for x in seq1:
     if x in seq2:
         res.append(x)
 print(res)
+print("\n")
+
+print([x for x in seq1 if x in seq2])
+print("\n")
+
+
+# Be careful: file scanner
+
+file = open("data.txt")
+print(file.read())
+print("\n---------------")
+
+file = open("log.txt")
+while True:
+    char = file.read(2)
+    if char:
+        print(char)
+    else:
+        break
+print("\n------------")
+
+for char in open("log.txt").read():
+    print(char)
+print("\n------------")
+
+file = open("log.txt")
+while True:
+    line = file.readline()
+    if line:
+        print(line.rstrip())
+    else:
+        break
+print("\n")
