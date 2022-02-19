@@ -90,3 +90,34 @@ print("\n")
 for all in [(1, 2, 3, 4), (5, 6, 7, 8)]:
     a, b, c = all[0], all[1:3], all[3]
     print(a, b, c)
+print("\n")
+
+
+# Nested in the for loop
+items = ["aaa", 111, (4, 5), 2.01]
+tests = [(4, 5), 3.14]
+
+for key in tests:
+    for item in items:
+        if item == key:
+            print(key, "was found")
+            break
+    else:
+        print(key, "not found!")
+print("\n")
+
+for key in tests:
+    if key in items:
+        print(key, "was found")
+    else:
+        print(key, "not found!")
+print("\n")
+
+seq1 = "spam"
+seq2 = "scam"
+
+res = []
+for x in seq1:
+    if x in seq2:
+        res.append(x)
+print(res)
