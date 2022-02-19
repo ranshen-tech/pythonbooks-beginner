@@ -125,4 +125,3 @@ while x:
     x = x[1:]
 else:
     print("Not found")
-print("hello")
