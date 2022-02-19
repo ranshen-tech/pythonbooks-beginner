@@ -134,9 +134,9 @@ print("\n")
 
 
 # Construct the dictionary using ZIP
+
 D1 = {"spam": 1, "eggs": 3, "toast": 5}
 print(D1)
-
 D1 = {}
 D1["spam"] = 1
 D1["eggs"] = 3
@@ -146,9 +146,36 @@ print("\n")
 
 keys = ["spam", "eggs", "toast"]
 vals = [1, 3, 5]
-
 print(list(zip(keys, vals)))
 D2 = {}
 for k, v in zip(keys, vals):
     D2[k] = v
 print(D2)
+print("\n")
+
+keys = ["spam", "eggs", "toast"]
+vals = [1, 3, 5]
+D3 = dict(zip(keys, vals))
+print(D3)
+print("\n")
+
+print({k: v for k, v in zip(keys, vals)})
+print("\n")
+
+
+# 同时给出偏移量和元素：enumerate
+
+S = "spam"
+offset = 0
+for item in S:
+    print(item, "appears at offset", offset)
+    offset += 1
+print("\n")
+
+S = "spam"
+for offset, item in enumerate(S):
+    print(item, "appears at offset", offset)
+print("\n")
+
+E = enumerate(S)
+print(E)
