@@ -65,3 +65,35 @@ print("\n")
 
 
 # 嵌套循环：for
+
+print([x + y for x in "abc" for y in "lmn"])
+print("\n")
+
+res = []
+for x in "abc":
+    for y in "lmn":
+        res.append(x + y)
+print(res)
+print("\n")
+
+
+# Other iteration contexts
+for line in open("script2.py"):
+    print(line.upper(), end="")
+print("\n")
+
+uppers = [line.upper() for line in open("script2.py")]
+print(uppers)
+print("\n")
+
+print(list(map(str.upper, open("script2.py"))))
+print("\n")
+
+print(sorted(open("script2.py")))
+print("\n")
+
+print(list(zip(open("script2.py"), open("script2.py"))))
+print("\n")
+
+print(list(enumerate(open("script2.py"))))
+print("\n")
