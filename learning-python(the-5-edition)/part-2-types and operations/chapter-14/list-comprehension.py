@@ -120,3 +120,29 @@ L = [11]
 L.extend(open("script2.py"))
 print(L)
 print("\n")
+
+L = [11]
+L.append(open("script2.py"))
+print(L)
+print(list(L[1]))
+print("\n")
+
+print(set(open("script2.py")))
+print({line for line in open("script2.py")})
+print({ix: line for ix, line in enumerate(open("script2.py"))})
+print("\n")
+
+print({line for line in open("script2.py") if line[0] == "p"})
+print({ix: line for ix, line in enumerate(open("script2.py")) if line[0] == "p"})
+print("\n")
+
+print(list(line.upper() for line in open("script2.py")))
+print("\n")
+
+print(sum([3, 2, 4, 1, 5, 0]))
+
+print(any(["spam", "", "ni"]))
+print(all(["spam", "", "ni"]))
+print(max([3, 2, 5, 1, 4]))
+print(min([3, 2, 5, 1, 4]))
+print("\n")
