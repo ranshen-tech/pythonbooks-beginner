@@ -63,3 +63,33 @@ Z = zip((1, 2, 3), (10, 20, 30))
 print(next(Z))
 print(next(Z))
 print("\n")
+
+print(filter(bool, ["spam", "", "ni"]))
+print(list(filter(bool, ["spam", "", "ni"])))
+print("\n")
+
+print([x for x in ["spam", "", "ni"] if bool(x)])
+print([x for x in ["spam", "", "ni"] if x])
+print("\n")
+
+
+# Multiple-iterators vs Single-pass-iterators
+
+R = range(3)
+# print(next(R))
+
+I1 = iter(R)
+print(next(I1))
+print(next(I1))
+I2 = iter(R)
+print(next(I2))
+print(next(I1))
+print("\n")
+
+Z = zip((1, 2, 3), (10, 11, 12))
+I1 = iter(Z)
+I2 = iter(Z)
+print(next(I1))
+print(next(I1))
+print(next(I2))
+print("\n")
