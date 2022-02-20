@@ -85,4 +85,11 @@ print("\💖")
 
 L = [1, 2, 3]
 print(iter(L) is L)
-print(L.__next__())
+# print(L.__next__())
+print("\n")
+
+I = iter(L)
+print(I.__next__())
+print(next(I))
+print(next(I))
+print(next(I))
