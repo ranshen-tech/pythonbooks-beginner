@@ -92,4 +92,38 @@ I = iter(L)
 print(I.__next__())
 print(next(I))
 print(next(I))
+print("\n")
+
+
+# Manual iteration
+
+L = [1, 2, 3]
+for X in L:
+    print(X**2, end=" ")
+print("\n")
+
+I = iter(L)
+while True:
+    try:
+        X = next(I)
+    except StopIteration:
+        break
+    print(X**2, end=" ")
+print("\n")
+
+
+# Other built-in type iterables
+
+D = {"a": 1, "b": 2, "c": 3}
+for key in D.keys():
+    print(key, D[key])
+print("\n")
+
+I = iter(D)
 print(next(I))
+print(next(I))
+print(next(I))
+print("\n")
+
+for key in D:
+    print(key, D[key])
