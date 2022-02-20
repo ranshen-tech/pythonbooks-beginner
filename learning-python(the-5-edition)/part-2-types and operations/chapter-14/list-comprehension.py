@@ -90,10 +90,33 @@ print(list(map(str.upper, open("script2.py"))))
 print("\n")
 
 print(sorted(open("script2.py")))
-print("\n")
-
 print(list(zip(open("script2.py"), open("script2.py"))))
+print(list(enumerate(open("script2.py"))))
+print(list(filter(bool, open("script2.py"))))
+
+import functools, operator
+
+print(functools.reduce(operator.add, open("script2.py")))
 print("\n")
 
-print(list(enumerate(open("script2.py"))))
+print([line for line in open("script2.py")])
+print("\n")
+
+print(list(open("script2.py")))
+print(tuple(open("script2.py")))
+print("&&".join(open("script2.py")))
+print("\n")
+
+a, b, c, d, e = open("script2.py")
+print(a, e)
+a, *b = open("script2.py")
+print(a, b)
+print("y = 2\n" in open("script2.py"))
+print("x = 2\n" in open("script2.py"))
+L = [11, 22, 33, 44]
+L[1:3] = open("script2.py")
+print(L)
+L = [11]
+L.extend(open("script2.py"))
+print(L)
 print("\n")
