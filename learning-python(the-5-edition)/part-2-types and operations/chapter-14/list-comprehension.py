@@ -31,4 +31,37 @@ print("\n")
 
 lines = [line.strip() for line in open("script2.py")]
 print(lines)
+print("\n💖")
+
+print([line.upper() for line in open("script2.py")])
 print("\n")
+
+print([line.rstrip().upper() for line in open("script2.py")])
+print("\n")
+
+print([line.split() for line in open("script2.py")])
+print("\n")
+
+print([line.replace(" ", "!") for line in open("script2.py")])
+print("\n")
+
+print([("sys" in line, line[:5]) for line in open("script2.py")])
+print("\n")
+
+
+# Extended list-comprehension syntax
+# 筛选分句：if
+
+lines = [line.rstrip() for line in open("script2.py") if line[0] == "p"]
+print(lines)
+print("\n")
+
+res = []
+for line in open("script2.py"):
+    if line[0] == "p":
+        res.append(line.rstrip())
+print(res)
+print("\n")
+
+
+# 嵌套循环：for
