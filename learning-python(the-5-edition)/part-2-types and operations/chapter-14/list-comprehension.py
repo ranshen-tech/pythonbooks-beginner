@@ -146,3 +146,28 @@ print(all(["spam", "", "ni"]))
 print(max([3, 2, 5, 1, 4]))
 print(min([3, 2, 5, 1, 4]))
 print("\n")
+
+print(max(open("script2.py")).rstrip())
+print(min(open("script2.py")).rstrip())
+print("\n")
+
+
+def f(a, b, c, d, e):
+    print(a, b, c, d, e, sep="&")
+
+
+f(1, 2, 3, 4, 5)
+f(*[1, 2, 3, 4, 5])
+f(*open("script2.py"))
+print("\n")
+
+X = 1, 2
+Y = 3, 4
+print(list(zip(X, Y)))
+print(type(X))
+print(*zip(X, Y))
+A, B = zip(*zip(X, Y))
+print(A)
+print(B)
+print(*zip(X, Y))
+print(list(zip(*zip(X, Y))))
