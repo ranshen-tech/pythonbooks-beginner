@@ -122,3 +122,34 @@ print(next(I))
 for k in D.keys():
     print(k, end=" ")
 print("\n")
+
+K = D.keys()
+print(list(K))
+
+V = D.values()
+print(V)
+print(list(V))
+# print(V[0])
+print(list(V)[0])
+print(list(D.items()))
+for k, v in D.items():
+    print(k, v, end=" ")
+print("\n")
+
+print(D)
+I = iter(D)
+print(next(I))
+print(next(I))
+for key in D:
+    print(key, end=" ")
+print("\n")
+
+print(D)
+print(sorted(D.keys()))
+for k in sorted(D.keys()):
+    print(k, D[k], end=" ")
+print("\n")
+
+for k in sorted(D):
+    print(k, D[k], end=" ")
+print("\n")
