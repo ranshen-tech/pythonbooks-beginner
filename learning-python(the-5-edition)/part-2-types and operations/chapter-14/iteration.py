@@ -66,7 +66,7 @@ print(next(f).rstrip())
 print("💖")
 
 
-# Complete iteration agreement
+# Complete iteration protocol
 
 L = [1, 2, 3]
 I = iter(L)
@@ -127,3 +127,19 @@ print("\n")
 
 for key in D:
     print(key, D[key])
+print("\n")
+
+R = range(5)
+print(R)
+I = iter(R)
+print(next(I))
+print(next(I))
+print(list(range(5)))
+print("\n")
+
+E = enumerate("spam")
+print(E)
+I = iter(E)
+print(next(I))
+print(next(I))
+print(list(enumerate("spam")))
