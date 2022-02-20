@@ -93,3 +93,32 @@ print(next(I1))
 print(next(I1))
 print(next(I2))
 print("\n")
+
+M = map(abs, (-1, 0, 1))
+I1 = iter(M)
+I2 = iter(M)
+print(next(I1), next(I1), next(I1))
+# print(next(I2))
+print("\n")
+
+R = range(3)
+I1, I2 = iter(R), iter(R)
+print([next(I1), next(I1), next(I1)])
+print(next(I2), next(I2))
+print("\n")
+
+
+# Dictionary view iterable
+
+D = dict(a=1, b=2, c=3)
+print(D)
+
+K = D.keys()
+print(K)
+# print(next(K))
+I = iter(K)
+print(next(I))
+print(next(I))
+for k in D.keys():
+    print(k, end=" ")
+print("\n")
