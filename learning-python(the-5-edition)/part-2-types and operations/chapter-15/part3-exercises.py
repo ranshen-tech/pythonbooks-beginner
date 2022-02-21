@@ -44,3 +44,5 @@ print("\n")
 for key in sorted(D):
     print(key, "=>", D[key])
 print("\n")
+
+import power
