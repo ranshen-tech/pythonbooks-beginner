@@ -7,6 +7,9 @@ print(a)
 print(len([x for x in dir(sys) if not x[0] == "_"]))
 print("\n💖")
 
+
+# dir()
+
 print(dir([]))
 print("\n")
 print(dir(list()))
@@ -33,3 +36,43 @@ def dir1(x):
 
 print(dir1(tuple))
 print("\n")
+
+print(dir(str) == dir(""))
+print(dir(list) == dir([]))
+print(dir(str()) == dir(""))
+print("\n")
+
+
+# Docstring: __doc__
+import docstrings
+
+print(docstrings.__doc__)
+print(docstrings.square.__doc__)
+print(docstrings.Employee.__doc__)
+print("\n")
+
+
+# built-in docstring
+
+print(sys.__doc__)
+print(sys.getrefcount.__doc__)
+print("\n")
+print(int.__doc__)
+print(map.__doc__)
+print("\n")
+
+
+# help()
+
+# print(help(sys))
+# print(help(dict))
+# print(help(str.replace))
+# print(help("".replace))
+# print(help(ord))
+# print(help("re"))
+# print(help(docstrings))
+# print(help(docstrings.square))
+# print(help(docstrings.Employee))
+
+
+# HTML
