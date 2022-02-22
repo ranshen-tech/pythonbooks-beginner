@@ -8,6 +8,7 @@ def local():
 def glob1():
     global var
     var += 1
+    # print(var)
 
 
 def glob2():
