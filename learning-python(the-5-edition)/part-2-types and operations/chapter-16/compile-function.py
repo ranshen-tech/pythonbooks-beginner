@@ -67,3 +67,29 @@ s2 = "SCAM"
 print(intersect(s1, s2))
 print(intersect2(s1, s2))
 print("\n")
+
+x = intersect2([1, 2, 3], (1, 4))
+print(x)
+print("\n")
+
+print(intersect([1, 2, 3], []))
+print("\n")
+
+
+# Action-scope example
+
+X = 99
+
+
+def func(Y):
+    Z = X + Y
+    return Z
+
+
+print(func(1))
+
+
+import builtins
+
+print(dir(builtins))
+print("\n")
