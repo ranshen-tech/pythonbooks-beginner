@@ -1,31 +1,69 @@
 # def statement
 
-def name(arg1, arg2,...argN):
-    statements
+# def name(arg1, arg2,...argN):
+#     statements
 
 
+# def name(arg2, arg2...argN):
+#     ...
+#     return value
 
 
-def name(arg2, arg2...argN):
-    ...
-    return value
+# if test:
+#     def func():
+#         ...
+# else:
+#     def func():
+#         ...
+# ...
+# func()
 
 
-if test:
-    def func():
-        ...
-else:
-    def func():
-        ...
-...
-func()
+# othername = func
+# othername()
+
+# def func():
+#     ...
+# func()
+# func.attr = value
 
 
-othername = func
-othername()
+# Example1
 
-def func():
-    ...
-func()
-func.attr = value
 
+def times(x, y):
+    return x * y
+
+
+print(times(2, 4))
+print("\n")
+
+x = times(3.14, 4)
+print(x)
+print("\n")
+
+print(times("Ni", 4))
+print("\n")
+
+
+# Example2
+
+
+def intersect(seq1, seq2):
+    res = []
+    for x in seq1:
+        if x in seq2:
+            res.append(x)
+    return res
+
+
+def intersect2(seq1, seq2):
+    res = [x for x in seq1 if x in seq2]
+    return res
+
+
+s1 = "SPAM"
+s2 = "SCAM"
+print(intersect(s1, s2))
+print(intersect2(s1, s2))
+print("\n")
