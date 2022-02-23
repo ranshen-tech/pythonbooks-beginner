@@ -91,3 +91,46 @@ tester()()
 tester()()
 tester()()
 print("\n")
+
+
+# nonlocal state of variable(变量的状态)
+
+
+def tester(start):
+    state = start
+
+    def nested(label):
+        nonlocal state
+        print(label, state)
+        state += 1
+
+    return nested
+
+
+F = tester(78)
+F("spam")
+# print(F.state)
+print("\n")
+
+
+def tester(start):
+    global state
+    state = start
+
+    def nested(label):
+        global state
+        print(label, state)
+        state += 1
+
+    return nested
+
+
+F = tester(9)
+F("spam")
+F("eggs")
+
+G = tester(42)
+G("toast")
+G("bacon")
+F("ham")
+print("\n")
