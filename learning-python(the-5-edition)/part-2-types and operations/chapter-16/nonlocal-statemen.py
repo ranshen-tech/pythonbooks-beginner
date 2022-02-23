@@ -197,3 +197,25 @@ print(F.state)
 print(G.state)
 print(F is G)
 print("\n")
+
+
+# 可变对象的状态
+
+
+def tester(start):
+    state = [start]
+
+    def nested(label):
+        print(label, state[0])
+        state[0] += 1
+
+    # state = [start]
+    return nested
+
+
+F = tester(0)
+F("spam")
+F("ham")
+G = tester(9)
+G("ranshen")
+F("xupeng")
