@@ -134,3 +134,40 @@ G("toast")
 G("bacon")
 F("ham")
 print("\n")
+
+
+class tester:
+    def __init__(self, start):
+        self.state = start
+
+    def nested(self, label):
+        print(label, self.state)
+        self.state += 1
+
+
+F = tester(0)
+F.nested("spam")
+F.nested("ham")
+print("\n")
+
+G = tester(42)
+G.nested("toast")
+G.nested("bacon")
+F.nested("eggs")
+print(F.state)
+print("\n")
+
+
+class tester:
+    def __init__(self, start):
+        self.state = start
+
+    def __call__(self, label):
+        print(label, self.state)
+        self.state += 1
+
+
+H = tester(99)
+H("juice")
+H("pancakes")
+print("\n")
