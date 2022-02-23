@@ -22,3 +22,42 @@ class makeopen:
     def __call__(self, *kargs, **pargs):
         print("Custom open call %r" % self.id, kargs, pargs)
         return self.original(*kargs, **pargs)
+
+
+print("\n")
+
+
+# exercise
+X = "Spam"
+
+
+def func():
+    print(X)
+
+
+func()
+print("\n")
+
+
+x = "Spam"
+
+
+def func():
+    x = "NI"
+
+
+func()
+print(X)
+print("\n")
+
+
+x = "Spam"
+
+
+def func():
+    x = "NI"
+    print(x)
+
+
+func()
+print(x)
