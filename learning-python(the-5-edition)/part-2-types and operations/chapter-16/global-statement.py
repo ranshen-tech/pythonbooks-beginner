@@ -69,4 +69,121 @@ g = maker(3)
 print(g(4))
 print(f(4))
 print("\n")
+
 print(maker(3)(4))
+print("\n")
+
+
+def maker(N):
+    return lambda X: X**N
+
+
+h = maker(3)
+print(h(4))
+print("\n")
+
+
+def f1():
+    x = 88
+
+    def f2(x=x):
+        print(x)
+
+    f2()
+
+
+f1()
+print("\n")
+
+
+def f1():
+    x = 88
+    f2(x)
+
+
+def f2(x):
+    print(x)
+
+
+f1()
+print("\n💖")
+
+
+def f1():
+    x = 88
+
+    def f2(x=x):
+        print(x)
+
+    f2()
+
+
+f1()
+print("\n")
+
+
+def f1():
+    x = 88
+    f2(x)
+
+
+def f2(x):
+    print(x)
+
+
+f1()
+print("\n")
+
+
+# nested scope & fault参数 & lambda
+def func():
+    x = 4
+    action = lambda n: x**n
+    return action
+
+
+x = func()
+print(x(2))
+print("\n")
+
+
+def func():
+    x = 3
+    action = lambda n, x=x: x**n
+    return action
+
+
+x = func()
+print(x(2))
+print("\n")
+
+
+def makeActions():
+    acts = []
+    for i in range(5):
+        acts.append(lambda x: i**x)
+    return acts
+
+
+acts = makeActions()
+print(acts[0](2))
+print(acts[1](2))
+print(acts[2](3))
+print(acts[3](2))
+print(acts[4](2))
+print("\n")
+
+
+def makeActions():
+    acts = []
+    for i in range(5):
+        acts.append(lambda x, i=i: i**x)
+    return acts
+
+
+acts = makeActions()
+print(acts[0](2))
+print(acts[1](2))
+print(acts[2](2))
+print(acts[3](2))
+print(acts[4](2))
