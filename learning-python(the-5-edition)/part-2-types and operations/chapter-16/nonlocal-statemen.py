@@ -74,3 +74,20 @@ print(state)
 C = tester(3)
 C("ranshen")
 print("\n")
+
+spam = 99
+
+
+def tester():
+    def nested():
+        global spam
+        print("Current=", spam)
+        spam += 1
+
+    return nested
+
+
+tester()()
+tester()()
+tester()()
+print("\n")
