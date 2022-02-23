@@ -49,6 +49,28 @@ F = tester(0)
 F("spam")
 F("ham")
 F("eggs")
+print("\n")
 
 G = tester(42)
 G("spam")
+G("eggs")
+F("bacon")
+print("\n")
+
+
+def tester(start):
+    def nested(label):
+        global state
+        state = 0
+        print(label, state)
+
+    return nested
+
+
+F = tester(0)
+F("abc")
+print(state)
+
+C = tester(3)
+C("ranshen")
+print("\n")
