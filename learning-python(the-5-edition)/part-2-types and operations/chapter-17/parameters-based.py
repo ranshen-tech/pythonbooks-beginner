@@ -198,3 +198,15 @@ def func(a, b, c, d):
 
 print(tracer(func, 1, 2, c=3, d=4))
 print("\n")
+
+
+# func(*pargs, **kargs)
+# func(*sequence, **dict)
+
+
+def echo(*args, **kwargs):
+    print(args, kwargs)
+
+
+echo(1, 2, a=3, b=4)
+print("\n")
