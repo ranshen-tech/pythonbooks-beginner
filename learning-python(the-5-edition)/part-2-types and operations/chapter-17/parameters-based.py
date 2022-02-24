@@ -98,3 +98,18 @@ print("\n")
 f(1, 4)
 f(1, 4, 5)
 f(1, c=6)
+print("\n")
+
+
+# 混合使用关键字参数和默认值参数
+
+
+def func(spam, eggs, toast=0, ham=0):
+    print((spam, eggs, toast, ham))
+
+
+func(1, 2)
+func(1, ham=1, eggs=0)
+func(spam=1, eggs=0)
+func(toast=1, eggs=2, spam=3)
+func(1, 2, 3, 4)
