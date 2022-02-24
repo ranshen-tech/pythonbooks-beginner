@@ -65,3 +65,36 @@ L = [1, 2]
 X, L = multiple(X, L)
 print(X, L)
 print("\n")
+
+# def f(T):
+# a, (b, c) = T
+
+
+def f(a, b, c):
+    print(a, b, c)
+
+
+f(1, 2, 3)
+print("\n")
+
+f(c=3, b=2, a=1)
+f(1, c=3, b=2)
+print("\n")
+
+# func(name="Bob", age=40, job="dev")
+
+
+# 默认值参数
+
+
+def f(a, b=2, c=3):
+    print(a, b, c)
+
+
+f(1)
+f(a=1)
+print("\n")
+
+f(1, 4)
+f(1, 4, 5)
+f(1, c=6)
