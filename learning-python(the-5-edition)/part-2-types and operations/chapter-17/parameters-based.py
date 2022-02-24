@@ -163,3 +163,25 @@ args = {"a": 1, "b": 2, "c": 3}
 args["d"] = 4
 func(**args)
 print("\n")
+
+
+func(*(1, 2), **{"d": 4, "c": 3})
+func(1, *(2, 3), **{"d": 4})
+func(1, c=3, *(2,), **{"d": 4})
+func(1, *(2, 3), d=4)
+func(1, *(2,), c=3, **{"d": 4})
+print("\n")
+
+
+# 泛化地使用函数
+
+# if sometest:
+# action, args = func1, (1,)
+# else:
+# action, args = func2, (1, 2, 3)
+
+args = (2, 3)
+args += (4,)
+print(args)
+# func(*args)
+print("\n")
