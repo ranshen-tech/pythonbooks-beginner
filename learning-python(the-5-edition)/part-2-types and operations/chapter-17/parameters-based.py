@@ -135,3 +135,31 @@ def f(**args):
 
 f()
 f(a=1, b=2)
+print("\n")
+
+
+def f(a, *pargs, **kargs):
+    print(a, pargs, kargs)
+
+
+f(1, 2, 3, x=1, y=2)
+print("\n")
+
+
+# function call: unpack the parameters
+
+
+def func(a, b, c, d):
+    print(a, b, c, d)
+
+
+args = (1, 2)
+args += (3, 4)
+print(args)
+func(*args)
+print("\n")
+
+args = {"a": 1, "b": 2, "c": 3}
+args["d"] = 4
+func(**args)
+print("\n")
