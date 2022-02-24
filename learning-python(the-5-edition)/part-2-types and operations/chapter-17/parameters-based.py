@@ -210,3 +210,16 @@ def echo(*args, **kwargs):
 
 echo(1, 2, a=3, b=4)
 print("\n")
+
+
+pargs = (1, 2)
+kargs = {"a": 3, "b": 4}
+
+echo(*pargs, **kargs)
+# print(help(pow))
+print("\n")
+
+print(pow(*(2, 100)))
+print("\n")
+
+echo(0, c=5, *pargs, **kargs)
