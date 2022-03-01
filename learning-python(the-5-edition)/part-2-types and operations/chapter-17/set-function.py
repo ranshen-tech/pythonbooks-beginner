@@ -29,3 +29,9 @@ print("\n")
 print(intersect([1, 2, 1, 3], (1, 1, 4)))
 print(union([1, 2, 1, 3], (1, 1, 4)))
 tester(intersect, ("ababa", "abcdefga", "aaaab"), False)
+print("\n")
+
+
+# def tester(func, items, trace=True):
+# for args in scramble(items):
+# ...use args...
