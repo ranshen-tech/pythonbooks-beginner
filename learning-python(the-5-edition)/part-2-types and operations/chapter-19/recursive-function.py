@@ -56,3 +56,41 @@ print(mysum([1]))
 print(mysum([1, 2, 3, 4, 5]))
 print(mysum(("s", "p", "a", "m")))
 print(mysum(["spam", "ham", "eggs"]))
+print("\n")
+
+
+def mysum(L):
+    if not L:
+        return 0
+    return nonempty(L)
+
+
+def nonempty(L):
+    return L[0] + mysum(L[1:])
+
+
+print(mysum([1.1, 2.2, 3.3, 4.4]))
+print("\n")
+
+
+# loop statement & recursion
+
+
+L = [1, 2, 3, 4, 5]
+sum = 0
+while L:
+    sum += L[0]
+    L = L[1:]
+
+print(sum)
+print("\n")
+
+
+for x in L:
+    sum += x
+
+print(sum)
+print("\n")
+
+
+# 处理任意结构
