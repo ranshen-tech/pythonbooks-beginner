@@ -65,3 +65,27 @@ for f in L:
 
 print(L[0](3))
 print("\n")
+
+
+# 多分支switch语句：尾声
+
+
+key = "got"
+print({"already": lambda: 2 + 2, "got": lambda: 2 * 4, "one": lambda: 2**6}[key]())
+print("\n")
+
+
+def f1():
+    return 2 + 2
+
+
+def f2():
+    return 2 * 4
+
+
+def f3():
+    return 2**6
+
+
+key = "one"
+print({"already": f1, "got": f2, "one": f3}[key]())
