@@ -123,3 +123,23 @@ print("\n")
 
 showall = lambda x: print(*x, sep="\n", end="\n")
 showall(("bright", "side", "of", "life"))
+print("\n")
+
+
+# 作用域：lambda也能嵌套
+
+
+def action(x):
+    return lambda y: x + y
+
+
+act = action(99)
+print(act)
+print(act(2))
+print("\n")
+
+action = lambda x: lambda y: x + y
+act = action(99)
+print(act(3))
+print((lambda x: lambda y: x + y)(99)(4))
+print("\n")
