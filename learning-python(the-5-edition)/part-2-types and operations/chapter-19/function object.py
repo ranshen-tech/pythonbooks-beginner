@@ -37,3 +37,25 @@ F = make("Spam")
 F("Ham")
 F("Eggs")
 print("\n")
+
+
+# function自省
+
+
+def func(a):
+    b = "spam"
+    return b * a
+
+
+print(func(8))
+print(func.__name__)
+print(dir(func))
+print("\n")
+
+print(func.__code__)
+print(dir(func.__code__))
+print("\n")
+
+print(func.__code__.co_varnames)
+print(func.__code__.co_argcount)
+print("\n")
