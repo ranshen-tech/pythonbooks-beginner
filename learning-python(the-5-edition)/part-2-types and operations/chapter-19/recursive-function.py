@@ -91,6 +91,3 @@ for x in L:
 
 print(sum)
 print("\n")
-
-
-# 处理任意结构
