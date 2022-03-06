@@ -89,3 +89,37 @@ def f3():
 
 key = "one"
 print({"already": f1, "got": f2, "one": f3}[key]())
+print("\n")
+
+
+# 如何（不）让Python代码变得晦涩难懂
+
+# if a:
+#     b
+# else:
+#     c
+
+# b if a else c
+
+lower = lambda x, y: x if x < y else y
+print(lower("bb", "aa"))
+print(lower("aa", "bb"))
+print("\n")
+
+
+import sys
+
+showall = lambda x: list(map(sys.stdout.write, x))
+t = showall(["spam\n", "toast\n", "eggs\n"])
+print("\n")
+
+showall = lambda x: [sys.stdout.write(line) for line in x]
+t = showall(("bright\n", "side\n", "of\n", "life\n"))
+print("\n")
+
+showall = lambda x: [print(line, end="\n") for line in x]
+showall(("bright", "side", "of", "life"))
+print("\n")
+
+showall = lambda x: print(*x, sep="\n", end="\n")
+showall(("bright", "side", "of", "life"))
