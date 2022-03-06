@@ -1,6 +1,4 @@
 # 在可迭代对象上映射函数：map
-
-
 counters = [1, 2, 3, 4]
 
 updated = []
@@ -43,8 +41,6 @@ print("\n")
 
 
 # 选择可迭代对象中的元素：filter
-
-
 print(list(range(-5, 5)))
 print(list(filter(lambda x: x > 0, range(-5, 5))))
 print("\n")
@@ -62,3 +58,33 @@ print("\n")
 
 
 # 合并可迭代对象中的元素：reduce
+from functools import reduce
+
+print(reduce(lambda x, y: x + y, [1, 2, 3, 4]))
+print(reduce(lambda x, y: x * y, [1, 2, 3, 4]))
+print("\n")
+
+L = [1, 2, 3, 4]
+res = L[0]
+for x in L[1:]:
+    res += x
+
+print(res)
+print("\n")
+
+
+def myreduce(function, sequence):
+    tally = sequence[0]
+    for next in sequence[1:]:
+        tally = function(tally, next)
+    return tally
+
+
+print(myreduce(lambda x, y: x + y, [1, 2, 3, 4, 5]))
+print(myreduce(lambda x, y: x * y, [1, 2, 3, 4, 5]))
+print("\n")
+
+import operator, functools
+
+print(functools.reduce(operator.add, [2, 4, 6]))
+print(functools.reduce(lambda x, y: x + y, [2, 4, 6]))
