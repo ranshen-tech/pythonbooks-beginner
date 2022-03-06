@@ -59,3 +59,37 @@ print("\n")
 print(func.__code__.co_varnames)
 print(func.__code__.co_argcount)
 print("\n")
+
+
+# function attributes
+
+
+print(func)
+func.count = 0
+func.count += 1
+print(func.count)
+func.handles = "Button-Press"
+print(func.handles)
+print(dir(func))
+print("\n")
+
+
+def f():
+    pass
+
+
+print(f())
+print(len(dir(f)))
+print([x for x in dir(f) if not x.startswith("__")])
+print("\n")
+
+
+# Python3.X 中的function annotation
+
+
+def func(a, b, c):
+    return a + b + c
+
+
+print(func(1, 2, 3))
+print("\n")
