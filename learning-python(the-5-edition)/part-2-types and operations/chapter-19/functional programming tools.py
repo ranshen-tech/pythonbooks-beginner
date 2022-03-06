@@ -32,3 +32,33 @@ def mymap(func, seq):
 print(list(map(inc, [1, 2, 3])))
 print(mymap(inc, [1, 2, 3]))
 print("\n")
+
+print(pow(3, 4))
+print(list(map(pow, [1, 2, 3], [2, 3, 4])))
+print("\n")
+
+print(list(map(inc, [1, 2, 3, 4])))
+print([inc(x) for x in [1, 2, 3, 4]])
+print("\n")
+
+
+# 选择可迭代对象中的元素：filter
+
+
+print(list(range(-5, 5)))
+print(list(filter(lambda x: x > 0, range(-5, 5))))
+print("\n")
+
+res = []
+for x in range(-5, 5):
+    if x > 0:
+        res.append(x)
+
+print(res)
+print("\n")
+
+print([x for x in range(-5, 5) if x > 0])
+print("\n")
+
+
+# 合并可迭代对象中的元素：reduce
