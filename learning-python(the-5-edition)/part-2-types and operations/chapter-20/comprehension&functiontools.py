@@ -167,3 +167,23 @@ for row1, row2 in zip(M, N):
         tmp.append(col1 * col2)
     res.append(tmp)
 print(res)
+print("\n")
+
+
+# 请留意：comprehension & map
+
+print(open("myfile.txt").readlines())
+
+print([line.rstrip() for line in open("myfile.txt").readlines()])
+
+print([line.rstrip() for line in open("myfile.txt")])
+
+print(list(map(lambda line: line.rstrip(), open("myfile.txt"))))
+print("\n")
+
+
+listoftuple = [("bob", 35, "mgr"), ("sue", 40, "dev")]
+
+print([age for name, age, job in listoftuple])
+
+print(list(map(lambda row: row[1], listoftuple)))
