@@ -140,3 +140,30 @@ for row in M:
 
 print(res)
 print("\n")
+
+M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+N = [[2, 2, 2], [3, 3, 3], [4, 4, 4]]
+
+print([M[row][col] * N[row][col] for row in range(3) for col in range(3)])
+print([[M[row][col] * N[row][col] for col in range(3)] for row in range(3)])
+print("\n")
+
+res = []
+for row in range(3):
+    tmp = []
+    for col in range(3):
+        tmp.append(M[row][col] * N[row][col])
+    res.append(tmp)
+
+print(res)
+print("\n")
+
+print([[col1 * col2 for col1, col2 in zip(row1, row2)] for row1, row2 in zip(M, N)])
+
+res = []
+for row1, row2 in zip(M, N):
+    tmp = []
+    for col1, col2 in zip(row1, row2):
+        tmp.append(col1 * col2)
+    res.append(tmp)
+print(res)
