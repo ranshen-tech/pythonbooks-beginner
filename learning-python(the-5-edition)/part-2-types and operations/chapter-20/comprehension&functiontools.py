@@ -105,3 +105,38 @@ N = [[2, 2, 2], [3, 3, 3], [4, 4, 4]]
 print(M[1])
 print(M[1][2])
 print("\n")
+
+print([row[1] for row in M])
+print([M[row][1] for row in (0, 1, 2)])
+print("\n")
+
+print([M[i][i] for i in range(len(M))])
+print([M[i][len(M) - 1 - i] for i in range(len(M))])
+print("\n")
+
+L = [[1, 2, 3], [4, 5, 6]]
+for i in range(len(L)):
+    for j in range(len(L[i])):
+        L[i][j] += 10
+print(L)
+print("\n")
+
+print([col + 10 for row in M for col in row])
+print([[col + 10 for col in row] for row in M])
+print("\n")
+
+res = []
+for row in M:
+    for col in row:
+        res.append(col + 10)
+print(res)
+
+res = []
+for row in M:
+    tmp = []
+    for col in row:
+        tmp.append(col + 10)
+    res.append(tmp)
+
+print(res)
+print("\n")
