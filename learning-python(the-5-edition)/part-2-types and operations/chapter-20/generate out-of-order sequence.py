@@ -96,3 +96,5 @@ print("\n")
 
 
 # Test client
+
+from scramble import scramble
