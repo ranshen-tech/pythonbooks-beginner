@@ -298,3 +298,29 @@ print(next(I2))
 del L[2:]
 # print(next(I1))
 print("\n")
+
+
+# Python 3.3的 yield from 扩展
+
+
+def both(N):
+    for i in range(N):
+        yield i
+    for i in (x**2 for x in range(N)):
+        yield i
+
+
+print(list(both(5)))
+print("\n")
+
+
+def both(N):
+    yield from range(N)
+    yield from (x**2 for x in range(N))
+
+
+print(list(both(5)))
+print("\n")
+
+
+print(" : ".join(str(i) for i in both(5)))
