@@ -47,3 +47,32 @@ f(0, 1, 2)
 f(*range(3))
 f(*(i for i in range(3)))
 print("\n")
+
+
+D = dict(a="Bob", b="dev", c=40.5)
+print(D)
+f(a="Bob", b="dev", c=40.5)
+f(**D)
+f(*D)
+f(*D.values())
+print("\n")
+
+
+for x in "spam":
+    print(x.upper(), end=" ")
+print("\n")
+
+print(x.upper() for x in "spam")
+print(list(print(x.upper(), end=" ") for x in "spam"))
+print("\n")
+
+
+# prepare: a user-defined iterable in class
+
+
+class SomeIterable:
+    def __init__(self):
+        pass
+
+    def __next__(self):
+        pass
