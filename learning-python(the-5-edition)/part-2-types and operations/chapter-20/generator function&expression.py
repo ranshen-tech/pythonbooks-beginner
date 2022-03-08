@@ -146,3 +146,55 @@ print(list(map(lambda x: x * 2, map(abs, (-1, -2, 3, 4)))))
 
 print(list(x * 2 for x in (abs(x) for x in (-1, -2, 3, 4))))
 print("\n")
+
+
+import math
+
+print(list(map(math.sqrt, (x**2 for x in range(4)))))
+print("\n")
+
+print(list(map(abs, map(abs, map(abs, (-1, 0, 1))))))
+print(list(abs(x) for x in (abs(x) for x in (abs(x) for x in (-1, 0, 1)))))
+print("\n")
+
+
+print(list(abs(x) * 2 for x in (-1, -2, 3, 4)))
+print(list(math.sqrt(x**2) for x in range(4)))
+print(list(abs(x) for x in (-1, 0, 1)))
+print("\n")
+
+
+# generator expression VS filter
+
+line = "aa bbb c"
+print("".join(x for x in line.split() if len(x) > 1))
+print("".join(filter(lambda x: len(x) > 1, line.split())))
+print("\n")
+
+for x in line.split():
+    if len(x) > 1:
+        print(x)
+print("\n")
+
+
+print("".join(x.upper() for x in line.split() if len(x) > 1))
+print("".join(map(str.upper, filter(lambda x: len(x) > 1, line.split()))))
+print("\n")
+
+
+print("".join(x.upper() for x in line.split() if len(x) > 1))
+
+res = ""
+for x in line.split():
+    if len(x) > 1:
+        res += x.upper()
+
+print(res)
+print("\n")
+
+
+# generator function VS generator expression
+
+G = (c * 4 for c in "SPAM")
+print(G)
+print(list(G))
