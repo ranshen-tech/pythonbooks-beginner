@@ -198,3 +198,50 @@ print("\n")
 G = (c * 4 for c in "SPAM")
 print(G)
 print(list(G))
+print("\n")
+
+
+def timesfour(S):
+    for c in S:
+        yield c * 4
+
+
+G = timesfour("spam")
+print(list(G))
+print("\n")
+
+
+G = (c * 4 for c in "SPAM")
+I = iter(G)
+print(type(I))
+print(next(I))
+print(next(I))
+print(next(I))
+print(next(I))
+print("\n")
+
+G = timesfour("spam")
+I = iter(G)
+print(next(I))
+print(next(I))
+print(next(I))
+print(next(I))
+print("\n")
+
+
+line = "aa bbb c"
+
+print("".join(x.upper() for x in line.split() if len(x) > 1))
+
+
+def gensub(line):
+    for x in line.split():
+        if len(x) > 1:
+            yield x.upper()
+
+
+print("".join(gensub(line)))
+print("\n")
+
+
+# generator is 单遍iterative object
