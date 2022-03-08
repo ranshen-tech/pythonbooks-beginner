@@ -49,3 +49,50 @@ print("\n")
 
 
 # generator function
+
+
+def scramble(seq):
+    for i in range(len(seq)):
+        seq = seq[1:] + seq[:1]
+        yield seq
+
+
+print(list(scramble("spam")))
+print(list(scramble((1, 2, 3))))
+for x in scramble((1, 2, 3)):
+    print(x, end=" ")
+print("\n")
+
+
+def scramble(seq):
+    for i in range(len(seq)):
+        yield seq[i:] + seq[:i]
+
+
+print(list(scramble("spam")))
+print(list(scramble((1, 2, 3))))
+for x in scramble((1, 2, 3)):
+    print(x, end=" ")
+print("\n")
+
+
+# generator expression
+
+print(S)
+G = (S[i:] + S[:i] for i in range(len(S)))
+print(list(G))
+print("\n")
+
+
+F = lambda seq: (seq[i:] + seq[:i] for i in range(len(seq)))
+print(F(S))
+print(list(F(S)))
+print(list(F([1, 2, 3])))
+print("\n")
+
+for x in F((1, 2, 3)):
+    print(x, end=" ")
+print("\n")
+
+
+# Test client
