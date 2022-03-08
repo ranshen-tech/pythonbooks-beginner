@@ -96,3 +96,53 @@ print(next(G))
 print(next(G))
 print(G)
 print("\n")
+
+
+for num in (x**2 for x in range(4)):
+    print("%s, %s" % (num, num / 2.0))
+print("\n")
+
+
+print("aaa,bbb,ccc".split(","))
+print("".join(x.upper() for x in "aaa,bbb,ccc".split(",")))
+
+a, b, c = (x + "\n" for x in "aaa,bbb,ccc".split(","))
+print(a, c)
+print("\n")
+
+
+print(sum(x**2 for x in range(4)))
+print(sorted(x**2 for x in range(4)))
+print(sorted((x**2 for x in range(4)), reverse=True))
+print("\n")
+
+
+# Why use generator expression
+# generator expression VS map
+
+print(list(map(abs, (-1, -2, 3, 4))))
+print(list(abs(x) for x in (-1, -2, 3, 4)))
+print(list(map(lambda x: x * 2, (1, 2, 3, 4))))
+print(list(x * 2 for x in (1, 2, 3, 4)))
+print("\n")
+
+
+line = "aaa,bbb,ccc"
+print(x.upper() for x in line.split(","))
+print("".join([x.upper() for x in line.split(",")]))
+
+print("".join(x.upper() for x in line.split(",")))
+print("".join(map(str.upper, line.split(","))))
+
+print("".join(x * 2 for x in line.split(",")))
+print("".join(map(lambda x: x * 2, line.split(","))))
+print("\n")
+
+
+print([x * 2 for x in [abs(x) for x in (-1, -2, 3, 4)]])
+
+print(list(map(lambda x: x * 2, [abs(x) for x in (-1, -2, 3, 4)])))
+print(list(map(lambda x: x * 2, map(abs, (-1, -2, 3, 4)))))
+
+print(list(x * 2 for x in (abs(x) for x in (-1, -2, 3, 4))))
+print("\n")
