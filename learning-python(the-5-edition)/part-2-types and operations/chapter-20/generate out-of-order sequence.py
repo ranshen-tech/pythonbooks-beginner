@@ -136,3 +136,6 @@ print(permute1("spam") == list(permute2("spam")))
 print(len(list(permute2("spam"))))
 print(len(list(scramble("spam"))))
 print("\n")
+
+print(list(scramble("spam")))
+print(list(permute2("spam")))
