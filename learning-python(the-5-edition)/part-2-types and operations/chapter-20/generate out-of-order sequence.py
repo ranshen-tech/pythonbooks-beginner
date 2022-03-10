@@ -96,5 +96,43 @@ print("\n")
 
 
 # Test client
+# from scramble import scramble
 
-from scramble import scramble
+# from inter2 import intersect, union
+
+
+# def tester(func, items, trace=True):
+#     for args in scramble(items):
+#         if trace:
+#             print(args)
+#         print(sorted(func(*args)))
+
+
+# tester(intersect, ("aab", "abcde", "ababab"))
+# tester(intersect, ([1, 2], [2, 3, 4], [1, 6, 2, 7, 3]), False)
+
+
+# 全排列，所有可能的组合
+
+from scramble import scramble, scramble2
+from permute import permute1, permute2
+
+print(list(scramble("abc")))
+print("\n")
+
+print(permute1("abc"))
+print(list(permute2("abc")))
+print("\n")
+
+G = permute2("abc")
+print(next(G))
+print(next(G))
+for x in permute2("abc"):
+    print(x)
+print("\n")
+
+
+print(permute1("spam") == list(permute2("spam")))
+print(len(list(permute2("spam"))))
+print(len(list(scramble("spam"))))
+print("\n")
