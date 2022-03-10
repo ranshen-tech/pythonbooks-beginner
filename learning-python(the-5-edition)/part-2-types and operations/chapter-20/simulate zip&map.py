@@ -48,3 +48,36 @@ def mymap(func, *seqs):
 
 def mymap(func, *seqs):
     return (func(*args) for args in zip(*seqs))
+
+
+print(list(mymap(abs, [-2, -1, 0, 1, 2])))
+print(list(mymap(pow, [1, 2, 3], [2, 3, 4, 5])))
+print("\n")
+
+
+# 编写自己的zip(...)和map(None, ...)
+
+print(map(None, [1, 2, 3], [2, 3, 4, 5]))
+print(map(None, "abc", "xyz123"))
+print("\n")
+
+
+def myzip(*seqs):
+    seqs = [list(S) for S in seqs]
+    res = []
+    while all(seqs):
+        res.append(tuple(S.pop(0) for S in seqs))
+    return res
+
+
+def mymapPad(*seqs, pad=None):
+    seqs = [list(S) for S in seqs]
+    res = []
+    while any(seqs):
+        res.append(tuple((S.pop(0) if S else pad) for S in seqs))
+    return res
+
+
+S1, S2 = "abc", "xyz123"
+print(myzip(S1, S2))
+print("\n")
