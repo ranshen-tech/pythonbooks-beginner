@@ -72,6 +72,7 @@ def myzip(*seqs):
 
 def mymapPad(*seqs, pad=None):
     seqs = [list(S) for S in seqs]
+    # print(seqs)
     res = []
     while any(seqs):
         res.append(tuple((S.pop(0) if S else pad) for S in seqs))
@@ -81,3 +82,45 @@ def mymapPad(*seqs, pad=None):
 S1, S2 = "abc", "xyz123"
 print(myzip(S1, S2))
 print("\n")
+
+print(mymapPad(S1, S2))
+print(mymapPad(S1, S2, pad=99))
+print("\n")
+
+
+def myzip(*seqs):
+    seqs = [list(S) for S in seqs]
+    while all(seqs):
+        yield tuple(S.pop(0) for S in seqs)
+
+
+def mymapPad(*seqs, pad=None):
+    seqs = [list(S) for S in seqs]
+    while any(seqs):
+        yield tuple((S.pop(0) if S else pad) for S in seqs)
+
+
+S1, S2 = "abc", "xyz123"
+print(list(myzip(S1, S2)))
+print(list(mymapPad(S1, S2)))
+print(list(mymapPad(S1, S2, pad=99)))
+print("\n")
+
+
+def myzip(*seqs):
+    minlen = min(len(S) for S in seqs)
+    return [tuple(S[i] for S in seqs) for i in range(minlen)]
+
+
+S1, S2 = "abc", "xyz123"
+print(myzip(S1, S2))
+
+
+def mymapPad(*seqs, pad=None):
+    maxlen = max(len(S) for S in seqs)
+    index = range(maxlen)
+    return [tuple((S[i] if len(S) > i else pad) for S in seqs) for i in index]
+
+
+print(mymapPad(S1, S2))
+print(mymapPad(S1, S2, pad=99))
