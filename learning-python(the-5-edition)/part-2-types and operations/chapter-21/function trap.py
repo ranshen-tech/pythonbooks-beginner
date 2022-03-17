@@ -45,3 +45,41 @@ print("\n")
 
 
 # default value parameter and variable object
+
+
+def saver(x=[]):
+    x.append(1)
+    print(x)
+
+
+saver([2])
+saver([2])
+saver()
+saver()
+saver()
+print("\n")
+
+
+def saver(x=None):
+    if x is None:
+        x = []
+    x.append(1)
+    print(x)
+
+
+saver([2])
+saver()
+saver()
+print("\n")
+
+
+def saver():
+    saver.x.append(1)
+    print(saver.x)
+
+
+saver.x = []
+saver()
+saver()
+saver()
+print("\n")
