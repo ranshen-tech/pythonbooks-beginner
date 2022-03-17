@@ -178,3 +178,37 @@ def f6(a, b=2, *c):
 f1(1, 2)
 f1(b=2, a=1)
 print("\n")
+
+f2(1, 2, 3)
+print("\n")
+
+f3(1, x=2, y=3)
+
+f4(1, 2, 3, x=2, y=3)
+print("\n")
+
+f5(1)
+f5(1, 4)
+print("\n")
+
+f6(1)
+f6(1, 3, 4)
+print("\n")
+
+
+# 9 iteration and comprehension
+
+import math
+
+values = [2, 4, 9, 16, 25]
+res = []
+for x in values:
+    res.append(math.sqrt(x))
+print(res)
+
+print(list(map(math.sqrt, values)))
+
+print([math.sqrt(x) for x in [2, 4, 9, 16, 25]])
+
+print(list((math.sqrt(x) for x in values)))
+print("\n")
