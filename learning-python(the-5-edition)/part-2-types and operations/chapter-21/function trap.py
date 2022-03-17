@@ -83,3 +83,21 @@ saver()
 saver()
 saver()
 print("\n")
+
+
+# 没有return语句的函数
+
+
+def proc(x):
+    print(x)
+
+
+x = proc("testing 123...")
+print(x)
+print("\n")
+
+
+list = [1, 2, 3]
+list = list.append(4)
+print(list)
+print("\n")
