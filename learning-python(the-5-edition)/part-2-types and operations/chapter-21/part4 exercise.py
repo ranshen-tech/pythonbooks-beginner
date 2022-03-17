@@ -97,3 +97,52 @@ def adder3(**args):
 
 def adder4(**args):
     return adder1(*args.values())
+
+
+print(adder1(1, 2, 3), adder1("aa", "bb", "cc"))
+
+print(adder2(a=1, b=2, c=3), adder2(a="aa", b="bb", c="cc"))
+
+print(adder3(a=1, b=2, c=3), adder3(a="aa", b="bb", c="cc"))
+
+print(adder4(a=1, b=2, c=3), adder4(a="aa", b="bb", c="cc"))
+print("\n")
+
+
+# 5, 6 dict tools
+
+
+def copyDict(old):
+    new = {}
+    for key in old.keys():
+        new[key] = old[key]
+    return new
+
+
+def addDict(d1, d2):
+    new = {}
+    for key in d1.keys():
+        new[key] = d1[key]
+    for key in d2.keys():
+        new[key] = d2[key]
+    return new
+
+
+d = {1: 1, 2: 2}
+print(d.copy())
+e = copyDict(d)
+print(e)
+
+d[2] = "?"
+print(d)
+print(e)
+print("\n")
+
+x = {1: 1}
+y = {2: 2}
+z = addDict(x, y)
+print(z)
+
+x.update(y)
+print(x)
+print("\n")
