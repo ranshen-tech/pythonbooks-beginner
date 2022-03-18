@@ -252,3 +252,15 @@ def countdown2(N):
 
 print(list(countdown2(5)))
 print("\n")
+
+
+# Nonrecursive options
+def countdown3():
+    yield from range(5, 0, -1)
+
+
+print(list(countdown3()))
+
+print(list(x for x in range(5, 0, -1)))
+
+print(list(range(5, 0, -1)))
