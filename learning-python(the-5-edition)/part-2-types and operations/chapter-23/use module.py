@@ -97,3 +97,31 @@ print(list(name for name in module2.__dict__ if not name.startswith("__")))
 print("\n")
 
 print(module2.name, module2.__dict__["name"])
+print("\n")
+
+
+# reload basic
+
+# import module
+# ...use module.attributes...
+# ...
+# ...
+# from imp import reload
+# reload(module)
+# ...use module.attributes...
+
+
+# reload example
+
+import changer
+
+changer.printer()
+
+
+# import changer
+
+# changer.printer()
+# from imp import reload
+
+# reload(changer)
+# changer.printer()
