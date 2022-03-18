@@ -212,3 +212,43 @@ print([math.sqrt(x) for x in [2, 4, 9, 16, 25]])
 
 print(list((math.sqrt(x) for x in values)))
 print("\n")
+
+
+# recursion function
+
+
+def countdown(N):
+    if N == 0:
+        print("stop")
+    else:
+        print(N, end=" ")
+        countdown(N - 1)
+
+
+countdown(5)
+countdown(20)
+print("\n")
+
+# Nonrecursive options
+print(list(range(5, 0, -1)))
+print("\n")
+
+# On 3.X only:
+t = [print(i, end=" ") for i in range(5, 0, -1)]
+print("\n")
+
+t = list(map(lambda x: print(x, end=" "), range(5, 0, -1)))
+print("\n")
+
+
+def countdown2(N):
+    if N == 0:
+        yield "stop"
+    else:
+        yield N
+        for x in countdown2(N - 1):
+            yield x
+
+
+print(list(countdown2(5)))
+print("\n")
