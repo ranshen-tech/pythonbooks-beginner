@@ -158,3 +158,26 @@ pers2.jobs = ["dev", "cto"]
 
 print(pers1.name, pers2.name)
 print("\n")
+
+
+class Person:
+    def __init__(self, name, jobs, age=None):
+        self.name = name
+        self.jobs = jobs
+        self.age = age
+
+    def info(self):
+        return self.name, self.jobs
+
+
+rec1 = Person("Bob", ["dev", "mgr"], 40.5)
+rec2 = Person("Sue", ["dev", "cto"])
+print(rec1.jobs, rec2.info())
+print("\n")
+
+
+rec = dict(name="Bob", age=40.5, jobs=["dev", "mgr"])
+
+rec = {"name": "Bob", "age": 40.5, "jobs": ["dev", "mgr"]}
+
+rec = Rec("Bob", 40.5, ["dev", "mgr"])
