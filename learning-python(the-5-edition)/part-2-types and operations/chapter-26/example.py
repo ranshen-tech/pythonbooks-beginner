@@ -110,3 +110,51 @@ def uppername(obj):
 
 print(uppername(x))
 print("\n")
+
+rec.method = uppername
+print(x.method())
+print(y.method())
+print(rec.method(x))
+print("\n")
+
+
+# class VS dict
+
+rec = ("Bob", 40.5, ["dev", "mgr"])
+print(rec[0])
+
+rec = {}
+rec["name"] = "Bob"
+rec["age"] = 40.5
+rec["jobs"] = ["dev", "mgr"]
+print(rec["name"])
+print(rec)
+print("\n")
+
+
+class rec:
+    pass
+
+
+rec.name = "Bob"
+rec.age = 40.5
+rec.jobs = ["dev", "mgr"]
+print(rec.name)
+print("\n")
+
+
+class rec:
+    pass
+
+
+pers1 = rec()
+pers1.name = "Bob"
+pers1.jobs = ["dev", "mgr"]
+pers1.age = 40.5
+
+pers2 = rec()
+pers2.name = "Sue"
+pers2.jobs = ["dev", "cto"]
+
+print(pers1.name, pers2.name)
+print("\n")
