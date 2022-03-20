@@ -31,4 +31,5 @@ if __name__ == "__main__":
     print(bob.lastName(), sue.lastName())
     sue.giveRaise(0.10)
     print(sue.pay)
+    print(sue)
     print("\n")
