@@ -34,3 +34,4 @@ if __name__ == "__main__":
     print("\nProvider...")
     x = Provider()
     x.delegate()
+    x.action()
