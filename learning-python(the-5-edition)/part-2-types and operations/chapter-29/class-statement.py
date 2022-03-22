@@ -1,3 +1,6 @@
+# Class
+
+
 class ShareData:
     spam = 42
 
@@ -29,3 +32,23 @@ x = MixedNames(1)
 y = MixedNames(2)
 x.display()
 y.display()
+print("\n")
+
+
+# Method
+
+
+class NextClass:
+    def printer(self, text):
+        self.message = text
+        print(self.message)
+
+
+x = NextClass()
+x.printer("instance call")
+print(x.message)
+print("\n")
+
+NextClass.printer(x, "class call")
+print(x.message)
+# NextClass.printer("bad call")
