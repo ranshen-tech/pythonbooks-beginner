@@ -18,6 +18,7 @@ I.m()
 print(I.X)
 print("\n")
 
+
 X = 11
 
 
@@ -28,6 +29,7 @@ def g1():
 def g2():
     global X
     X = 22
+    print(X)
 
 
 def h1():
@@ -43,3 +45,10 @@ def h2():
     def nested():
         nonlocal X
         X = 44
+
+
+if __name__ == "__main__":
+    print(X)
+    g1()
+    g2()
+    print(X)
