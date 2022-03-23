@@ -76,3 +76,48 @@ X[99]
 X[1:99:2]
 X[1:]
 print("\n")
+
+
+# Python3中的__index__不是索引
+
+
+class C:
+    def __index__(self):
+        return 255
+
+
+X = C()
+print(hex(X))
+print(bin(X))
+print(oct(X))
+print("\n")
+
+print(("C" * 256)[255])
+print(("C" * 256)[X])
+print(("C" * 256)[X:])
+print("\n")
+
+
+# 索引迭代: __getitem__
+
+
+class StepperIndex:
+    def __getitem__(self, i):
+        return self.data[i]
+
+
+X = StepperIndex()
+X.data = "Spam"
+print(X[1])
+
+for item in X:
+    print(item, end=" ")
+print("\n")
+
+print("p" in X)
+print([c for c in X])
+print(list(map(str.upper, X)))
+a, b, c, d = X
+print(a, c, d)
+print(list(X), tuple(X), "".join(X))
+print(X)
