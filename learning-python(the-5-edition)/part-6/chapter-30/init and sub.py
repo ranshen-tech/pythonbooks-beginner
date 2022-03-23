@@ -40,3 +40,39 @@ print(L[slice(1, None)])
 print(L[slice(None, -1)])
 print(L[slice(None, None, 2)])
 print("\n")
+
+
+class Indexer:
+    data = [5, 6, 7, 8, 9]
+
+    def __getitem__(self, index):
+        print("getitem:", index)
+        return self.data[index]
+
+
+X = Indexer()
+print(X[0])
+print(X[1])
+print(X[-1])
+print("\n")
+
+print(X[2:4])
+print(X[1:])
+print(X[:-1])
+print(X[::2])
+print("\n")
+
+
+class Indexer:
+    def __getitem__(self, index):
+        if isinstance(index, int):
+            print("indexing", index)
+        else:
+            print("slicing", index.start, index.stop, index.step)
+
+
+X = Indexer()
+X[99]
+X[1:99:2]
+X[1:]
+print("\n")
