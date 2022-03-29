@@ -45,3 +45,30 @@ a = "Hello"
 print(max(a))
 print(min(a))
 print(len(a))
+print(a[::-1])
+print("\n")
+
+
+# 6.2
+print(list("hello"))
+list = [20, 10, 50, 30]
+t = [1, 2, 3]
+list.extend(t)
+print(list)
+list.insert(2, 80)
+print(list)
+print("\n")
+
+
+# 6.3
+print(tuple([21, 23, 32, 43]))
+print("\n")
+
+
+# 6.4
+a = set("hello")
+print(a)
+print(type(a))
+b = {}
+print(type(b))
+print("\n")
