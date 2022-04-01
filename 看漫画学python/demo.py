@@ -72,3 +72,19 @@ print(type(a))
 b = {}
 print(type(b))
 print("\n")
+
+
+# 6.6
+d = {1: "ran", 2: "xu", 3: "zhu"}
+print("---遍历键---")
+for k in d.keys():
+    print(f"学号: {k}")
+
+print("\n---遍历值---")
+for v in d.values():
+    print(f"学生: {v}")
+
+print("\n---遍历键:值---")
+for d_id, d_name in d.items():
+    print(f"学号: {d_id} - 学生: {d_name}")
+print("\n")
