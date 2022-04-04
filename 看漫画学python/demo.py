@@ -88,3 +88,35 @@ print("\n---遍历键:值---")
 for d_id, d_name in d.items():
     print(f"学号: {d_id} - 学生: {d_name}")
 print("\n")
+
+
+# 7.4
+s = "hello world"
+print(s.find("l", 4, 10))
+print("\n")
+
+
+wordstring = """
+    it was the best of time it was the worst of time.
+    it was the wisdom of age it was the foolish of age.
+    """
+# 标点符号替换
+wordstring = wordstring.replace(".", "")
+print(wordstring)
+
+# 分割单词
+wordlist = wordstring.split()
+print(wordlist)
+
+wordreq = []
+for w in wordlist:
+    # 统计单词出现个数
+    wordreq.append(wordlist.count(w))
+
+d = dict(zip(wordlist, wordreq))
+print(d)
+print("\n")
+
+
+s = "Python"
+print("{}".format(s))
