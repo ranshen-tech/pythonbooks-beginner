@@ -74,6 +74,27 @@ print(f"利率: {Account.interest_rate}")
 print("\n")
 
 
+# 9.4.5 类方法
+class Account:
+    # 类变量利率interest_rate
+    interest_rate = 0.0668
+    # 构造方法
+    def __init__(self, owner, amount):
+        # 创建并初始化实例变量owner，定义实例变量账户名
+        self.owner = owner
+        # 创建并初始化实例变量amount，定义实例变量账户金额
+        self.amount = amount
+
+    # 类方法
+    @classmethod
+    def interest_by(cla, amt):
+        return Account.interest_rate * amt
+
+
+interest = Account.interest_by(12000.0)
+print(f"计算利息: {interest}")
+print("\n")
+
 # class Dog:
 #     # 构造方法
 #     def __init__(self, name, age, sex='雌性'):
