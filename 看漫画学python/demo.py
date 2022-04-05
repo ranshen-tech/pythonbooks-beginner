@@ -153,6 +153,52 @@ print(f"{d3.name}: {d3.age}岁{d3.sex}")
 print("\n")
 
 
+# 9.4.3 实例方法
+class Dog:
+    # 构造方法
+    def __init__(self, name, age, sex="雌性"):
+        # 创建和初始化实例变量name
+        self.name = name
+        # 创建和初始化实例变量age
+        self.age = age
+        # 创建和初始化实例变量sex
+        self.sex = sex
+
+    # 实例方法
+    def run(self):
+        print(f"{self.name}在跑...")
+
+    # 实例方法
+    def speak(self, sound):
+        print(f'{self.name}在叫, "{sound}"!')
+
+
+dog = Dog("球球", 2)
+dog.run()
+dog.speak("汪汪汪")
+print("\n")
+
+
+# 9.4.4 类变量
+class Account:
+    # 类变量利率interest_rate
+    interest_rate = 0.0568
+    # 构造方法
+    def __init__(self, owner, amount):
+        # 创建并初始化实例变量owner
+        self.owner = owner
+        # 创建并初始化实例变量amount
+        self.amount = amount
+
+
+account = Account("Tony", 800000.0)
+
+print(f"账户名: {account.owner}")
+print(f"账户金额: {account.amount}")
+print(f"利率: {Account.interest_rate}")
+print("\n")
+
+
 # class Dog:
 #     # 构造方法
 #     def __init__(self, name, age, sex='雌性'):
