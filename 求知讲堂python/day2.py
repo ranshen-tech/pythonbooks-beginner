@@ -94,3 +94,40 @@ for i in range(1, 51):
     sum += i
 print(sum)
 print("\n")
+
+
+for item in range(10):
+    if item % 2 == 0:
+        continue
+    print(item)
+print("\n")
+
+
+for item in "i love python":
+    if item == "e":
+        break
+    print(item)
+print("\n")
+
+
+for item in "i love python":
+    if item == "o":
+        continue
+    print(item)
+print("\n")
+
+
+index = 1
+while index <= 100:
+    if index > 20:
+        break
+    print(index)
+    index += 1
+print("\n")
+
+
+for i in range(1, 10):
+    for j in range(1, i + 1):
+        print(f"{i}*{j}={i*j}", end=" ")
+    print()
+print("\n")
