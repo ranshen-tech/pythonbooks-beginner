@@ -1,28 +1,29 @@
-# 猜拳
-import random
+# # 猜拳
+# import random
 
-count = 1
-while count <= 10:
-    person = int(input("请出拳:[0:石头，1:剪刀，2:布]: "))
-    computer = random.randint(0, 2)
-    if person == 0 and computer == 2:
-        print("你输了")
-    elif person == 1 and computer == 0:
-        print("你输了")
-    elif person == 2 and computer == 1:
-        print("你输了")
-    elif person == computer:
-        print("平局")
-    else:
-        print("你赢了")
-    count += 1
+# count = 1
+# while count <= 10:
+#     person = int(input("请出拳:[0:石头，1:剪刀，2:布]: "))
+#     computer = random.randint(0, 2)
+#     if person == 0 and computer == 2:
+#         print("你输了")
+#     elif person == 1 and computer == 0:
+#         print("你输了")
+#     elif person == 2 and computer == 1:
+#         print("你输了")
+#     elif person == computer:
+#         print("平局")
+#     else:
+#         print("你赢了")
+#     count += 1
 
 
 # 输出1-10之间的数据
 index = 1
 while index <= 10:
     print(index)
-index += 1
+    index += 1
+print("\n")
 
 
 # 打印九九乘法表
@@ -34,6 +35,7 @@ while row <= 9:
         col += 1
     print()
     row += 1
+print("\n")
 
 
 # 打印直角三角形
@@ -45,6 +47,7 @@ while row <= 7:
         col += 1
     print()
     row += 1
+print("\n")
 
 
 # 打印倒直角三角形
@@ -56,6 +59,38 @@ while row >= 1:
         col += 1
     print()
     row -= 1
+print("\n")
 
 
 # 打印等腰直角三角形
+row = 1
+while row <= 5:
+    j = 1
+    while j <= 5 - row:
+        print(" ", end="")
+        j += 1
+
+    k = 1
+    while k <= 2 * row - 1:
+        print("*", end="")
+        k += 1
+    print()
+    row += 1
+print("\n")
+
+
+sum = 0
+for i in range(1, 101):
+    sum += i
+print(f"sum = {sum}")
+print("\n")
+
+
+sum = 0
+for i in range(1, 51):
+    if sum > 100:
+        print(f"循环执行到{i}结束")
+        break
+    sum += i
+print(sum)
+print("\n")
