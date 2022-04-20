@@ -63,20 +63,54 @@ print(len(stra))
 print("\n")
 
 
-list = [123, "ran", 3.14, True]
-print(list)
-print(list[0])
-print(list[1:3])
-print(list[2:])
-print(list[::-1])
-print(list * 2)
+l = [123, "ran", 3.14, True]
+print(l)
+print(l[0])
+print(l[1:3])
+print(l[2:])
+print(l[::-1])
+print(l * 2)
 print("\n")
 
 
-print("追加之前", list)
-list.append(["fff", "ddd"])
-list.append(8888)
-print("追加之后", list)
-list.insert(1, "这是我刚插入的数据")
-print(list)
+print("追加之前", l)
+l.append(["fff", "ddd"])
+l.append(8888)
+print("追加之后", l)
+l.insert(1, "这是我刚插入的数据")
+print(l)
 print("\n")
+
+
+rsDate = list(range(10))
+print(type(rsDate))
+print(rsDate)
+l.extend(rsDate)
+print(l)
+l.extend([3, 4, 5])
+print(l)
+print("\n")
+
+
+li = [123, 3.14, "ranshen", True]
+print("修改之前", li)
+li[2] = 3232323
+print("修改之后", li)
+print("\n")
+
+
+listB = list(range(10, 20))
+print(listB)
+del listB[0]
+del listB[1:3]
+listB.remove(14)
+print(listB)
+listB.pop(0)
+print(listB)
+print(listB.index(19))
+print("\n")
+
+
+tupleA = ()
+tupleA = (123, "ranshen", 3.14, True)
+print(type(tupleA))
