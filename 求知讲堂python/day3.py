@@ -112,5 +112,32 @@ print("\n")
 
 
 tupleA = ()
-tupleA = (123, "ranshen", 3.14, True)
+tupleA = (123, "ranshen", 3.14, True, [11, 22, 33])
 print(type(tupleA))
+print(tupleA)
+for item in tupleA:
+    print(item, end=" ")
+print("\n")
+
+
+print(tupleA[2:4])
+print(tupleA[::-1])
+print(tupleA[::-2])
+print(tupleA[::-3])
+print(tupleA[-2:-1:])
+print("\n")
+
+
+tupleA[4][0] = 519
+print(tupleA)
+print("\n")
+
+
+tupleB = 1
+print(type(tupleB))
+tupleB = "1"
+print(type(tupleB))
+tupleB = (1,)
+print(type(tupleB))
+print(tupleB)
+print("\n")
