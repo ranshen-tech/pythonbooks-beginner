@@ -131,3 +131,102 @@ for i in range(1, 10):
         print(f"{i}*{j}={i*j}", end=" ")
     print()
 print("\n")
+
+
+# for ... else ...
+for item in range(1, 10):
+    if item >= 5:
+        break
+    print(item)
+else:
+    print("已经执行完了吗")
+print("\n")
+
+
+# account = "ranshen"
+# password = "ranshen0519"
+# for i in range(3):
+#     accounts = input("please input your account: ")
+#     passwords = input("please input your password: ")
+#     if accounts == account and passwords == password:
+#         print("恭喜您登陆成功")
+#         break
+# else:
+#     print("您的系统已被锁定...")
+# print('\n')
+
+
+index = 1
+while index <= 10:
+    print(index)
+    index += 1
+    if index == 6:
+        break
+else:
+    print("else执行了吗？")
+print("\n")
+
+
+# 猜年龄
+ranshen = "29"
+# for i in range(3):
+#     age = input("please input your age: ")
+#     if age == ranshen:
+#         break
+# else:
+#     reply = input("还要继续玩吗？")
+#     if reply == "y" or "Y":
+
+
+# # 猜年龄
+# index = 0
+# while index < 3:
+#     age = input("please input your age: ")
+#     if age == ranshen:
+#         break
+#     index += 1
+#     if index == 3:
+#         reply = input("还要继续玩吗？")
+#         if reply == "y" or "Y":
+#             index = 0
+# print("\n")
+
+
+# BMI
+# height = 1.78
+# weight = 62.5
+# BMI = weight / height**2
+# if BMI < 18.5:
+#     print("过轻")
+# elif BMI < 25:
+#     print("正常")
+# elif BMI < 28:
+#     print("过重")
+# elif BMI < 32:
+#     print("肥胖")
+# else:
+#     print("过度肥胖")
+# print("\n")
+
+
+# 猜年龄
+times = 0
+counts = 3
+while times < counts:
+    age = int(input("please input your age:"))
+    if age == 29:
+        print("congratulation!")
+        break
+    elif age > 29:
+        print("too old!")
+    else:
+        print("too young!")
+    times += 1
+    if times == 3:
+        choose = input("还要继续吗: Y/N? ")
+        if choose == "Y" or choose == "y":
+            times = 0
+        elif choose == "N" or choose == "n":
+            break
+        else:
+            print("请输入正确标识")
