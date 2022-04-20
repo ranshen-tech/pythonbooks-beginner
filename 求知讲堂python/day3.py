@@ -53,3 +53,30 @@ print(msg[2:])
 print(msg[:3])
 print(msg[::-1])
 print("\n")
+
+
+l = [1, 2, 3, "你好"]
+print(len(l))
+print(type(l))
+stra = "我喜欢python"
+print(len(stra))
+print("\n")
+
+
+list = [123, "ran", 3.14, True]
+print(list)
+print(list[0])
+print(list[1:3])
+print(list[2:])
+print(list[::-1])
+print(list * 2)
+print("\n")
+
+
+print("追加之前", list)
+list.append(["fff", "ddd"])
+list.append(8888)
+print("追加之后", list)
+list.insert(1, "这是我刚插入的数据")
+print(list)
+print("\n")
