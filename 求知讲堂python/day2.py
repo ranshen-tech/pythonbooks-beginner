@@ -210,23 +210,23 @@ ranshen = "29"
 
 
 # 猜年龄
-times = 0
-counts = 3
-while times < counts:
-    age = int(input("please input your age:"))
-    if age == 29:
-        print("congratulation!")
-        break
-    elif age > 29:
-        print("too old!")
-    else:
-        print("too young!")
-    times += 1
-    if times == 3:
-        choose = input("还要继续吗: Y/N? ")
-        if choose == "Y" or choose == "y":
-            times = 0
-        elif choose == "N" or choose == "n":
-            break
-        else:
-            print("请输入正确标识")
+# times = 0
+# counts = 3
+# while times < counts:
+#     age = int(input("please input your age:"))
+#     if age == 29:
+#         print("congratulation!")
+#         break
+#     elif age > 29:
+#         print("too old!")
+#     else:
+#         print("too young!")
+#     times += 1
+#     if times == 3:
+#         choose = input("还要继续吗: Y/N? ")
+#         if choose == "Y" or choose == "y":
+#             times = 0
+#         elif choose == "N" or choose == "n":
+#             break
+#         else:
+#             print("请输入正确标识")
