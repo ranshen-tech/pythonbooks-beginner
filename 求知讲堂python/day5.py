@@ -68,3 +68,35 @@ def computer(x, y):
 
 print(computer(2, 3))
 print("\n")
+
+
+M = lambda x, y: x + y
+# 通过变量去调用匿名函数
+print(M(23, 19))
+print("\n")
+
+
+result = lambda a, b, c: a * b * c
+print(result(12, 34, 2))
+print("\n")
+
+
+# def 三元运算():
+#     if a:
+#         b
+#     else:
+#         c
+
+
+# def 三元运算():
+#     b if a else c
+
+greater = lambda x, y: x if x > y else y
+print(greater(3, 5))
+print(greater(6, 2))
+print("\n")
+
+
+age = 22
+print("可以参军" if age > 18 else "继续上学")
+print("\n")
