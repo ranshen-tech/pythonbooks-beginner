@@ -195,3 +195,55 @@ b = returnDict()
 print(type(b))
 print(b)
 print("\n")
+
+
+def fun1():
+    print("------------fun1 start-----------")
+    print("------------执行代码省略-------------")
+    print("------------fun1 end-------------")
+
+
+def fun2():
+    print("-----------fun2 start------------")
+    # 调用第一个函数
+    fun1()
+    print("-----------fun2 end--------------")
+
+
+fun2()
+print("\n")
+
+
+def sumFunc(*args):
+    """接收n个参数
+
+    Returns:
+        _type_: 参数和(int)
+    """
+    sum = 0
+    for item in args:
+        sum += item
+    return sum
+
+
+result = sumFunc(4, 5, 6, 7, 8, 9, 10)
+print(f"result = {result}")
+print("\n")
+
+
+def process_func(container):
+    """找出传入的列表或元组的奇数位对应的元素
+    并返回新的列表
+    """
+    newlist = []
+    index = 1
+    for i in container:
+        if index % 2 == 1:
+            newlist.append(i)
+        index += 1
+    return newlist
+
+
+print(process_func([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+print(process_func(tuple(range(10))))
+print("\n")
