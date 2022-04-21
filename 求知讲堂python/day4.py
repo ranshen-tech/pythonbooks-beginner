@@ -133,7 +133,7 @@ print(rs)
 print("\n")
 
 
-def calComputer(num):
+def calComputer1(num):
     """计算累加值
 
     Args:
@@ -147,7 +147,51 @@ def calComputer(num):
     return result
 
 
-value = calComputer(10)
+value = calComputer1(10)
 print(type(value))
 print(value)
+print("\n")
+
+
+def calComputer2(num):
+    """计算累加值
+
+    Args:
+        num (_type_): 输入数字类型
+    """
+    l = []
+    result = 0
+    index = 1
+    while index <= num:
+        result += index
+        index += 1
+    l.append(result)
+    return l
+
+
+value = calComputer2(10)
+print(type(value))
+print(value)
+print("\n")
+
+
+def returnTuple():
+    """返回元组类型的数据"""
+    return 1, 2, 3
+
+
+a = returnTuple()
+print(type(a))
+print(a)
+print("\n")
+
+
+def returnDict():
+    """返回字典类型的数据"""
+    return {"name": "ranshen"}
+
+
+b = returnDict()
+print(type(b))
+print(b)
 print("\n")
