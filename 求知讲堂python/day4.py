@@ -72,4 +72,36 @@ sum2(5)
 print("\n")
 
 
-# 可变参数
+# 可变参数(当参数的个数不确定时使用，比较灵活)
+def getComputer(*args):
+    """
+    可变长的参数类型
+    计算累加和
+    """
+    # print(args)
+    result = 0
+    for item in args:
+        result += item
+    print(f"result={result}")
+
+
+# 打印出来的都是元组类型的数据
+# getComputer((1, 2, 3, 4, 5, 6))
+getComputer(1)
+getComputer(1, 2, 3)
+print("\n")
+
+
+# 关键字参数（**来定义,参数关键字是一个字典类型,key是一个字符串）
+def keyFunc(**keywordargs):
+    """参数关键字是一个字典类型,key是一个字符串"""
+    print(keywordargs)
+
+
+# keyFunc(1, 2, 4) 这样是不可以的
+dictA = {"name": "ranshen", "age": 29}
+# keyFunc(dictA) 这样也是不可以的
+keyFunc(**dictA)
+keyFunc(name="ranshen", age=29)
+keyFunc()
+print("\n")
