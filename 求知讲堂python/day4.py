@@ -247,3 +247,28 @@ def process_func(container):
 print(process_func([1, 2, 3, 4, 5, 6, 7, 8, 9]))
 print(process_func(tuple(range(10))))
 print("\n")
+
+
+# 检查传入字典的每一个函数，如果value大于2，那么仅保留前两个的长度，
+def dict_func(dictparms):
+    """处理字典类型的数据
+
+    Args:
+        dictparms (_type_): 字典
+    """
+    result = {}
+    for key, value in dictparms.items():
+        if len(value) > 2:
+            # 向字典添加数据
+            result[key] = value[:2]
+        else:
+            result[key] = value
+    return result
+
+
+dictObj = {
+    "name": "Shawn Ran",
+    "hobby": ["code", "reading", "exercise"],
+    "major": "computer",
+}
+print(dict_func(dictObj))
