@@ -141,3 +141,39 @@ tupleB = (1,)
 print(type(tupleB))
 print(tupleB)
 print("\n")
+
+
+tupleC = range(10)
+print(type(tupleC))
+tupleC = tuple(range(10))
+print(type(tupleC))
+print(tupleC)
+print(tupleC.count(7))
+tupleC = (1, 2, 3, 2, 3, 4, 5, 4)
+print(tupleC.count(4))
+print("\n")
+
+
+dictA = {}
+print(type(dictA))
+dictA["name"] = "ranshen"
+dictA["age"] = 29
+dictA["pos"] = "programer"
+print(dictA)
+print(len(dictA))
+print(dictA["name"])
+dictA["name"] = "冉申"
+print(dictA)
+print("\n")
+
+
+print(dictA.keys())
+print(dictA.values())
+print(dictA.items())
+for item in dictA.items():
+    print(item)
+print("\n")
+
+
+for key, value in dictA.items():
+    print(f"{key} == {value}")
