@@ -177,3 +177,47 @@ print("\n")
 
 for key, value in dictA.items():
     print(f"{key} == {value}")
+print("\n")
+
+
+dictA.update({"love": "books"})
+print(dictA)
+dictA.update({"height": 1.80})
+print(dictA)
+print("\n")
+
+
+del dictA["name"]
+print(dictA)
+dictA.pop("age")
+print(dictA)
+print("\n")
+
+
+# 如何排序，按照key排序
+print(sorted(dictA.items(), key=lambda d: d[0]))
+print(dictA)
+print("\n")
+
+
+strA = "人生苦短"
+strB = "我用python"
+print(strA + strB)
+print("\n")
+
+
+listA = list(range(10))
+listB = list(range(11, 20))
+print(listA + listB)
+print("\n")
+
+
+print(strA * 3)
+print(listA * 3)
+print("生" in strA)
+print("我" in strA)
+print(22 in listA)
+print(9 in listA)
+dictA = {"name": "ranshen"}
+print("age" in dictA)
+print("name" in dictA)
