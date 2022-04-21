@@ -105,3 +105,49 @@ keyFunc(**dictA)
 keyFunc(name="ranshen", age=29)
 keyFunc()
 print("\n")
+
+
+def complexFunc(*args, **kwargs):
+    """可选参数和关键字参数组合使用"""
+    print(args)
+    print(kwargs)
+
+
+complexFunc(1, 2, 3, 4)
+complexFunc(1, 2, 3, 4, name="ranshen")
+complexFunc(age=29)
+print("\n")
+
+
+# 参数顺序（必选参数》默认参数〉可选参数（接受元组类型数据）》关键字参数（接收字典类型数据） ）
+
+
+def sum(a, b):
+    sum = a + b
+    return sum
+
+
+print(sum(10, 20))
+rs = sum(10, 20)
+print(rs)
+print("\n")
+
+
+def calComputer(num):
+    """计算累加值
+
+    Args:
+        num (_type_): 输入累加到哪个值
+    """
+    result = 0
+    index = 1
+    while index <= num:
+        result += index
+        index += 1
+    return result
+
+
+value = calComputer(10)
+print(type(value))
+print(value)
+print("\n")
