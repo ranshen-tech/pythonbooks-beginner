@@ -100,3 +100,10 @@ print("\n")
 age = 22
 print("可以参军" if age > 18 else "继续上学")
 print("\n")
+
+
+# 直接调用
+result = (lambda x, y: x if x > y else y)(16, 12)
+print(result)
+varRs = lambda x: (x**2) + 890
+print(varRs(10))
