@@ -107,3 +107,66 @@ result = (lambda x, y: x if x > y else y)(16, 12)
 print(result)
 varRs = lambda x: (x**2) + 890
 print(varRs(10))
+print("\n")
+
+
+# 阶乘
+def factorial(n):
+    """阶乘
+
+    Args:
+        n (_type_): int
+
+    Returns:
+        _type_: int
+    """
+    result = 1
+    for item in range(1, n + 1):
+        result *= item
+    return result
+
+
+print(f"10的阶乘是{factorial(10)}")
+
+
+# 用递归方式去实现
+def recursion(n):
+    """递归函数
+
+    Args:
+        n (_type_): int
+    """
+    if n == 1:
+        return 1
+    else:
+        return n * recursion(n - 1)
+
+
+print(recursion(4))
+print(f"10的阶乘是{recursion(10)}")
+print("\n")
+
+
+# 递归案例 模拟实践树形结构的遍历
+# import os 引入文件操作模块
+import os
+
+
+def find_file(file_path):
+    # 得到该路径下的所有文件和文件夹
+    listRs = os.listdir(file_path)
+    for find_item in listRs:
+        # 获取完整的文件路径
+        full_path = os.path.join(file_path, find_item)
+        # 判断是否是文件夹
+        if os.path.isdir(full_path):
+            # 如果是一个文件夹，再去递归
+            find_file(full_path)
+        else:
+            print(find_item)
+    else:
+        return
+
+
+# 调用搜索文件对象
+find_file("/Users/ranshen/Downloads/下载资源")
