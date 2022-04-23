@@ -31,7 +31,7 @@ print(sum(range(50), 3))
 print("\n")
 
 
-# eval()动态执行字符串表达式
+# eval()动态执行字符串表达式,并返回表达式的值
 a, b, c = 1, 2, 3
 print(eval("a + b + c"))
 print(eval("a + b, c"))
@@ -49,3 +49,26 @@ eval("test_func()")
 print(eval("test_func"))
 print(eval("a+b"))
 print("\n")
+
+
+print(bin(10))
+print(hex(23))
+print(hex(10))
+print("\n")
+
+
+t = (1, 2, 3, 4)
+print(type(t))
+l = list(t)
+print(type(l))
+print(l)
+l.append("强制转换成功")
+print(l)
+print("\n")
+
+
+d = dict()
+print(type(d))
+print(d)
+d = dict(name="ranshen", age=29)
+print(d)
