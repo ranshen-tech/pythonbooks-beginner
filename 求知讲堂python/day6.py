@@ -72,3 +72,46 @@ print(type(d))
 print(d)
 d = dict(name="ranshen", age=29)
 print(d)
+print("\n")
+
+
+# all()判断给定的可迭代参数是否都为True，空元组、空列表返回True
+print(bool([]))
+print(all([0]))
+print(all([1]))
+print(all([]))
+print(all(()))
+print(all([1, 2, 3, False, True]))
+print(all([[]]))
+print(all([]))
+print("\n")
+
+
+# any()判断给定的可迭代参数是否全部为False，则返回False， 有一个是True则返回True
+print(any([]))
+print(any([[]]))
+print(any([0]))
+print(any([1]))
+print(any([1, 0]))
+print(any(["", 0, False, 1]))
+print("\n")
+
+
+# sort是应用在list上的排序方法，sorted可对所有可迭代对象排序，sorted返回的是新的list
+l = [1, 2, 3, 5, 4, 1]
+# list排序方法，直接修改原始对象，元组不可以
+l.sort()
+print(l)
+
+print("排序之前的l", l)
+li = sorted(l, reverse=True)
+print("排序之后的l", li)
+print(f"排序之后的li {li}")
+print(f"排序之后的l{l}")
+print("\n")
+
+
+t = (1, 2, 5, 3, 1)
+print(t)
+tup = sorted(t)
+print(tup)
