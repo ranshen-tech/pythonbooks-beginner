@@ -187,3 +187,32 @@ set.add("python")
 print(set)
 set.clear()
 print(set)
+print("\n")
+
+
+s1 = {1, 2, 3}
+s2 = {2, 3, 4}
+print(s1.difference(s2))
+print(s1.intersection(s2))
+print(s1.union(s2))
+print("\n")
+
+
+print(s1)
+print(s1.pop())
+print(s1)
+print("\n")
+
+
+print(s1)
+print(s2)
+s1.update(s2)
+print(s1)
+print(s2)
+print("\n")
+
+
+s1 = {1, 2, 3}
+s2 = {2, 3, 4}
+s1.discard(2)
+print(s1)
