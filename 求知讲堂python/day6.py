@@ -160,3 +160,30 @@ def books_info():
 
 # books_info()
 print("\n")
+
+
+# enumerate()用于将一个可遍历的数据对象（列表，元组，字符串）组合为一个索引序列，一般用在for循环
+l = ["a", "b", "c"]
+for item in enumerate(l):
+    print(item)
+print("\n")
+
+
+dict = {}
+dict["name"] = "shawn ran"
+dict["hobby"] = "read"
+dict["majoy"] = "computer science"
+print(dict)
+for index, item in enumerate(dict):
+    print(index, item)
+print("\n")
+
+
+# set()不支持索引和切片，无序不重复的容器
+set = {1, 2, 3}
+print(type(set))
+print(set)
+set.add("python")
+print(set)
+set.clear()
+print(set)
