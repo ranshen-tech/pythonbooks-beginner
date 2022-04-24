@@ -115,3 +115,48 @@ t = (1, 2, 5, 3, 1)
 print(t)
 tup = sorted(t)
 print(tup)
+print("\n")
+
+
+a = [1, 2, 3, 4, 5]
+a.reverse()
+print(a)
+print("\n")
+
+
+# zip()将可迭代对象作为参数，将对象中对应的元素打包成元组，然后返回由这些元组组成的列表
+s1 = ["a", "b", "c"]
+s2 = ["你", "我", "它"]
+print(zip(s1))
+print(list(zip(s1)))
+print(list(zip(s1, s2)))
+
+
+def books_info():
+    """zip函数的使用"""
+    # 存储所有图书信息
+    books = []
+    book_id = input("请输入编号")
+    book_name = input("请输入书名")
+    book_pos = input("请输入书的位置")
+
+    id_list = book_id.split()
+    name_list = book_name.split()
+    pos_list = book_pos.split()
+
+    # 打包处理
+    books_info = list(zip(id_list, name_list, pos_list))
+    print(books_info)
+
+    # 遍历图书信息进行存储
+    for book_item in books_info:
+        dict_info = {"编号": book_item[0], "书名": book_item[1], "位置": book_item[2]}
+        #  将字典对象添加到列表
+        books.append(dict_info)
+
+    for item in books:
+        print(item)
+
+
+# books_info()
+print("\n")
