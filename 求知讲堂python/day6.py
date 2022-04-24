@@ -216,3 +216,43 @@ s1 = {1, 2, 3}
 s2 = {2, 3, 4}
 s1.discard(2)
 print(s1)
+print("\n")
+
+
+# 求三组连续自然数的和
+n = 0
+for i in range(1, 11):
+    n += i
+print(n)
+print("\n")
+
+
+print(sum(range(11)))
+print("\n")
+
+
+def sum_range(x, y):
+    """求连续自然数的和
+
+    Args:
+        x (_type_): int
+        y (_type_): int
+    """
+    return sum(range(x, y + 1))
+
+
+print(sum_range(1, 10))
+print(sum_range(20, 30))
+print(sum_range(30, 45))
+print("\n")
+
+
+def person_count():
+    """计算各有多少个和尚"""
+    for x in range(101):
+        if x * 3 + (100 - x) * (1 / 3) == 100:
+            return x, 100 - x
+
+
+result = person_count()
+print(f"大和尚{person_count()[0]}人，小和尚{person_count()[1]}人")
