@@ -67,3 +67,26 @@ print(rs.name, rs.sex, rs.age)
 xp = People("xu", "female", 14)
 print(xp.name, xp.age, xp.sex)
 print("\n")
+
+
+class Person:
+    """定义类"""
+
+    def __init__(self, major):
+        """定义专业
+
+        Args:
+            major (_type_): str
+        """
+        self.major = major
+
+    def eat(self, name, food):
+        """实例方法"""
+        print(f"self={id(self)}")
+        print(f"{name} like {food}, 专业是{self.major}")
+
+
+# rs是一个新的实例话对象
+rs = Person("CS")
+print(f"rs={id(rs)}")
+rs.eat("ran", "apple")
