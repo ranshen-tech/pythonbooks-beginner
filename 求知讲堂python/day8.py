@@ -205,3 +205,54 @@ list_ojb = [Dog(), Cat(), Duck(), Bird(), Student()]
 for item in list_ojb:
     common_invoke(item)
 print("\n")
+
+
+class F1:
+    def show(self):
+        return "F1.show"
+
+
+class S1:
+    def show(self):
+        return "S1.show"
+
+
+class S2:
+    def show(self):
+        return "S2.show"
+
+
+def Func(obj):
+    print(obj.show)
+
+
+s1_obj = S1()
+Func(s1_obj)
+s2_obj = S2()
+Func(s2_obj)
+print("\n")
+
+
+class Student:
+    name = "ran"
+
+    def __init__(self, age):
+        self.age = age
+
+
+rs = Student(18)
+# 通过实例对象可以访问类属性
+print(rs.name)
+# 通过实例对象对类属性进行修改, 不可以！！！
+rs.name = "shawn ran"
+print(rs.name)
+# 通过类对象对类属性进行修改， 可以！！！
+Student.name = "Shawn Ran"
+print(Student.name)
+print(rs.age)
+print("------通过类对象去访问name---------")
+# 通过类对象访问name属性
+print(Student.name)
+# 类属性是可以被类对象和实例对象共同访问使用  类名.属性名
+# 实例属性只能由实例对象访问
+print("\n")
