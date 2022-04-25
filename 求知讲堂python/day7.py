@@ -146,7 +146,7 @@ class Role:
 rs = Role("冉申", 100)
 xp = Role("徐鹏", 100)
 # rs捅xp一刀
-rs.poke(xp)
+rs.chop(xp)
 # 打印双方状态
 print(rs)
 print(xp)
@@ -172,7 +172,7 @@ import time
 while True:
     if rs.hp <= 0 or xp.hp <= 0:
         break
-    rs.poke(xp)
+    rs.chop(xp)
     # 打印双方状态
     print(rs)
     print(xp)
@@ -185,3 +185,46 @@ while True:
     print("*******************************")
     time.sleep(1)
 print("对决结束.....")
+print("\n")
+
+
+class Student:
+    def run(self):
+        print("学生每天进行2000米跑步训练")
+
+
+rs = Student()
+rs.run()
+print("\n")
+
+
+class Fruit:
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+
+    def __str__(self):
+        return f"{self.name}的颜色是{self.color}"
+
+
+apple = Fruit("apple", "red")
+print(apple)
+# 通过对象添加对象属性
+apple.age = 13
+print("*" * 40)
+orange = Fruit("orange", "yellow")
+print(orange)
+print("*" * 40)
+xigua = Fruit("西瓜", "绿皮")
+print(xigua)
+print("\n")
+
+
+class Person:
+    def weight(self):
+        print(f"self的ID是{id(self)}")
+
+
+liming = Person()
+liming.weight()
+print(id(liming))
