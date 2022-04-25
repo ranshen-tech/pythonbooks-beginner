@@ -60,6 +60,8 @@ print("\n")
 t = (1, 2, 3, 4)
 print(type(t))
 l = list(t)
+s = set(l)
+print(s)
 print(type(l))
 print(l)
 l.append("强制转换成功")
@@ -180,13 +182,13 @@ print("\n")
 
 
 # set()不支持索引和切片，无序不重复的容器
-set = {1, 2, 3}
-print(type(set))
-print(set)
-set.add("python")
-print(set)
-set.clear()
-print(set)
+set1 = {1, 2, 3}
+print(type(set1))
+print(set1)
+set1.add("python")
+print(set1)
+set1.clear()
+print(set1)
 print("\n")
 
 
@@ -256,3 +258,17 @@ def person_count():
 
 result = person_count()
 print(f"大和尚{person_count()[0]}人，小和尚{person_count()[1]}人")
+print("\n")
+
+
+l = [1, 3, 4, 3, 3, 5, 2, 4, 2, 5, 2, 1, 7]
+s1 = set(l)
+print(s1)
+for i in s1:
+    l.remove(i)
+# s2中为原来l中有重复的数字集合
+s2 = set(l)
+print(s2)
+for i in s1:
+    if i not in s2:
+        print(i)
