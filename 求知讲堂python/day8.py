@@ -106,7 +106,8 @@ class GrandFather:
 
 
 class Father(GrandFather):
-    pass
+    def eat(self):
+        print("爸爸经常吃海鲜")
 
 
 class Son(Father):
@@ -114,4 +115,93 @@ class Son(Father):
 
 
 son = Son()
+print(Son.__mro__)
 son.eat()
+print("\n")
+
+
+class Dog:
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+
+    def bark(self):
+        print("汪汪叫")
+
+
+class Corgi(Dog):
+    # 重写类的方法
+    def __init__(self, name, color):
+        # 调用父类方法
+        # super()是自动找到父类然后调动方法
+        super().__init__(name, color)
+        self.height = 90
+        self.weight = 20
+
+    def __str__(self):
+        return f"{self.name}的颜色是{self.color},它的身高是{self.height}cm,体重是{self.weight}kg."
+
+    def bark(self):
+        super().bark()
+        print("叫的跟神一样")
+        print(self.name)
+
+
+corgi = Corgi("柯基犬", "红色")
+corgi.bark()
+print(corgi)
+print("\n")
+
+
+class Animal:
+    def say(self):
+        print("我是动物")
+
+
+class Duck(Animal):
+    def say(self):
+        print("我是一只鸭子")
+
+
+class Dog(Animal):
+    def say(self):
+        print("我是一只狗")
+
+
+class Cat(Animal):
+    def say(self):
+        print("我是一只猫")
+
+
+class Bird(Animal):
+    def say(self):
+        print("我是一只鸟")
+
+
+class Student(Animal):
+    def say(self):
+        print("我是学生")
+
+
+duck = Duck()
+duck.say()
+dog = Dog()
+dog.say()
+cat = Cat()
+cat.say()
+print("\n")
+
+
+def common_invoke(obj):
+    """统一调用的方法
+
+    Args:
+        obj (_type_): _description_
+    """
+    obj.say()
+
+
+list_ojb = [Dog(), Cat(), Duck(), Bird(), Student()]
+for item in list_ojb:
+    common_invoke(item)
+print("\n")
