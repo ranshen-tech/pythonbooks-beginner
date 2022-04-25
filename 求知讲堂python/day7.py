@@ -228,3 +228,26 @@ class Person:
 liming = Person()
 liming.weight()
 print(id(liming))
+print("\n")
+
+
+class Animal:
+    def __init__(self, color, name, age):
+        self.color = color
+        self.name = name
+        self.age = age
+
+    def eat(self):
+        print(f"{self.name}在吃东西")
+
+    def run(self):
+        print(f"{self.name}在跑")
+
+    def __str__(self):
+        return f"{self.name}的颜色是:{self.color}, {self.name}今年{self.age}岁了"
+
+
+tiger = Animal("yello", "东北虎", 3)
+tiger.eat()
+tiger.run()
+print(tiger)
