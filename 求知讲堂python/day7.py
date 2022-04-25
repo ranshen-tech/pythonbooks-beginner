@@ -161,3 +161,27 @@ print("*******************************")
 xp.cure()
 print(rs)
 print(xp)
+print("\n")
+
+
+rs = Role("冉申", 100)
+xp = Role("徐鹏", 100)
+
+import time
+
+while True:
+    if rs.hp <= 0 or xp.hp <= 0:
+        break
+    rs.poke(xp)
+    # 打印双方状态
+    print(rs)
+    print(xp)
+    print("*******************************")
+    # xp捅rs一刀
+    xp.poke(rs)
+    # 打印双方状态
+    print(rs)
+    print(xp)
+    print("*******************************")
+    time.sleep(1)
+print("对决结束.....")
