@@ -90,3 +90,30 @@ class Person:
 rs = Person("CS")
 print(f"rs={id(rs)}")
 rs.eat("ran", "apple")
+print(rs)
+print("\n")
+
+
+class Animal:
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+        print("---init函数的执行----")
+
+    def __str__(self):
+        """自定义对象的内容格式
+
+        Returns:
+            _type_: 对象内容
+        """
+        return f"我的名字是{self.name}, 我的颜色为{self.color}"
+
+    def __new__(cls, *Args):
+        """创建对象实例的方法 每调用一次就会生成新的对象"""
+        print("new------函数的执行")
+        return object.__new__(cls)
+
+
+dog = Animal("旺财", "white")
+print(dog)
+print("\n")
