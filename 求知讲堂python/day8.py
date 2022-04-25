@@ -256,3 +256,25 @@ print(Student.name)
 # 类属性是可以被类对象和实例对象共同访问使用  类名.属性名
 # 实例属性只能由实例对象访问
 print("\n")
+
+
+class People:
+    country = "china"
+    # 将实例方法转化为类方法，所属权利归类对象而不是实例对象
+    @classmethod
+    def get_country(cls):
+        # 访问类属性
+        return cls.country
+
+    @classmethod
+    def change_country(cls, data):
+        # 在类方法中修改类属性的值
+        cls.country = data
+
+
+print(People.get_country())
+p = People()
+print(p.get_country())
+People.change_country("英国")
+print(People.get_country())
+print(p.get_country())
