@@ -70,3 +70,48 @@ class MonkeyKing(Immortal, Monkey):
 sun = MonkeyKing()
 sun.fly()
 sun.eat()
+print("\n")
+
+
+class D(object):
+    def eat(self):
+        print("D.eat")
+
+
+class C(D):
+    def eat(self):
+        print("C.eat")
+
+
+class B(D):
+    pass
+
+
+class A(B, C):
+    pass
+
+
+a = A()
+# 首先去A中查找，A没有则去B，B没有则去C中查找，如果C类没有则去D类查找，如果还没有则报错
+# A-B-C-D
+a.eat()
+# 可以显示类的依次继承关系
+print(A.__mro__)
+print("\n")
+
+
+class GrandFather:
+    def eat(self):
+        print("吃饭")
+
+
+class Father(GrandFather):
+    pass
+
+
+class Son(Father):
+    pass
+
+
+son = Son()
+son.eat()
