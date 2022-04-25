@@ -117,3 +117,47 @@ class Animal:
 dog = Animal("旺财", "white")
 print(dog)
 print("\n")
+
+
+class Role:
+    def __init__(self, name, hp):
+        """构造初始化函数"""
+        self.name = name
+        self.hp = hp
+
+    def poke(self, enemy):
+        enemy.hp -= 10
+        info = f"{self.name}捅了{enemy.name}一刀"
+        print(info)
+
+    def chop(self, enemy):
+        enemy.hp -= 15
+
+    def cure(self):
+        self.hp += 10
+        info = f"{self.name}吃了一颗补血药,增加了10滴血"
+        print(info)
+
+    def __str__(self):
+        return f"{self.name}还剩下{self.hp}血量"
+
+
+# 创建两个实例化对象
+rs = Role("冉申", 100)
+xp = Role("徐鹏", 100)
+# rs捅xp一刀
+rs.poke(xp)
+# 打印双方状态
+print(rs)
+print(xp)
+print("*******************************")
+# xp捅rs一刀
+xp.poke(rs)
+# 打印双方状态
+print(rs)
+print(xp)
+print("*******************************")
+# 徐鹏吃药
+xp.cure()
+print(rs)
+print(xp)
