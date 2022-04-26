@@ -64,3 +64,35 @@ print(rs.get_age())
 rs.set_age(20)
 print(rs.get_age())
 print("\n")
+
+
+class A(object):
+    def __myname(self):
+        print("xiaoming")
+
+    def myname(self):
+        print("xiaoming")
+
+
+a = A()
+a.myname()
+# a.__myname()
+print("\n")
+
+
+class Animal:
+    def __eat(self):
+        print("吃东西")
+
+    def run(self):
+        self.__eat()
+        print("飞快的跑")
+
+
+class Bird(Animal):
+    pass
+
+
+b = Bird()
+# b.eat()
+b.run()
