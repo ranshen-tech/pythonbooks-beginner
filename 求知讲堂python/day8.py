@@ -320,21 +320,20 @@ print("\n")
 # 数据资源能得到充分有效利用
 
 # demo 返回当前的系统时间
-# import time
+import time
 
 
-# class TimeTest:
-#     def __init__(self, hour, min, second):
-#         self.hour = hour
-#         self.min = min
-#         self.second = second
+class TimeTest:
+    def __init__(self, hour, min, second):
+        self.hour = hour
+        self.min = min
+        self.second = second
 
-#     @staticmethod
-#     def show_time():
-#         return time.strftime(f"{time.localtime()}")
+    @staticmethod
+    def show_time():
+        return time.strftime(f"{time.localtime()}")
 
 
-# print(TimeTest.show_time())
-# t = TimeTest(2, 10, 15)
-# print(t.show_time())
-# print("\n")
+print(TimeTest.show_time())
+t = TimeTest(2, 10, 15)
+print(t.show_time())
