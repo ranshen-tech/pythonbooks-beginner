@@ -4,7 +4,7 @@ class Person(object):
 
 
 class Person:
-    hobby = "dance"
+    __hobby = "dance"
 
     def __init__(self):
         # 私有化之后就不能在类外部访问了
@@ -12,7 +12,10 @@ class Person:
         self.age = 30
 
     def __str__(self):
-        return f"{self.__name}的年龄是{self.age}"
+        return f"{self.__name}的年龄是{self.age},爱好是{Person.__hobby}"
+
+    def change_value(self):
+        Person.__hobby = "sing"
 
 
 rs = Person()
@@ -31,6 +34,33 @@ stu = Student()
 # print(stu.__name )
 print(stu.age)
 stu.info()
-print(Person.hobby)
-print(Student.hobby)
-print(stu.hobby)
+# print(Person.hobby)
+# print(Student.hobby)
+# print(stu.hobby)
+print(stu)
+print("\n")
+
+
+rs.change_value()
+# Person.change_value()
+print(rs)
+print("\n")
+
+
+class Person(object):
+    __age = 18
+
+    def get_age(self):
+        # 返回私有类属性
+        return Person.__age
+
+    def set_age(self, age):
+        # 修改私有类属性
+        Person.__age = age
+
+
+rs = Person()
+print(rs.get_age())
+rs.set_age(20)
+print(rs.get_age())
+print("\n")
