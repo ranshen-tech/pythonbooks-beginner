@@ -224,3 +224,15 @@ except Exception as result:
     print(result)
 else:
     print("没毛病")
+print("\n")
+
+
+try:
+    int("23")
+    print("aaa.txt")
+    open("aaa".txt)
+    open("aaa.txt")
+except Exception as result:
+    print(result)
+finally:
+    print("不管对错我都执行")
