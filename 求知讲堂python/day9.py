@@ -236,3 +236,23 @@ except Exception as result:
     print(result)
 finally:
     print("不管对错我都执行")
+print("\n")
+
+
+class Long(Exception):
+    def __init__(self, length):
+        self.length = length
+
+    def __str__(self):
+        return f"您输入的长度是{self.length},超出长度了"
+
+
+def name():
+    name = input("请输入姓名")
+    if len(name) > 3:
+        raise Long(len(name))
+    else:
+        print(name)
+
+
+name()
