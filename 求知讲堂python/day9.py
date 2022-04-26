@@ -117,15 +117,39 @@ class Person:
         else:
             self.__age = age
 
-    # 定义一个属性，当对这个age设置值时设置set_age,当获取值时调用get_age
-    # age = property(set_age, get_age)
+    # 定义一个类属性，通过直接访问属性的形式访问私有属性
+    age = property(get_age, set_age)
 
 
-# xiaoming = Person()
-# xiaoming.age(15)
-# print(xiaoming.age)
 p = Person()
+print(p.age)
+p.age = 29
+print(p.age)
+p.age = -1
+print("\n")
+
 print(p.get_age())
 p.set_age(21)
 print(p.get_age())
 print("\n")
+
+
+class Person:
+    def __init__(self):
+        self.__age = 18
+
+    @property
+    def get_age(self):
+        return self.__age
+
+    @property
+    def set_age(self, age):
+        if age < 0:
+            print("年龄不能大于0")
+        else:
+            self.__age = age
+
+
+xiaoming = Person()
+xiaoming.age = 15
+print(xiaoming.age)
