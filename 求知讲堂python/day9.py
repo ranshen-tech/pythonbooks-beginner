@@ -194,3 +194,23 @@ try:
     print(l[9])
 except Exception as result:
     print(result)
+print("\n")
+
+
+def a(s):
+    return 10 / int(s)
+
+
+def b(s):
+    return a(s) ** 2
+
+
+def main():
+    try:
+        b("0")
+    except Exception as result:
+        print(result)
+
+
+main()
+print("\n")
