@@ -214,3 +214,13 @@ def main():
 
 main()
 print("\n")
+
+
+try:
+    print(我是没有错误产生的)
+except SyntaxError as msg:
+    print(msg)
+except Exception as result:
+    print(result)
+else:
+    print("没毛病")
