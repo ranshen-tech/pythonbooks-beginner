@@ -139,11 +139,11 @@ class Person:
         self.__age = 18
 
     @property
-    def get_age(self):
+    def age(self):
         return self.__age
 
-    @property
-    def set_age(self, age):
+    @age.setter
+    def age(self, age):
         if age < 0:
             print("年龄不能大于0")
         else:
@@ -153,3 +153,44 @@ class Person:
 xiaoming = Person()
 xiaoming.age = 15
 print(xiaoming.age)
+print("\n")
+
+
+class Animal:
+    def __init__(self):
+        self.color = "red"
+
+
+tigger = Animal()
+print(tigger.color)
+print("\n")
+
+
+try:
+    # 要捕获的代码
+    # l = [1, 2, 3]
+    # print(l[5])
+    # print(c)
+    print(9 / 0)
+
+except NameError as msg:
+    print(msg)
+
+except IndexError as msg:
+    print(msg)
+
+except ZeroDivisionError as msg:
+    print(msg)
+
+print("hahah")
+print("ranshen")
+print("\n")
+
+
+try:
+    # print(2 / 0)
+    # print(dfd)
+    l = [2, 3, 4, 5, 6]
+    print(l[9])
+except Exception as result:
+    print(result)
