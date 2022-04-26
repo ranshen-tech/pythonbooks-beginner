@@ -96,3 +96,36 @@ class Bird(Animal):
 b = Bird()
 # b.eat()
 b.run()
+print("\n")
+
+
+# 后单下划线避免属性与关键字名字冲突
+
+
+class Person:
+    def __init__(self):
+        self.__age = 18
+
+    # 访问私有实例属性
+    def get_age(self):
+        return self.__age
+
+    # 修改私有实例属性
+    def set_age(self, age):
+        if age < 0:
+            print("年龄不能小于0")
+        else:
+            self.__age = age
+
+    # 定义一个属性，当对这个age设置值时设置set_age,当获取值时调用get_age
+    # age = property(set_age, get_age)
+
+
+# xiaoming = Person()
+# xiaoming.age(15)
+# print(xiaoming.age)
+p = Person()
+print(p.get_age())
+p.set_age(21)
+print(p.get_age())
+print("\n")
