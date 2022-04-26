@@ -275,6 +275,10 @@ class People:
     def get_data():
         return People.country
 
+    @staticmethod
+    def add(x, y):
+        return x + y
+
 
 print(People.get_country())
 p = People()
@@ -286,6 +290,7 @@ print(People.get_data())
 p = People()
 # 一般情况下，我们不会通过实例对象去访问静态方法
 print(p.get_data())
+print(People.add(2, 3))
 print("\n")
 
 
@@ -308,3 +313,28 @@ people = Person("ran")
 result = Person.get_country()
 Person.get_country()
 print("\n")
+
+
+# 为什么要使用静态方法
+# 由于静态方法主要用来存放逻辑性代码，本身和类以及实例对象没有交互，在静态方法中不会涉及到类中方法和属性的操作
+# 数据资源能得到充分有效利用
+
+# demo 返回当前的系统时间
+# import time
+
+
+# class TimeTest:
+#     def __init__(self, hour, min, second):
+#         self.hour = hour
+#         self.min = min
+#         self.second = second
+
+#     @staticmethod
+#     def show_time():
+#         return time.strftime(f"{time.localtime()}")
+
+
+# print(TimeTest.show_time())
+# t = TimeTest(2, 10, 15)
+# print(t.show_time())
+# print("\n")
