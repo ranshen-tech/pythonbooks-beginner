@@ -271,6 +271,10 @@ class People:
         # 在类方法中修改类属性的值
         cls.country = data
 
+    @staticmethod
+    def get_data():
+        return People.country
+
 
 print(People.get_country())
 p = People()
@@ -278,4 +282,29 @@ print(p.get_country())
 People.change_country("英国")
 print(People.get_country())
 print(p.get_country())
+print(People.get_data())
+p = People()
+# 一般情况下，我们不会通过实例对象去访问静态方法
+print(p.get_data())
+print("\n")
+
+
+class Person(object):
+    # 类属性
+    country = "china"
+
+    def __init__(self, name):
+        self.name = name
+
+    # 静态方法，用装饰器装饰
+    @staticmethod
+    # 静态方法不用传任何参数
+    def get_country():
+        print(Person.country)
+
+
+people = Person("ran")
+# 获取类属性
+result = Person.get_country()
+Person.get_country()
 print("\n")
