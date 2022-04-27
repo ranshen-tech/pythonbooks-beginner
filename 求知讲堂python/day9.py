@@ -424,3 +424,29 @@ class Person:
 
 
 print("\n")
+
+
+class Student:
+    def __init__(self):
+        self.__name = "ran"
+        self.__score = 80
+
+    # @property
+    def get_name(self):
+        return self.__name
+
+    # @set_name.setter
+    def set_name(self, name):
+        self.__name = name
+
+    # @property
+    def get_score(self):
+        return self.__score
+
+    # @set_score.setter
+    def set_score(self, score):
+        self.__score = score
+
+
+rs = Student()
+print(rs.get_name())
