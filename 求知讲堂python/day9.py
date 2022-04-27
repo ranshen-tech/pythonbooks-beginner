@@ -239,20 +239,88 @@ finally:
 print("\n")
 
 
-class Long(Exception):
-    def __init__(self, length):
-        self.length = length
+# class Long(Exception):
+#     def __init__(self, length):
+#         self.length = length
+
+#     def __str__(self):
+#         return f"您输入的长度是{self.length},超出长度了"
+
+
+# def name():
+#     try:
+#         name = input("请输入姓名")
+#         if len(name) > 3:
+#             raise Long(len(name))
+#         else:
+#             print(name)
+#     except Long as msg:
+#         print(msg)
+#     finally:
+#         print("执行完毕")
+
+
+# name()
+
+
+# class Something(Exception):
+#     def __str__(self):
+#         return "[Error:]请输入大于0的数字"
+
+#     try:
+#         num = int(input("请输入数字: "))
+#         if num < 0:
+#             raise Something
+#     except Something() as msg:
+#         print(msg)
+#     else:
+#         print("没有异常")
+
+
+# print(Something)
+
+
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+cat = Animal("小白", 5)
+cat.color = "白色"
+print(cat.color)
+print("\n")
+
+
+import types
+
+# 定义要添加的方法
+def dynamic(self):
+    print(f"{self.name}的体重是{self.weight}kg, 在{Student.school}读大学.")
+
+
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
     def __str__(self):
-        return f"您输入的长度是{self.length},超出长度了"
+        return f"{self.name}今年{self.age}岁了."
 
 
-def name():
-    name = input("请输入姓名")
-    if len(name) > 3:
-        raise Long(len(name))
-    else:
-        print(name)
-
-
-name()
+rs = Student("冉申", 20)
+rs.weight = 60
+rs.info = types.MethodType(dynamic, rs)
+print(rs)
+print(rs.weight)
+xp = Student("徐鹏", 90)
+Student.weight = 30
+xp.info = types.MethodType(dynamic, xp)
+# print(xp.weight)
+print("---给类对象添加属性----")
+Student.school = "北京大学"
+print(xp.school)
+print(rs.school)
+rs.info()
+xp.info()
+print("\n")
