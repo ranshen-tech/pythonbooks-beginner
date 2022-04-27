@@ -348,3 +348,48 @@ Animal.eat()
 Animal.drink = drink
 Animal.drink()
 print("\n")
+
+
+class A:
+    __slots__ = "name", "age"
+
+
+a = A()
+a.name = "旺财"
+a.age = 5
+print(a.name)
+print(a.age)
+# a.hobby = "read"
+print("\n")
+
+
+class Student:
+    # 限制要添加的实例属性
+    # __slots__速度更快
+    __slots__ = "name", "age", "score"
+
+    def __str__(self):
+        return f"{self.name}年纪{self.age}"
+
+
+rs = Student()
+rs.name = "ranshen"
+rs.age = 19
+rs.score = 100
+print(rs)
+# 所有可引用的属性都在这里存储，不足的地方在于占用内存空间大
+# print(rs.__dict__)
+print("\n")
+
+
+# 子类未声明__slots__时，是不会继承父类__slots__属性的
+class SubStudent(Student):
+    # 子类声明__slots__时，继承父类__slots__,子类的__slots__范围是父类__slots__加自身
+    __slots__ = ("sex", "major")
+
+
+cyy = SubStudent()
+cyy.sex = "female"
+cyy.major = "computer science"
+cyy.name = "cyyyy"
+print(cyy.sex, cyy.major, cyy.name)
