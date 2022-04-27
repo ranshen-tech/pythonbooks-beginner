@@ -423,32 +423,48 @@ class Person:
             self.__age = age
 
 
-print("\n")
+# class Student:
+#     def __init__(self):
+#         self.__name = "ran"
+#         self.__score = 80
+
+#     @property
+#     def get_name(self):
+#         return self.__name
+
+#     @set_name.setter
+#     def set_name(self, name):
+#         self.__name = name
+
+#     @property
+#     def get_score(self):
+#         return self.__score
+
+#     @set_score.setter
+#     def set_score(self, score):
+#         self.__score = score
+
+#     def __str__(self):
+#         return self.__name
 
 
 class Student:
-    def __init__(self):
-        self.__name = "ran"
-        self.__score = 80
+    __slots__ = "__name", "__age", "__score"
 
-    @property
-    def get_name(self):
-        return self.__name
-
-    @set_name.setter
-    def set_name(self, name):
+    def __init__(self, name, age, score=0):
         self.__name = name
+        self.__age = age
+        self.__score = score
 
-    @property
     def get_score(self):
         return self.__score
 
-    @set_score.setter
     def set_score(self, score):
         self.__score = score
 
-    def __str__(self):
-        return self.__name
 
-
+rs = Student("冉申", 29)
+print(rs.get_score())
+rs.set_score(100)
+print(rs.get_score())
 print("\n")
