@@ -324,3 +324,27 @@ print(rs.school)
 rs.info()
 xp.info()
 print("\n")
+
+
+class Animal:
+    pass
+
+
+# 定义一个类方法
+@classmethod
+def eat(cls):
+    print("吃东西")
+
+
+# 定义一个静态方法
+@staticmethod
+def drink():
+    print("喝水")
+
+
+Animal.eat = eat
+Animal.eat()
+
+Animal.drink = drink
+Animal.drink()
+print("\n")
