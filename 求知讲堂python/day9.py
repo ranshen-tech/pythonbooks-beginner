@@ -393,3 +393,34 @@ cyy.sex = "female"
 cyy.major = "computer science"
 cyy.name = "cyyyy"
 print(cyy.sex, cyy.major, cyy.name)
+print("\n")
+
+
+# 私有化方法与私有化属性在子类中不能继承❕
+
+
+class Person:
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = age
+
+    def __str__(self):
+        return f"{self.__name}的年龄是{self.__age}."
+
+    def get_name(self):
+        return self.__name
+
+    def get_age(self):
+        return self.__age
+
+    def set_name(self, name):
+        self.__name = name
+
+    def set_age(self, age):
+        if age > 120 or age < 0:
+            print("范围0-120")
+        else:
+            self.__age = age
+
+
+print("\n")
