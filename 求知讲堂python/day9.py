@@ -468,3 +468,30 @@ print(rs.get_score())
 rs.set_score(100)
 print(rs.get_score())
 print("\n")
+
+
+import types
+
+
+class Animal:
+    pass
+
+
+def run(self):
+    print("cat run.")
+
+
+# @classmethod
+def info():
+    print("class method.")
+
+
+Animal.color = "red"
+Animal.info = info
+cat = Animal()
+cat.run = types.MethodType(run, cat)
+cat.run()
+print(cat.color)
+print(Animal.color)
+print("\n")
+Animal.info()
